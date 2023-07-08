@@ -1,0 +1,85 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  restore-build-test-pack-push:
+    runs-on: ubuntu-latest
+    steps:
+    -
+      name: Prepare - Checkout Code
+      uses: actions/checkout@v3
+    -
+      name: Prepare - Read Version
+      uses: bfren/read-file@v2
+      with:
+        file: ./Version
+      id: version
+    -
+      name: Prepare - Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          6.0.x
+          7.0.x
+    -
+      name: A - Restore
+      run: |
+        dotnet restore Test.csproj
+    -
+      name: B - Build
+      run: |
+        dotnet build Test.csproj \
+          --no-restore \
+          --configuration Release
+    -
+      name: C - Test
+      run: |
+        dotnet test Test.csproj \
+          --no-restore \
+          --no-build \
+          --configuration Release
+    -
+      if: success()
+      name: D - Pack
+      run: |
+        dotnet pack Pack.csproj \
+          --no-build \
+          --configuration Release \
+          /p:PackageOutputPath=$HOME/.nupkgs \
+          -p:PackageVersion=${{ steps.version.outputs.contents }}
+    -
+      if: success()
+      name: E - Push
+      run: |
+        dotnet nuget push "$HOME/.nupkgs/*.nupkg" \
+          --skip-duplicate \
+          --api-key ${{ secrets.NUGET_API_KEY }} \
+          --source https://api.nuget.org/v3/index.json
+        dotnet nuget push "$HOME/.nupkgs/*.nupkg" \
+          --skip-duplicate \
+          --api-key ${{ secrets.GITHUB_TOKEN }} \
+          --source https://nuget.pkg.github.com/bfren/index.json
+    -
+      if: success()
+      name: Finish - Success
+      uses: bfren/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Maybe (GitHub)
+        SLACK_MESSAGE: Publish Succeeded
+        SLACK_COLOR: good
+        SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
+    -
+      if: failure()
+      name: Finish - Failure
+      uses: bfren/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Maybe (GitHub)
+        SLACK_MESSAGE: Publish Failed
+        SLACK_COLOR: danger
+        SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg

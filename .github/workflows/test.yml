@@ -1,0 +1,72 @@
+name: Test
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+    tags-ignore:
+      - '**'
+    paths:
+      - '.github/workflows/test.yml'
+      - 'Directory.Packages.props'
+      - 'src/**'
+      - 'tests/**'
+  workflow_dispatch:
+
+jobs:
+  restore-build-test:
+    runs-on: ubuntu-latest
+    steps:
+    -
+      name: Prepare - Checkout Code
+      uses: actions/checkout@v3
+    -
+      name: Prepare - Read Version
+      uses: bfren/read-file@v2
+      with:
+        file: ./Version
+      id: version
+    -
+      name: Prepare - Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          6.0.x
+          7.0.x
+    -
+      name: A - Restore
+      run: |
+        dotnet restore Test.csproj
+    -
+      name: B - Build
+      run: |
+        dotnet build Test.csproj \
+          --no-restore \
+          --configuration Release
+    -
+      name: C - Test
+      run: |
+        dotnet test Test.csproj \
+          --no-restore \
+          --no-build \
+          --configuration Release
+    -
+      if: success()
+      name: Finish - Success
+      uses: bfren/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Maybe (GitHub)
+        SLACK_MESSAGE: Tests Passed
+        SLACK_COLOR: good
+        SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
+    -
+      if: failure()
+      name: Finish - Failure
+      uses: bfren/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Maybe (GitHub)
+        SLACK_MESSAGE: Test Failed
+        SLACK_COLOR: danger
+        SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
