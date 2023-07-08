@@ -1,0 +1,4 @@
+[*.{cs,csx,cake,vb,vbx}]
+
+file_header_template = Maybe: Rqlite Client for .NET.\nCopyright (c) bfren - licensed under https://mit.bfren.dev/2023
+insert_final_newline = true

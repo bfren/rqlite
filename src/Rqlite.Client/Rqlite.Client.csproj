@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>Rqlite client for .NET.</Description>
+		<PackageId>Rqlite</PackageId>
+	</PropertyGroup>
+</Project>

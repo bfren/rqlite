@@ -1,0 +1,13 @@
+﻿[*.{cs,csx,cake,vb,vbx}]
+
+file_header_template = Rqlite: Unit Tests\nCopyright (c) bfren - licensed under https://mit.bfren.dev/2023
+insert_final_newline = true
+
+# IDE0130: Namespace does not match folder structure
+dotnet_diagnostic.IDE0130.severity = none
+
+# RCS1090: Add call to 'ConfigureAwait' (or vice versa).
+dotnet_diagnostic.RCS1090.severity = none
+
+# RCS1118: Mark local variable as const.
+dotnet_diagnostic.RCS1118.severity = none
