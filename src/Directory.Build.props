@@ -33,8 +33,8 @@
 		<LicencePath>$([MSBuild]::GetPathOfFileAbove('$(LicenceFile)'))</LicencePath>
 		<LocalPackFile>Local.pack.props</LocalPackFile>
 		<LocalPackPath>$([MSBuild]::GetPathOfFileAbove('$(LocalPackFile)'))</LocalPackPath>
-		<LogoFile>logo.png</LogoFile>
-		<LogoPath>$([System.IO.Path]::Combine('$(SolutionRootPath)', 'artwork', '$(LogoFile)'))</LogoPath>
+		<!--<LogoFile>logo.png</LogoFile>
+		<LogoPath>$([System.IO.Path]::Combine('$(SolutionRootPath)', 'artwork', '$(LogoFile)'))</LogoPath>-->
 		<ReadmeFile>README.md</ReadmeFile>
 		<ReadmePath>$([MSBuild]::GetPathOfFileAbove('$(ReadmeFile)', '$(MSBuildProjectDirectory)'))</ReadmePath>
 		<VersionFile>Version</VersionFile>
@@ -44,7 +44,7 @@
 	<!-- Import Files -->
 	<ItemGroup Label="Files" Condition="'$(Configuration)'=='Release'">
 		<None Include="$(LicencePath)" Pack="true" PackagePath="/"/>
-		<None Include="$(LogoPath)" Pack="true" PackagePath="/"/>
+		<!--<None Include="$(LogoPath)" Pack="true" PackagePath="/"/>-->
 		<None Include="$(ReadmePath)" Pack="true" PackagePath="/"/>
 	</ItemGroup>
 
@@ -60,11 +60,11 @@
 		<Copyright>Copyright © bfren.dev $([System.DateTime]::Now.ToString(yyyy))</Copyright>
 		<DebugType>embedded</DebugType>
 		<Description>$(MSBuildProjectName) library</Description>
-		<PackageIcon>$(LogoFile)</PackageIcon>
+		<!--<PackageIcon>$(LogoFile)</PackageIcon>-->
 		<PackageLicenseFile>$(LicenceFile)</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/bfren/rqlite/wiki</PackageProjectUrl>
 		<PackageReadmeFile>$(ReadmeFile)</PackageReadmeFile>
-		<PackageTags>Rqlite;client</PackageTags>
+		<PackageTags>Rqlite;client;orm</PackageTags>
 		<RepositoryUrl>https://github.com/bfren/rqlite</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<Version>$(RqliteVersion)</Version>
