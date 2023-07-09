@@ -1,0 +1,23 @@
+{
+	"jeebs": {
+		"app": {
+			"name": "Console App",
+			"suite": "Rqlite"
+		},
+		"logging": {
+			"minimum": "Debug",
+			"providers": {
+				"console.serilog": {
+					"enabled": true
+				}
+			}
+		},
+		"services": {
+			"console": {
+				"serilog": {
+					"addPrefix": false
+				}
+			}
+		}
+	}
+}
