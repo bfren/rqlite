@@ -5,23 +5,49 @@ using System;
 using System.Collections.Specialized;
 using System.Text;
 
-namespace Rqlite.Client;
+namespace Rqlite.Client.Internals;
 
+/// <summary>
+/// Enables building relative URIs with expandable query vars.
+/// </summary>
 internal sealed class UriBuilder
 {
+	/// <summary>
+	/// URI path.
+	/// </summary>
 	private string Path { get; }
 
+	/// <summary>
+	/// Query vars collection.
+	/// </summary>
 	private NameValueCollection QueryVars { get; } = new();
 
+	/// <summary>
+	/// Create builder with a URI path.
+	/// </summary>
+	/// <param name="path">URI path.</param>
 	internal UriBuilder(string path) =>
 		Path = path;
 
+	/// <summary>
+	/// Add a query var without a value.
+	/// </summary>
+	/// <param name="key">Query var key.</param>
 	internal void AddQueryVar(string key) =>
 		QueryVars.Add(key, null);
 
+	/// <summary>
+	/// Add a query var with a value.
+	/// </summary>
+	/// <param name="key">Query var key.</param>
+	/// <param name="value">Query var value.</param>
 	internal void AddQueryVar(string key, string value) =>
 		QueryVars.Add(key, value);
 
+	/// <summary>
+	/// Build relative URI.
+	/// </summary>
+	/// <returns></returns>
 	internal Uri Build()
 	{
 		// Start URI with path

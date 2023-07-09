@@ -3,20 +3,20 @@
 
 using System;
 
-namespace Rqlite.Client.Exceptions;
+namespace Rqlite.Client.Internals;
 
 /// <summary>Thrown when <see cref="RqliteClientFactory"/> cannot find the specified client.</summary>
-public sealed class UnknownClientException : Exception
+internal sealed class UnknownClientException : Exception
 {
 	/// <summary>Create blank exception.</summary>
-	public UnknownClientException() { }
+	internal UnknownClientException() { }
 
 	/// <summary>Create exception with message.</summary>
 	/// <param name="message"></param>
-	public UnknownClientException(string message) : base(message) { }
+	internal UnknownClientException(string message) : base(message) { }
 
 	/// <summary>Create exception with message and inner exception.</summary>
 	/// <param name="message"></param>
 	/// <param name="inner"></param>
-	public UnknownClientException(string message, Exception inner) : base(message, inner) { }
+	internal UnknownClientException(string message, Exception inner) : base(message, inner) { }
 }

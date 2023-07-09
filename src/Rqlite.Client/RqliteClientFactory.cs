@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Rqlite.Client.Exceptions;
+using Rqlite.Client.Internals;
 
 namespace Rqlite.Client;
 

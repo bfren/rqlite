@@ -13,11 +13,11 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <summary>
 	/// Returns the URI path for execute requests, including timings if <see cref="IncludeTimings"/> is true.
 	/// </summary>
-	internal Lazy<UriBuilder> ExecuteUri
+	internal Lazy<Internals.UriBuilder> ExecuteUri
 	{
 		get
 		{
-			var builder = new UriBuilder("/db/execute");
+			var builder = new Internals.UriBuilder("/db/execute");
 			if (IncludeTimings)
 			{
 				builder.AddQueryVar("timings");
