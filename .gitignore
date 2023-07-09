@@ -398,3 +398,5 @@ FodyWeavers.xsd
 
 # Local props
 Local.pack.props
+
+**/jeebsconfig-secrets*
