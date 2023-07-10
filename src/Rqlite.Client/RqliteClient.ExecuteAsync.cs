@@ -18,40 +18,43 @@ public sealed partial class RqliteClient : IRqliteClient
 	{
 		get
 		{
-			var builder = new Internals.UriBuilder("/db/execute");
+			var uriBuilder = new Internals.UriBuilder("/db/execute");
 			if (IncludeTimings)
 			{
-				builder.AddQueryVar("timings");
+				uriBuilder.AddQueryVar("timings");
 			}
 
-			return new(builder);
+			return new(uriBuilder);
 		}
 	}
 
-	/// <inheritdoc/>
-	private async Task<RqliteExecuteResponse> ExecuteAsync<T>(IEnumerable<T> commands, bool asSingleTransaction)
+	internal static async Task<RqliteExecuteResponse> ExecuteAsync<T>(
+		IEnumerable<T> commands,
+		bool asSingleTransaction,
+		Internals.UriBuilder uriBuilder,
+		Func<HttpRequestMessage, Task<RqliteExecuteResponse>> send
+	)
 	{
 		if (!commands.Any())
 		{
 			return new RqliteExecuteResponse("You must pass at least one command.");
 		}
 
-		var builder = ExecuteUri.Value;
 		if (asSingleTransaction)
 		{
-			builder.AddQueryVar("transaction");
+			uriBuilder.AddQueryVar("transaction");
 		}
 
 		var request = new HttpRequestMessage
 		{
 			Content = new JsonContent(commands),
 			Method = HttpMethod.Post,
-			RequestUri = builder.Build(),
+			RequestUri = uriBuilder.Build(),
 		};
 
 		try
 		{
-			return await SendAsync<RqliteExecuteResponse>(request);
+			return await send(request);
 		}
 		catch (Exception ex)
 		{
@@ -65,7 +68,12 @@ public sealed partial class RqliteClient : IRqliteClient
 
 	/// <inheritdoc/>
 	public Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params string[] commands) =>
-		ExecuteAsync(commands, asSingleTransaction);
+		ExecuteAsync(
+			commands: commands,
+			asSingleTransaction: asSingleTransaction,
+			uriBuilder: ExecuteUri.Value,
+			send: SendAsync<RqliteExecuteResponse>
+		);
 
 	/// <inheritdoc/>
 	public Task<RqliteExecuteResponse> ExecuteAsync(string command, object param) =>
@@ -77,5 +85,10 @@ public sealed partial class RqliteClient : IRqliteClient
 
 	/// <inheritdoc/>
 	public Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands) =>
-		ExecuteAsync(from c in commands select new[] { c.command, c.param }, asSingleTransaction);
+		ExecuteAsync(
+			commands: from c in commands select new[] { c.command, c.param },
+			asSingleTransaction: asSingleTransaction,
+			uriBuilder: ExecuteUri.Value,
+			send: SendAsync<RqliteExecuteResponse>
+		);
 }
