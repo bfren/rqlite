@@ -2,7 +2,10 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
+using System.Globalization;
 using System.Net.Http;
+using System.Text;
+using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 
 namespace Rqlite.Client.Internals;
@@ -22,13 +25,36 @@ internal static class LoggerExtensions
 		LoggerMessage.Define<string?>(LogLevel.Information, new(), "Rqlite version: {Version}");
 
 	/// <summary>
+	/// Unescape UTF8 characters to show correctly in logs.
+	/// </summary>
+	/// <param name="bytes">UTF8 string as byte array.</param>
+	/// <returns>Unescaped string (or empty string if <paramref name="bytes"/> is null or empty).</returns>
+	internal static string UnescapeUTF8(byte[]? bytes)
+	{
+		if (bytes is null || bytes.Length == 0)
+		{
+			return string.Empty;
+		}
+
+		// HT https://stackoverflow.com/a/462586/8199362
+		var regex = new Regex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase);
+		return regex.Replace(
+			input: Encoding.UTF8.GetString(bytes),
+			evaluator: match => parse(match).ToString()
+		);
+
+		static char parse(Match m) =>
+			(char)int.Parse(m.Groups[1].Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
+	}
+
+	/// <summary>
 	/// Log a <see cref="HttpRequestMessage"/>.
 	/// </summary>
 	/// <param name="this"></param>
 	/// <param name="request">HttpRequestMessage instance.</param>
 	internal static void Request(this ILogger @this, HttpRequestMessage request)
 	{
-		var content = request.Content?.ReadAsStringAsync().Result;
+		var content = UnescapeUTF8(request.Content?.ReadAsByteArrayAsync().Result);
 		LogRequest(@this, request.Method, request.RequestUri, content, null);
 	}
 
