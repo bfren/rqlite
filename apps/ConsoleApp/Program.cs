@@ -1,7 +1,6 @@
 // Rqlite: Test Apps
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-using ConsoleApp.Types;
 using Microsoft.Extensions.DependencyInjection;
 using RndF;
 using Rqlite.Client;
@@ -30,18 +29,24 @@ log.Inf("Insert row result: {@Row}", insertRowResult1);
 var queryResult0 = await client.QueryAsync($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 log.Inf("Query result: {@Row}", queryResult0);
 
-var queryResult1 = await client.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
+var queryResult1 = await client.QueryAsync<ConsoleApp.Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 log.Inf("Query result: {@Row}", queryResult1);
 
-var queryResult2 = await client.QueryAsync($"SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
+var queryResult2 = await client.QueryAsync("SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
 log.Inf("Query result: {@Row}", queryResult2);
 
-var queryResult3 = await client.QueryAsync<Person>($"SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
-log.Inf("Query result: {@Row}", queryResult3);
+var query3 = "SELECT * FROM foo WHERE age > :age";
+var queryResult3 = await client.QueryAsync<ConsoleApp.Person>(
+	(query3, new { age = Rnd.Int }),
+	(query3, new { age = Rnd.Int })
+);
+log.Inf("Query 0 result: {@Row}", queryResult3.Results[0].Rows!);
+log.Inf("Query 1 result: {@Row}", queryResult3.Results[1].Rows!);
+log.Inf("Flattened query result: {@Row}", queryResult3.Flatten());
 
 Console.ReadLine();
 
-namespace ConsoleApp.Types
+namespace ConsoleApp
 {
 	public readonly record struct Person(int Id, string Name, int Age);
 }
