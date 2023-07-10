@@ -21,7 +21,7 @@ var insertRowResult0 = await client.ExecuteAsync($"INSERT INTO foo(name, age) VA
 log.Inf("Insert row result: {@Row}", insertRowResult0);
 
 var insertRowCommand1 = "INSERT INTO foo(name, age) VALUES(:name, :age)";
-var insertRowResult1 = await client.ExecuteAsync(
+var insertRowResult1 = await client.ExecuteAsync(true,
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int }),
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int })
 );

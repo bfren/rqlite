@@ -53,7 +53,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		Logger.Request(request);
 
 		var response = await HttpClient.SendAsync(request);
-		var json = await response.Content.ReadAsStringAsync();
+		var json = await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
 		Logger.ResponseJson(json);
 
 		var result = JsonSerializer.Deserialize<T>(json, JsonOptions)

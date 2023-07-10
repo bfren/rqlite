@@ -24,11 +24,21 @@ public interface IRqliteClient : IDisposable
 	Task<RqliteStatus> GetStatusAsync();
 
 	/// <summary>
-	/// Execute commands and return results.
+	/// Execute commands and return results. (Does not use a transaction -
+	/// i.e. if one fails, the others will be executed.)
 	/// </summary>
 	/// <param name="commands">Rqlite commands.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(params string[] commands);
+
+	/// <summary>
+	/// Execute commands and return results, optionally using a single transaction
+	/// (i.e. if one fails, none will be executed).
+	/// </summary>
+	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction</param>
+	/// <param name="commands">Rqlite commands.</param>
+	/// <returns>Command results.</returns>
+	Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params string[] commands);
 
 	/// <summary>
 	/// Execute parameterised command and return results.
@@ -39,11 +49,21 @@ public interface IRqliteClient : IDisposable
 	Task<RqliteExecuteResponse> ExecuteAsync(string command, object param);
 
 	/// <summary>
-	/// Execute parameterised commands and return results.
+	/// Execute parameterised commands and return results. (Does not use a transaction -
+	/// i.e. if one fails, the others will be executed.)
 	/// </summary>
 	/// <param name="commands">Rqlite parameterised commands.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(params (string command, object param)[] commands);
+
+	/// <summary>
+	/// Execute parameterised commands and return results, optionally using a single transaction
+	/// (i.e. if one fails, none will be executed).
+	/// </summary>
+	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction</param>
+	/// <param name="commands">Rqlite parameterised commands.</param>
+	/// <returns>Command results.</returns>
+	Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands);
 
 	/// <summary>
 	/// Execute query and return results.

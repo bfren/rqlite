@@ -2,6 +2,7 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -28,18 +29,24 @@ public sealed partial class RqliteClient : IRqliteClient
 	}
 
 	/// <inheritdoc/>
-	public async Task<RqliteExecuteResponse> ExecuteAsync(params string[] commands)
+	private async Task<RqliteExecuteResponse> ExecuteAsync<T>(IEnumerable<T> commands, bool asSingleTransaction)
 	{
-		if (commands.Length == 0)
+		if (!commands.Any())
 		{
 			return new RqliteExecuteResponse("You must pass at least one command.");
+		}
+
+		var builder = ExecuteUri.Value;
+		if (asSingleTransaction)
+		{
+			builder.AddQueryVar("transaction");
 		}
 
 		var request = new HttpRequestMessage
 		{
 			Content = new JsonContent(commands),
 			Method = HttpMethod.Post,
-			RequestUri = ExecuteUri.Value.Build(),
+			RequestUri = builder.Build(),
 		};
 
 		try
@@ -51,28 +58,24 @@ public sealed partial class RqliteClient : IRqliteClient
 			return new RqliteExecuteResponse(ex);
 		}
 	}
+
+	/// <inheritdoc/>
+	public Task<RqliteExecuteResponse> ExecuteAsync(params string[] commands) =>
+		ExecuteAsync(false, commands);
+
+	/// <inheritdoc/>
+	public Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params string[] commands) =>
+		ExecuteAsync(commands, asSingleTransaction);
 
 	/// <inheritdoc/>
 	public Task<RqliteExecuteResponse> ExecuteAsync(string command, object param) =>
-		ExecuteAsync(commands: (command, param));
+		ExecuteAsync(false, (command, param));
 
 	/// <inheritdoc/>
-	public async Task<RqliteExecuteResponse> ExecuteAsync(params (string command, object param)[] commands)
-	{
-		var request = new HttpRequestMessage
-		{
-			Content = new JsonContent(from x in commands select new[] { x.command, x.param }),
-			Method = HttpMethod.Post,
-			RequestUri = ExecuteUri.Value.Build(),
-		};
+	public Task<RqliteExecuteResponse> ExecuteAsync(params (string command, object param)[] commands) =>
+		ExecuteAsync(false, commands);
 
-		try
-		{
-			return await SendAsync<RqliteExecuteResponse>(request);
-		}
-		catch (Exception ex)
-		{
-			return new RqliteExecuteResponse(ex);
-		}
-	}
+	/// <inheritdoc/>
+	public Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands) =>
+		ExecuteAsync(from c in commands select new[] { c.command, c.param }, asSingleTransaction);
 }
