@@ -43,7 +43,7 @@ public interface IRqliteClient : IDisposable
 	/// <summary>
 	/// Execute parameterised command and return results.
 	/// </summary>
-	/// <param name="command">Rqlite command.</param>
+	/// <param name="command">Rqlite parameterised command.</param>
 	/// <param name="param">Command parameters - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(string command, object param);
@@ -52,7 +52,7 @@ public interface IRqliteClient : IDisposable
 	/// Execute parameterised commands and return results. (Does not use a transaction -
 	/// i.e. if one fails, the others will be executed.)
 	/// </summary>
-	/// <param name="commands">Rqlite parameterised commands.</param>
+	/// <param name="commands">Rqlite parameterised commands - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(params (string command, object param)[] commands);
 
@@ -61,39 +61,56 @@ public interface IRqliteClient : IDisposable
 	/// (i.e. if one fails, none will be executed).
 	/// </summary>
 	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction</param>
-	/// <param name="commands">Rqlite parameterised commands.</param>
+	/// <param name="commands">Rqlite parameterised commands - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands);
 
 	/// <summary>
-	/// Execute query and return results.
+	/// Execute queries and return results.
 	/// </summary>
-	/// <param name="query">Rqlite query.</param>
+	/// <param name="query">Rqlite queries.</param>
 	/// <returns>Query results.</returns>
-	Task<RqliteQueryResponse> QueryAsync(string query);
-
-	/// <summary>
-	/// Execute query and return strongly-typed results.
-	/// </summary>
-	/// <typeparam name="T">Record type.</typeparam>
-	/// <param name="query">Rqlite query.</param>
-	/// <returns>Query results.</returns>
-	Task<RqliteQueryResponse<T>> QueryAsync<T>(string query);
+	Task<RqliteQueryResponse> QueryAsync(params string[] queries);
 
 	/// <summary>
 	/// Execute parameterised query and return results.
 	/// </summary>
-	/// <param name="query">Rqlite query.</param>
+	/// <param name="query">Rqlite parameterised query.</param>
 	/// <param name="param">Query parameters - property names must match parameter names.</param>
 	/// <returns>Query results.</returns>
 	Task<RqliteQueryResponse> QueryAsync(string query, object param);
 
 	/// <summary>
+	/// Execute parameterised queries and return results.
+	/// </summary>
+	/// <param name="queries">Rqlite parameterised queries and parameters - property names must match parameter names.</param>
+	/// <returns>Query results.</returns>
+	Task<RqliteQueryResponse> QueryAsync(params (string query, object param)[] queries);
+
+	/// <summary>
+	/// Execute queries and return strongly-typed results. Warning: each query MUST have the same return value or columns,
+	/// or the deserialisation to <typeparamref name="T"/> will fail.
+	/// </summary>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="queries">Rqlite queries.</param>
+	/// <returns>Query results.</returns>
+	Task<RqliteQueryResponse<T>> QueryAsync<T>(params string[] queries);
+
+	/// <summary>
 	/// Execute parameterised query and return results.
 	/// </summary>
-	/// <typeparam name="T">Record type.</typeparam>
-	/// <param name="query">Rqlite query.</param>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="query">Rqlite parameterised query.</param>
 	/// <param name="param">Query parameters - property names must match parameter names.</param>
 	/// <returns>Query results.</returns>
 	Task<RqliteQueryResponse<T>> QueryAsync<T>(string query, object param);
+
+	/// <summary>
+	/// Execute parameterised queries and return results. Warning: each query MUST have the same return value or columns,
+	/// or the deserialisation to <typeparamref name="T"/> will fail.
+	/// </summary>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="queries">Rqlite parameteries queries and parameters - property names must match parameter names.</param>
+	/// <returns>Query results.</returns>
+	Task<RqliteQueryResponse<T>> QueryAsync<T>(params (string query, object param)[] queries);
 }

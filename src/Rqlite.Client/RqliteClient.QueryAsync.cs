@@ -2,6 +2,8 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -26,91 +28,110 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 	}
 
-	/// <inheritdoc/>
-	public async Task<RqliteQueryResponse> QueryAsync(string query)
+	/// <inheritdoc cref="QueryAsync{TQuery, TModel}(IEnumerable{TQuery}, Internals.UriBuilder, Func{HttpRequestMessage, Task{RqliteQueryResponse{TModel}}})"/>
+	internal static async Task<RqliteQueryResponse> QueryAsync<TQuery>(
+		IEnumerable<TQuery> queries,
+		Internals.UriBuilder uriBuilder,
+		Func<HttpRequestMessage, Task<RqliteQueryResponse>> send
+	)
 	{
-		var builder = QueryUri.Value;
-		builder.AddQueryVar("q", query);
+		if (!queries.Any())
+		{
+			return new RqliteQueryResponse("You must pass at least one query.");
+		}
 
 		var request = new HttpRequestMessage
 		{
-			Method = HttpMethod.Get,
-			RequestUri = builder.Build()
+			Content = new JsonContent(queries),
+			Method = HttpMethod.Post,
+			RequestUri = uriBuilder.Build(),
 		};
 
 		try
 		{
-			return await SendAsync<RqliteQueryResponse>(request);
+			return await send(request);
 		}
 		catch (Exception ex)
 		{
 			return new RqliteQueryResponse(ex);
 		}
 	}
-
-	/// <inheritdoc/>
-	public async Task<RqliteQueryResponse<T>> QueryAsync<T>(string query)
+	/// <summary>
+	/// Execute multiple queries and return results.
+	/// </summary>
+	/// <typeparam name="TQuery">Query type.</typeparam>
+	/// <typeparam name="TModel">Return model type.</typeparam>
+	/// <param name="queries">Queries to execute.</param>
+	/// <param name="uriBuilder">URI builder.</param>
+	/// <param name="send">Asynchronous send method.</param>
+	/// <returns>Query results.</returns>
+	internal static async Task<RqliteQueryResponse<TModel>> QueryAsync<TQuery, TModel>(
+		IEnumerable<TQuery> queries,
+		Internals.UriBuilder uriBuilder,
+		Func<HttpRequestMessage, Task<RqliteQueryResponse<TModel>>> send
+	)
 	{
-		var builder = QueryUri.Value;
-		builder.AddQueryVar("associative");
-		builder.AddQueryVar("q", query);
+		if (!queries.Any())
+		{
+			return new RqliteQueryResponse<TModel>("You must pass at least one query.");
+		}
+
+		uriBuilder.AddQueryVar("associative");
 
 		var request = new HttpRequestMessage
 		{
-			Method = HttpMethod.Get,
-			RequestUri = builder.Build()
-		};
-
-		try
-		{
-			return await SendAsync<RqliteQueryResponse<T>>(request);
-		}
-		catch (Exception ex)
-		{
-			return new RqliteQueryResponse<T>(ex);
-		}
-	}
-
-	/// <inheritdoc/>
-	public async Task<RqliteQueryResponse> QueryAsync(string query, object param)
-	{
-		var request = new HttpRequestMessage
-		{
-			Content = new JsonContent(new[] { new[] { query, param } }),
+			Content = new JsonContent(queries),
 			Method = HttpMethod.Post,
-			RequestUri = QueryUri.Value.Build()
+			RequestUri = uriBuilder.Build(),
 		};
 
 		try
 		{
-			return await SendAsync<RqliteQueryResponse>(request);
+			return await send(request);
 		}
 		catch (Exception ex)
 		{
-			return new RqliteQueryResponse(ex);
+			return new RqliteQueryResponse<TModel>(ex);
 		}
 	}
 
 	/// <inheritdoc/>
-	public async Task<RqliteQueryResponse<T>> QueryAsync<T>(string query, object param)
-	{
-		var builder = QueryUri.Value;
-		builder.AddQueryVar("associative");
+	public Task<RqliteQueryResponse> QueryAsync(params string[] queries) =>
+		QueryAsync(
+			queries: queries,
+			uriBuilder: QueryUri.Value,
+			send: SendAsync<RqliteQueryResponse>
+		);
 
-		var request = new HttpRequestMessage
-		{
-			Content = new JsonContent(new[] { new[] { query, param } }),
-			Method = HttpMethod.Post,
-			RequestUri = builder.Build()
-		};
+	/// <inheritdoc/>
+	public Task<RqliteQueryResponse> QueryAsync(string query, object param) =>
+		QueryAsync((query, param));
 
-		try
-		{
-			return await SendAsync<RqliteQueryResponse<T>>(request);
-		}
-		catch (Exception ex)
-		{
-			return new RqliteQueryResponse<T>(ex);
-		}
-	}
+	/// <inheritdoc/>
+	public Task<RqliteQueryResponse> QueryAsync(params (string query, object param)[] queries) =>
+		QueryAsync(
+			queries: from q in queries select new[] { q.query, q.param },
+			uriBuilder: QueryUri.Value,
+			send: SendAsync<RqliteQueryResponse>
+		);
+
+	/// <inheritdoc/>
+	public Task<RqliteQueryResponse<T>> QueryAsync<T>(params string[] queries) =>
+		QueryAsync(
+			queries: queries,
+			uriBuilder: QueryUri.Value,
+			send: SendAsync<RqliteQueryResponse<T>>
+		);
+
+	/// <inheritdoc/>
+	public Task<RqliteQueryResponse<T>> QueryAsync<T>(string query, object param) =>
+		QueryAsync<T>((query, param));
+
+	/// <inheritdoc/>
+	public Task<RqliteQueryResponse<T>> QueryAsync<T>(params (string query, object param)[] queries) =>
+		QueryAsync(
+			queries: from q in queries select new[] { q.query, q.param },
+			uriBuilder: QueryUri.Value,
+			send: SendAsync<RqliteQueryResponse<T>>
+		);
 }
