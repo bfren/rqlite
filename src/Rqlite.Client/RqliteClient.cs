@@ -62,7 +62,9 @@ public sealed partial class RqliteClient : IRqliteClient
 		return result;
 	}
 
-	/// <inheritdoc/>
+	/// <summary>
+	/// Dispose <see cref="HttpClient"/>.
+	/// </summary>
 	public void Dispose() =>
 		HttpClient.Dispose();
 }

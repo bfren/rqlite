@@ -70,7 +70,7 @@ internal static class LoggerExtensions
 	/// Log the Rqlite version.
 	/// </summary>
 	/// <param name="this"></param>
-	/// <param name="version">Version string</param>
+	/// <param name="version">Version string.</param>
 	internal static void Version(this ILogger @this, string? version) =>
 		LogVersion(@this, version, null);
 }

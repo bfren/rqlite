@@ -7,9 +7,7 @@ using System.Text.Json;
 
 namespace Rqlite.Client;
 
-/// <summary>
-/// Rqlite response from a query request.
-/// </summary>
+/// <inheritdoc cref="RqliteQueryResponse{T}"/>
 public sealed record class RqliteQueryResponse : RqliteResponse<RqliteQueryResponse.Result>
 {
 	/// <inheritdoc/>
@@ -43,6 +41,10 @@ public sealed record class RqliteQueryResponse : RqliteResponse<RqliteQueryRespo
 	}
 }
 
+/// <summary>
+/// Rqlite response from a query request.
+/// </summary>
+/// <typeparam name="T">Return model type.</typeparam>
 public sealed record class RqliteQueryResponse<T> : RqliteResponse<RqliteQueryResponse<T>.Result>
 {
 	/// <inheritdoc/>
