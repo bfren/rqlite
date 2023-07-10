@@ -28,8 +28,17 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 	}
 
-	internal static async Task<RqliteExecuteResponse> ExecuteAsync<T>(
-		IEnumerable<T> commands,
+	/// <summary>
+	/// Execute multiple commands and return results.
+	/// </summary>
+	/// <typeparam name="TCommand">Command type.</typeparam>
+	/// <param name="commands">Commands to execute.</param>
+	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction.</param>
+	/// <param name="uriBuilder">URI builder.</param>
+	/// <param name="send">Asynchronous send method.</param>
+	/// <returns>Command results.</returns>
+	internal static async Task<RqliteExecuteResponse> ExecuteAsync<TCommand>(
+		IEnumerable<TCommand> commands,
 		bool asSingleTransaction,
 		Internals.UriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteExecuteResponse>> send

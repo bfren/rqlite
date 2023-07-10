@@ -35,7 +35,7 @@ public interface IRqliteClient : IDisposable
 	/// Execute commands and return results, optionally using a single transaction
 	/// (i.e. if one fails, none will be executed).
 	/// </summary>
-	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction</param>
+	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction.</param>
 	/// <param name="commands">Rqlite commands.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params string[] commands);
@@ -60,7 +60,7 @@ public interface IRqliteClient : IDisposable
 	/// Execute parameterised commands and return results, optionally using a single transaction
 	/// (i.e. if one fails, none will be executed).
 	/// </summary>
-	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction</param>
+	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction.</param>
 	/// <param name="commands">Rqlite parameterised commands - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
 	Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands);
