@@ -6,6 +6,9 @@
 		},
 		"logging": {
 			"minimum": "Debug",
+			"overrides": {
+				"System.Net.Http.HttpClient": "Warning"
+			},
 			"providers": {
 				"console.serilog": {
 					"enabled": true

@@ -34,4 +34,6 @@
 		<ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
 	</ItemGroup>
 
+	<ProjectExtensions><VisualStudio><UserProperties jeebsconfig_1json__JsonSchema="https://schemas.bfren.dev/jeebs/application/config/2022-06.json" /></VisualStudio></ProjectExtensions>
+
 </Project>
