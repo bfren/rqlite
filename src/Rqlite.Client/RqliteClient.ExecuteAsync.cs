@@ -6,28 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Rqlite.Client.Internals;
+using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
 
 public sealed partial class RqliteClient : IRqliteClient
 {
-	/// <summary>
-	/// Returns the URI path for execute requests, including timings if <see cref="IncludeTimings"/> is true.
-	/// </summary>
-	internal Lazy<Internals.UriBuilder> ExecuteUri
-	{
-		get
-		{
-			var uriBuilder = new Internals.UriBuilder("/db/execute");
-			if (IncludeTimings)
-			{
-				uriBuilder.AddQueryVar("timings");
-			}
-
-			return new(uriBuilder);
-		}
-	}
-
 	/// <summary>
 	/// Execute multiple commands and return results.
 	/// </summary>
@@ -40,7 +25,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	internal static async Task<RqliteExecuteResponse> ExecuteAsync<TCommand>(
 		IEnumerable<TCommand> commands,
 		bool asSingleTransaction,
-		Internals.UriBuilder uriBuilder,
+		UriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteExecuteResponse>> send
 	)
 	{
@@ -80,7 +65,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		ExecuteAsync(
 			commands: commands,
 			asSingleTransaction: asSingleTransaction,
-			uriBuilder: ExecuteUri.Value,
+			uriBuilder: ExecuteUri(),
 			send: SendAsync<RqliteExecuteResponse>
 		);
 
@@ -97,7 +82,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		ExecuteAsync(
 			commands: from c in commands select new[] { c.command, c.param },
 			asSingleTransaction: asSingleTransaction,
-			uriBuilder: ExecuteUri.Value,
+			uriBuilder: ExecuteUri(),
 			send: SendAsync<RqliteExecuteResponse>
 		);
 }

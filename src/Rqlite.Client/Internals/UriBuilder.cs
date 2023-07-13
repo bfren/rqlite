@@ -30,6 +30,19 @@ internal sealed class UriBuilder
 		Path = path;
 
 	/// <summary>
+	/// Create builder and optionally include timings with all requests.
+	/// </summary>
+	/// <param name="path">URI path.</param>
+	/// <param name="includeTimings">Whether or not to include timings with each request.</param>
+	internal UriBuilder(string path, bool includeTimings) : this(path)
+	{
+		if (includeTimings)
+		{
+			AddQueryVar("timings");
+		}
+	}
+
+	/// <summary>
 	/// Add a query var without a value.
 	/// </summary>
 	/// <param name="key">Query var key.</param>

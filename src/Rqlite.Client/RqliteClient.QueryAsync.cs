@@ -6,32 +6,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Rqlite.Client.Internals;
+using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
 
 public sealed partial class RqliteClient : IRqliteClient
 {
-	/// <summary>
-	/// Returns the URI path for query requests, including timings if <see cref="IncludeTimings"/> is true.
-	/// </summary>
-	internal Lazy<Internals.UriBuilder> QueryUri
-	{
-		get
-		{
-			var builder = new Internals.UriBuilder("/db/query");
-			if (IncludeTimings)
-			{
-				builder.AddQueryVar("timings");
-			}
-
-			return new(builder);
-		}
-	}
-
-	/// <inheritdoc cref="QueryAsync{TQuery, TModel}(IEnumerable{TQuery}, Internals.UriBuilder, Func{HttpRequestMessage, Task{RqliteQueryResponse{TModel}}})"/>
+	/// <inheritdoc cref="QueryAsync{TQuery, TModel}(IEnumerable{TQuery}, UriBuilder, Func{HttpRequestMessage, Task{RqliteQueryResponse{TModel}}})"/>
 	internal static async Task<RqliteQueryResponse> QueryAsync<TQuery>(
 		IEnumerable<TQuery> queries,
-		Internals.UriBuilder uriBuilder,
+		UriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteQueryResponse>> send
 	)
 	{
@@ -67,7 +52,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <returns>Query results.</returns>
 	internal static async Task<RqliteQueryResponse<TModel>> QueryAsync<TQuery, TModel>(
 		IEnumerable<TQuery> queries,
-		Internals.UriBuilder uriBuilder,
+		UriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteQueryResponse<TModel>>> send
 	)
 	{
@@ -99,7 +84,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	public Task<RqliteQueryResponse> QueryAsync(params string[] queries) =>
 		QueryAsync(
 			queries: queries,
-			uriBuilder: QueryUri.Value,
+			uriBuilder: QueryUri(),
 			send: SendAsync<RqliteQueryResponse>
 		);
 
@@ -111,7 +96,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	public Task<RqliteQueryResponse> QueryAsync(params (string query, object param)[] queries) =>
 		QueryAsync(
 			queries: from q in queries select new[] { q.query, q.param },
-			uriBuilder: QueryUri.Value,
+			uriBuilder: QueryUri(),
 			send: SendAsync<RqliteQueryResponse>
 		);
 
@@ -119,7 +104,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	public Task<RqliteQueryResponse<T>> QueryAsync<T>(params string[] queries) =>
 		QueryAsync(
 			queries: queries,
-			uriBuilder: QueryUri.Value,
+			uriBuilder: QueryUri(),
 			send: SendAsync<RqliteQueryResponse<T>>
 		);
 
@@ -131,7 +116,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	public Task<RqliteQueryResponse<T>> QueryAsync<T>(params (string query, object param)[] queries) =>
 		QueryAsync(
 			queries: from q in queries select new[] { q.query, q.param },
-			uriBuilder: QueryUri.Value,
+			uriBuilder: QueryUri(),
 			send: SendAsync<RqliteQueryResponse<T>>
 		);
 }

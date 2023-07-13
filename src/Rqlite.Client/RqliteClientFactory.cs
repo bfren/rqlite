@@ -37,28 +37,28 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 		(HttpClientFactory, Logger, Options) = (httpClientFactory, logger, options.Value);
 
 	/// <inheritdoc/>
-	public IRqliteClient CreateClient()
-	{
-		if (Options.DefaultClientName is string httpClientName)
+	public IRqliteClient CreateClient() =>
+		Options.DefaultClientName switch
 		{
-			return CreateClient(httpClientName);
-		}
-		else
-		{
-			throw new UndefinedDefaultClientException("Default HttpClient name must be defined in Rqlite settings.");
-		}
-	}
+			string httpClientName =>
+				CreateClient(httpClientName),
+
+			_ =>
+				throw new UndefinedDefaultClientException("Default HttpClient name must be defined in Rqlite settings.")
+		};
 
 	/// <inheritdoc/>
-	public IRqliteClient CreateClient(string httpClientName)
-	{
-		if (Options.Clients.GetValueOrDefault(httpClientName) is RqliteOptions.Client client)
+	public IRqliteClient CreateClient(string httpClientName) =>
+		Options.Clients.GetValueOrDefault(httpClientName) switch
 		{
-			var httpClient = HttpClientFactory.CreateClient(httpClientName);
-			var includeTimings = client.IncludeTimings ?? Options.IncludeTimings;
-			return new RqliteClient(httpClient, includeTimings, Logger);
-		}
+			RqliteOptions.Client client =>
+				new RqliteClient(
+					httpClient: HttpClientFactory.CreateClient(httpClientName),
+					includeTimings: client.IncludeTimings ?? Options.IncludeTimings,
+					logger: Logger
+				),
 
-		throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings.");
-	}
+			_ =>
+				throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings.")
+		};
 }
