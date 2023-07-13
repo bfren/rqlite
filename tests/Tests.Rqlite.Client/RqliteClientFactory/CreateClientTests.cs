@@ -23,7 +23,7 @@ public class when_DefaultClientName_is_not_defined : RqliteClientFactoryTests
 
 public class when_Clients_is_empty : RqliteClientFactoryTests
 {
-	public string ClientName { get; set; } = string.Empty;
+	public string ClientName { get; set; }
 
 	public when_Clients_is_empty()
 	{
