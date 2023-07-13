@@ -15,12 +15,12 @@ internal sealed class UriBuilder
 	/// <summary>
 	/// URI path.
 	/// </summary>
-	private string Path { get; }
+	internal string Path { get; }
 
 	/// <summary>
 	/// Query vars collection.
 	/// </summary>
-	private NameValueCollection QueryVars { get; } = new();
+	internal NameValueCollection QueryVars { get; } = new();
 
 	/// <summary>
 	/// Create builder with a URI path.
