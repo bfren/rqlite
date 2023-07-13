@@ -14,20 +14,7 @@ public static class RqliteQueryResponseExtensions
 {
 	/// <summary>
 	/// Flatten a <see cref="RqliteQueryResponse"/> by returning all results as a single list.
-	/// Warning: any errors will be ignored!
-	/// </summary>
-	/// <typeparam name="T">Return record typ</typeparam>
-	/// <param name="this">RqliteQueryResponse.</param>
-	/// <returns>Flattened list of results.</returns>
-	public static async Task<List<T>> Flatten<T>(this Task<RqliteQueryResponse<T>> @this)
-	{
-		var response = await @this;
-		return Flatten(response);
-	}
-
-	/// <summary>
-	/// Flatten a <see cref="RqliteQueryResponse"/> by returning all results as a single list.
-	/// Warning: any errors will be ignored!
+	/// Warning: any errors will be ignored and an empty list returned instead!
 	/// </summary>
 	/// <typeparam name="T">Return record typ</typeparam>
 	/// <param name="this">Asynchronous RqliteQueryResponse.</param>
@@ -41,4 +28,8 @@ public static class RqliteQueryResponseExtensions
 
 		return @this.Results.SelectMany(r => r.Rows ?? new()).ToList();
 	}
+
+	/// <inheritdoc cref="Flatten{T}(RqliteQueryResponse{T})"/>
+	public static async Task<List<T>> Flatten<T>(this Task<RqliteQueryResponse<T>> @this) =>
+		Flatten(await @this);
 }
