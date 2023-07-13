@@ -2,4 +2,7 @@
 	<PropertyGroup>
 		<RootNamespace>Rqlite.Client</RootNamespace>
 	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
+	</ItemGroup>
 </Project>

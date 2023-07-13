@@ -3,6 +3,18 @@
 file_header_template = Rqlite: Unit Tests\nCopyright (c) bfren - licensed under https://mit.bfren.dev/2023
 insert_final_newline = true
 
+# CA1707: Identifiers should not contain underscores
+dotnet_diagnostic.CA1707.severity = none
+
+# IDE0021: Use expression body for constructor
+dotnet_diagnostic.IDE0021.severity = none
+
+# IDE0058: Expression value is never used
+dotnet_diagnostic.IDE0058.severity = none
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
 # IDE0130: Namespace does not match folder structure
 dotnet_diagnostic.IDE0130.severity = none
 
