@@ -44,6 +44,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{F7DB54D4-3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "apps\ConsoleApp\ConsoleApp.csproj", "{B720C6DF-F92D-4816-BAEC-FB8C330008C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadmeApp", "apps\ReadmeApp\ReadmeApp.csproj", "{B8A8824C-0F1C-4F22-989E-4109D19A3A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{58C30D92-A396-40A0-A79B-BC95E20A7FD0} = {6D2C2580-0B7D-4356-AF0C-94519B5CBF51}
 		{21D34529-32FE-4347-999C-7C1702AFE506} = {4C4FF153-158F-43E1-887A-7520CA0480E0}
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4} = {F7DB54D4-38A7-44CA-A328-3CD6EA06D8A6}
+		{B8A8824C-0F1C-4F22-989E-4109D19A3A42} = {F7DB54D4-38A7-44CA-A328-3CD6EA06D8A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6903F1A1-588F-42D0-9B57-7DA085F6400C}
