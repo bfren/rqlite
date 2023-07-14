@@ -118,7 +118,7 @@ public interface IRqliteClient : IDisposable
 	/// <summary>
 	/// Execute a query and return a strongly-typed value.
 	/// </summary>
-	/// <typeparam name="T">Return model type.</typeparam>
+	/// <typeparam name="T">Return value type.</typeparam>
 	/// <param name="query">Rqlite query.</param>
 	/// <returns>Query value.</returns>
 	Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query);
@@ -126,7 +126,7 @@ public interface IRqliteClient : IDisposable
 	/// <summary>
 	/// Execute parameterised query and return a strongly-typed value.
 	/// </summary>
-	/// <typeparam name="T">Return model type.</typeparam>
+	/// <typeparam name="T">Return value type.</typeparam>
 	/// <param name="query">Rqlite parameterised query.</param>
 	/// <param name="param">Query parameters - property names must match parameter names.</param>
 	/// <returns>Query value.</returns>
