@@ -22,7 +22,7 @@ internal sealed class JsonContent : StringContent
 	/// Serialise content and set encoding.
 	/// </summary>
 	/// <param name="content">Content to be serialised as JSON.</param>
-	internal JsonContent(object content) : base(
+	internal JsonContent(object? content) : base(
 		content: JsonSerializer.Serialize(content, SerialiserOptions),
 		encoding: Encoding.UTF8,
 		mediaType: "application/json"
