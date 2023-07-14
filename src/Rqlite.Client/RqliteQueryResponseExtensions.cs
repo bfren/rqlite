@@ -13,7 +13,7 @@ namespace Rqlite.Client;
 public static class RqliteQueryResponseExtensions
 {
 	/// <summary>
-	/// Flatten a <see cref="RqliteQueryResponse"/> by returning all results as a single list.
+	/// Flatten a <see cref="RqliteQueryResponse{T}"/> by returning all results as a single list.
 	/// Warning: any errors will be ignored and an empty list returned instead!
 	/// </summary>
 	/// <typeparam name="T">Return record type</typeparam>
