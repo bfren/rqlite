@@ -16,6 +16,6 @@ public class default_value
 		var result = options.IncludeTimings;
 
 		// Assert
-		Assert.True(result);
+		Assert.False(result);
 	}
 }

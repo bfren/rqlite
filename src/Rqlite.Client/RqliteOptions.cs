@@ -18,7 +18,7 @@ public sealed record class RqliteOptions
 	/// <summary>
 	/// If set to true, timings will be included with each request.
 	/// </summary>
-	public bool IncludeTimings { get; init; } = true;
+	public bool IncludeTimings { get; init; }
 
 	/// <summary>
 	/// The default timeout in seconds.
