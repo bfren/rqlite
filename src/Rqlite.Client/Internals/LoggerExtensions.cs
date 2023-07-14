@@ -13,8 +13,14 @@ namespace Rqlite.Client.Internals;
 /// <summary>
 /// Extension methods for <see cref="ILogger"/> to use <see cref="LoggerMessage"/> pattern.
 /// </summary>
-internal static class LoggerExtensions
+internal static partial class LoggerExtensions
 {
+#if NET7_0_OR_GREATER
+	// HT https://stackoverflow.com/a/462586/8199362
+	[GeneratedRegex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase, "en-GB")]
+	private static partial Regex UnicodeEscapedCharacters();
+#endif
+
 	private static readonly Action<ILogger, HttpMethod, Uri?, string?, Exception?> LogRequest =
 		LoggerMessage.Define<HttpMethod, Uri?, string?>(LogLevel.Debug, new(), "{Method} {Uri}: {Content}");
 
@@ -36,8 +42,11 @@ internal static class LoggerExtensions
 			return string.Empty;
 		}
 
-		// HT https://stackoverflow.com/a/462586/8199362
+#if NET7_0_OR_GREATER
+		var regex = UnicodeEscapedCharacters();
+#else
 		var regex = new Regex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase);
+#endif
 		return regex.Replace(
 			input: Encoding.UTF8.GetString(bytes),
 			evaluator: match => parse(match).ToString()
