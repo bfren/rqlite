@@ -14,7 +14,7 @@ var factory = app.Services.GetRequiredService<IRqliteClientFactory>();
 using var client = factory.CreateClient();
 
 // create a table
-await client.ExecuteAsync("DROP TABLE foo");
+await client.ExecuteAsync("DROP TABLE IF EXISTS foo");
 await client.ExecuteAsync("CREATE TABLE foo (id INTEGER NOT NULL PRIMARY KEY, name TEXT, age INTEGER)");
 
 // 0: insert a row using parameters
