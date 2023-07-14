@@ -1,10 +1,11 @@
-// Maybe: Rqlite Client for .NET.
+// Rqlite client for .NET.
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Client.Internals;
+using Rqlite.Client.Response;
 using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
