@@ -42,7 +42,7 @@ log.Dbg("Query result: {@Row}", queryResult0);
 
 Console.WriteLine();
 log.Inf("4 - without specifiying client name");
-var queryResult1 = await client1.QueryAsync<ConsoleApp.Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
+var queryResult1 = await client1.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 log.Dbg("Query result: {@Row}", queryResult1);
 
 Console.WriteLine();
@@ -53,7 +53,7 @@ log.Dbg("Query result: {@Row}", queryResult2);
 Console.WriteLine();
 log.Inf("6 - with client name");
 var query3 = "SELECT * FROM foo WHERE age > :age";
-var queryResult3 = await client2.QueryAsync<ConsoleApp.Person>(
+var queryResult3 = await client2.QueryAsync<Person>(
 	(query3, new { age = Rnd.Int }),
 	(query3, new { age = Rnd.Int })
 );
@@ -67,9 +67,11 @@ var query4 = "SELECT * FROM foo WHERE name = :name";
 var queryResult4 = await client2.QueryAsync(query4, new { name });
 log.Dbg($"{name} is {{Age}}", queryResult4.Results[0].Values![0].First().GetInt32());
 
+Console.WriteLine();
+log.Inf("8 - with client name");
+var queryResult5 = await client2.QueryAsync<Person>(query4, new { name }).Flatten();
+log.Dbg($"{name} is {{Age}}", queryResult5[0].Age);
+
 Console.ReadLine();
 
-namespace ConsoleApp
-{
-	public readonly record struct Person(int Id, string Name, int Age);
-}
+internal sealed record Person(int Id, string Name, int Age);
