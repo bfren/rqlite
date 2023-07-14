@@ -16,8 +16,8 @@ public static class RqliteQueryResponseExtensions
 	/// Flatten a <see cref="RqliteQueryResponse"/> by returning all results as a single list.
 	/// Warning: any errors will be ignored and an empty list returned instead!
 	/// </summary>
-	/// <typeparam name="T">Return record typ</typeparam>
-	/// <param name="this">Asynchronous RqliteQueryResponse.</param>
+	/// <typeparam name="T">Return record type</typeparam>
+	/// <param name="this">RqliteQueryResponse.</param>
 	/// <returns>Flattened list of results.</returns>
 	public static List<T> Flatten<T>(this RqliteQueryResponse<T> @this)
 	{
