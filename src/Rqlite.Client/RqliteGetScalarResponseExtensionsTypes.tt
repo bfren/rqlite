@@ -2,7 +2,7 @@
 <#@ import namespace="System.IO" #>
 <#@ output extension=".cs" #>
 <#
-	var filename = this.Host.ResolvePath("RqliteGetScalarResponseExtensionsInput.csv");
+	var filename = this.Host.ResolvePath("RqliteGetScalarResponseExtensionsTypes.csv");
 	var lines = File.ReadLines(filename);
 #>
 // Maybe: Rqlite Client for .NET.
