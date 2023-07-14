@@ -8,4 +8,32 @@
 		<PackageReference Include="Microsoft.Extensions.Http" />
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
 	</ItemGroup>
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="RqliteGetScalarResponseExtensions.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>RqliteGetScalarResponseExtensions.tt</DependentUpon>
+		</Compile>
+		<Compile Update="RqliteGetScalarResponseExtensionsGenerator.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>RqliteGetScalarResponseExtensionsGenerator.tt</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="RqliteGetScalarResponseExtensionsGenerator.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>RqliteGetScalarResponseExtensionsGenerator.tt</DependentUpon>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="RqliteGetScalarResponseExtensionsGenerator.tt">
+			<Generator>TextTemplatingFileGenerator</Generator>
+			<LastGenOutput>RqliteGetScalarResponseExtensionsGenerator.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
 </Project>
