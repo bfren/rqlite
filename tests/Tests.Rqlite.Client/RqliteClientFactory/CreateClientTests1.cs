@@ -1,66 +1,11 @@
-﻿// Rqlite: Unit Tests
+// Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using Rqlite.Client.Internals;
 
 namespace Rqlite.Client.RqliteClientFactoryTests.CreateClientTests;
 
-public class when_DefaultClientName_is_not_defined : RqliteClientFactoryTests
-{
-	[Fact]
-	public void throws_UndefinedDefaultClientException()
-	{
-		// Arrange
-		var (factory, _) = Setup();
-
-		// Act
-		IRqliteClient act() => factory.CreateClient();
-
-		// Assert
-		Assert.Throws<UndefinedDefaultClientException>(act);
-	}
-}
-
-public class when_Clients_is_empty : RqliteClientFactoryTests
-{
-	public string ClientName { get; set; }
-
-	public when_Clients_is_empty()
-	{
-		ClientName = Rnd.Str;
-	}
-
-	[Fact]
-	public void throws_UnknownClientException()
-	{
-		// Arrange
-		var clientName = Rnd.Str;
-		var (factory, _) = Setup(new() { DefaultClientName = clientName });
-
-		// Act
-		IRqliteClient act0() => factory.CreateClient();
-		IRqliteClient act1() => factory.CreateClient(clientName);
-
-		// Assert
-		Assert.Throws<UnknownClientException>(act0);
-		Assert.Throws<UnknownClientException>(act1);
-	}
-
-	[Fact]
-	public void exception_contains_requested_client_name()
-	{
-		// Arrange
-		var clientName = Rnd.Str;
-		var (factory, _) = Setup();
-
-		// Act
-		IRqliteClient act() => factory.CreateClient(clientName);
-
-		// Assert
-		var ex = Assert.Throws<UnknownClientException>(act);
-		Assert.Contains(clientName, ex.ToString());
-	}
-}
+/// <see cref="RqliteClientFactory.CreateClient(string)"/>
 
 public class when_Clients_does_not_contain_named_client : RqliteClientFactoryTests
 {

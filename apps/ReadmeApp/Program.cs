@@ -1,38 +1,16 @@
-# Rqlite .NET Client
+// Rqlite: Test Apps
+// Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/bfren/rqlite?include_prereleases&label=Version) ![Nuget](https://img.shields.io/nuget/dt/rqlite?label=Downloads) ![GitHub](https://img.shields.io/github/license/bfren/rqlite?label=Licence)
+using Microsoft.Extensions.DependencyInjection;
+using Rqlite.Client;
 
-[![Test](https://github.com/bfren/rqlite/actions/workflows/test.yml/badge.svg)](https://github.com/bfren/rqlite/actions/workflows/test.yml) ![Publish](https://github.com/bfren/rqlite/workflows/Publish/badge.svg)
+// register Rqlite with dependency injection
+var (app, log) = Jeebs.Apps.Host.Create(args, (ctx, services) => services.AddRqlite());
 
-Simple .NET client for [Rqlite](https://rqlite.io), with deserialisation support.
+// get IRqliteClientFactory instance
+var factory = app.Services.GetRequiredService<IRqliteClientFactory>();
 
-## Features
-
-- Configure multiple connections in settings
-- Execute (e.g. INSERT) and Query support
-- Return query results as rows or map to objects
-- Use parameters for Execute and Query
-- Support for transactions and multiple statements
-
-## Getting Started
-
-The simplest way to start testing is to use [Docker](https://docker.com):
-
-```bash
-docker run -p4001:4001 rqlite/rqlite
-```
-
-Install the [NuGet package](https://nuget.org/packages/rqlite).  You can see a functioning example of the code below in the ReadmeApp project of this repository.
-
-```csharp
-// register Rqlite with dependency injection in your host startup
-// (currently supports Microsoft.Extensions.DependencyInjection)
-services.AddRqlite();
-
-// add IRqliteClientFactory to a class constructor, or use IServiceProvider
-var factory = provider.GetRequiredService<IRqliteClientFactory>();
-
-// creates default IRqliteClient, listening on http://localhost:4001
+// create default IRqliteClient, listening on http://localhost:4001
 using var client = factory.CreateClient();
 
 // create a table
@@ -72,11 +50,10 @@ Console.WriteLine("Found {0}.", query3.First());
 var param2 = new { name = "Bella", age = 31 };
 var param3 = new { name = "Alex", age = 59 };
 var query4 = await client.ExecuteAsync(
-    (sql0, param2),
-    (sql0, param3)
+	(sql0, param2),
+	(sql0, param3)
 );
 Console.WriteLine("Inserted records {0}.", string.Join(", ", query4.Results.Select(r => r.LastInsertId)));
 // Output: 'Inserted records 2, 3.'
 
 internal sealed record Person(int Id, string Name, int Age);
-```

@@ -1,9 +1,11 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals.UriBuilderTests;
+namespace Rqlite.Client.Internals.UriBuilderTests.ConstructorTests;
 
-public class ConstructorTests
+/// <see cref="UriBuilder(string)"/>
+
+public class when_called
 {
 	[Fact]
 	public void saves_path()

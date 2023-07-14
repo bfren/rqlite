@@ -1,4 +1,4 @@
-﻿// Rqlite: Unit Tests
+// Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using Microsoft.Extensions.Logging;
@@ -11,16 +11,21 @@ public abstract class RqliteClientFactoryTests
 	protected static (RqliteClientFactory, Vars) Setup(RqliteOptions? options = null)
 	{
 		var httpClientFactorySub = Substitute.For<IHttpClientFactory>();
+		httpClientFactorySub.CreateClient(default!).ReturnsForAnyArgs(new HttpClient());
+
 		var loggerSub = Substitute.For<ILogger<RqliteClient>>();
+
 		var optionsInst = options ?? new();
 		var optionsSub = Substitute.For<IOptions<RqliteOptions>>();
 		_ = optionsSub.Value.Returns(optionsInst);
+
 		var rqliteClientFactory = new RqliteClientFactory(httpClientFactorySub, loggerSub, optionsSub);
 
-		return (rqliteClientFactory, new(httpClientFactorySub, loggerSub, optionsInst));
+		return (rqliteClientFactory, new(new(), httpClientFactorySub, loggerSub, optionsInst));
 	}
 
 	public sealed record class Vars(
+		RqliteOptions.Client ClientOptions,
 		IHttpClientFactory HttpClientFactory,
 		ILogger<RqliteClient> Logger,
 		RqliteOptions Options

@@ -1,24 +1,23 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.RqliteOptionsTests.ClientTests;
+namespace Rqlite.Client.RqliteOptionsTests.ClientTests.BaseAddressTests;
 
-public class BaseAddressTests
+/// <see cref="RqliteOptions.Client.BaseAddress"/>
+
+public class default_value
 {
-	public class default_value
+	[Fact]
+	public void is_rqlite_default()
 	{
-		[Fact]
-		public void is_rqlite_default()
-		{
-			// Arrange
-			var client = new RqliteOptions.Client();
-			var rqliteDefaultAddress = "http://localhost:4001";
+		// Arrange
+		var client = new RqliteOptions.Client();
+		var rqliteDefaultAddress = "http://localhost:4001";
 
-			// Act
-			var result = client.BaseAddress;
+		// Act
+		var result = client.BaseAddress;
 
-			// Assert
-			Assert.Equal(rqliteDefaultAddress, result);
-		}
+		// Assert
+		Assert.Equal(rqliteDefaultAddress, result);
 	}
 }

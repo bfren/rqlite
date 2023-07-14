@@ -9,7 +9,8 @@ namespace Rqlite.Client;
 public interface IRqliteClientFactory
 {
 	/// <summary>
-	/// Create a new <see cref="IRqliteClient"/> using the default named HttpClient (see <see cref="RqliteOptions.DefaultClientName"/>.
+	/// Create a new <see cref="IRqliteClient"/> using the default named HttpClient
+	/// (see <see cref="RqliteOptions.DefaultClientName"/>.
 	/// </summary>
 	/// <returns>IRqliteClient instance.</returns>
 	IRqliteClient CreateClient();
@@ -20,4 +21,10 @@ public interface IRqliteClientFactory
 	/// <param name="httpClientName">Name of a preconfigured HttpClient.</param>
 	/// <returns>IRqliteClient instance.</returns>
 	IRqliteClient CreateClient(string httpClientName);
+
+	/// <summary>
+	/// Create a client using default values in <see cref="RqliteOptions"/>.
+	/// </summary>
+	/// <returns>Default RqliteClient instance.</returns>
+	IRqliteClient CreateClientWithDefaults();
 }

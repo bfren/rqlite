@@ -41,6 +41,7 @@ public sealed partial class RqliteClient : IRqliteClient
 			return new RqliteQueryResponse(ex);
 		}
 	}
+
 	/// <summary>
 	/// Execute multiple queries and return results.
 	/// </summary>

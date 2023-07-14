@@ -1,9 +1,11 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals.JsonContentTests;
+namespace Rqlite.Client.Internals.JsonContentTests.ConstructorTests;
 
-public class ConstructorTests
+/// <see cref="JsonContent(object)"/>
+
+public class when_called
 {
 	[Fact]
 	public void seralises_content_as_json()

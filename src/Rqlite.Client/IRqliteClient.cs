@@ -68,7 +68,7 @@ public interface IRqliteClient : IDisposable
 	/// <summary>
 	/// Execute queries and return results.
 	/// </summary>
-	/// <param name="query">Rqlite queries.</param>
+	/// <param name="queries">Rqlite queries.</param>
 	/// <returns>Query results.</returns>
 	Task<RqliteQueryResponse> QueryAsync(params string[] queries);
 
@@ -110,7 +110,24 @@ public interface IRqliteClient : IDisposable
 	/// or the deserialisation to <typeparamref name="T"/> will fail.
 	/// </summary>
 	/// <typeparam name="T">Return model type.</typeparam>
-	/// <param name="queries">Rqlite parameteries queries and parameters - property names must match parameter names.</param>
+	/// <param name="queries">Rqlite parameterised queries and parameters - property names must match parameter names.</param>
 	/// <returns>Query results.</returns>
 	Task<RqliteQueryResponse<T>> QueryAsync<T>(params (string query, object param)[] queries);
+
+	/// <summary>
+	/// Execute a query and return a strongly-typed value.
+	/// </summary>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="query">Rqlite query.</param>
+	/// <returns>Query value.</returns>
+	Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query);
+
+	/// <summary>
+	/// Execute parameterised query and return a strongly-typed value.
+	/// </summary>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="query">Rqlite parameterised query.</param>
+	/// <param name="param">Query parameters - property names must match parameter names.</param>
+	/// <returns>Query value.</returns>
+	Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query, object param);
 }

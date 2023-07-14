@@ -8,43 +8,52 @@ using Rqlite.Client;
 var (app, log) = Jeebs.Apps.Host.Create(args, (ctx, services) => services.AddRqlite());
 
 var factory = app.Services.GetRequiredService<IRqliteClientFactory>();
-using var client0 = factory.CreateClient();
-using var client1 = factory.CreateClient("localhost1");
+using var client0 = factory.CreateClientWithDefaults();
+using var client1 = factory.CreateClient();
+using var client2 = factory.CreateClient("localhost1");
 
-var version = await client0.GetVersionAsync();
+var version = await client1.GetVersionAsync();
 log.Inf("Version: {Version}", version);
 
-log.Inf("0");
+Console.WriteLine();
+log.Inf("0 - using client defaults");
 var createTableResult = await client0.ExecuteAsync("CREATE TABLE foo (id INTEGER NOT NULL PRIMARY KEY, name TEXT, age INTEGER)");
 log.Dbg("Create table result: {@Result}", createTableResult);
 
-log.Inf("1");
-var insertRowResult0 = await client0.ExecuteAsync($"INSERT INTO foo(name, age) VALUES('{Rnd.Str}', {Rnd.Int})");
+Console.WriteLine();
+log.Inf("1 - using client defaults");
+var name = Rnd.Str;
+var insertRowResult0 = await client0.ExecuteAsync($"INSERT INTO foo(name, age) VALUES('{name}', {Rnd.Int})");
 log.Dbg("Insert row result: {@Row}", insertRowResult0);
 
-log.Inf("2");
+Console.WriteLine();
+log.Inf("2 - without specifiying client name");
 var insertRowCommand1 = "INSERT INTO foo(name, age) VALUES(:name, :age)";
-var insertRowResult1 = await client0.ExecuteAsync(true,
+var insertRowResult1 = await client1.ExecuteAsync(true,
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int }),
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int })
 );
 log.Dbg("Insert row result: {@Row}", insertRowResult1);
 
-log.Inf("3");
-var queryResult0 = await client0.QueryAsync($"SELECT * FROM foo WHERE age > {Rnd.Int}");
+Console.WriteLine();
+log.Inf("3 - without specifiying client name");
+var queryResult0 = await client1.QueryAsync($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 log.Dbg("Query result: {@Row}", queryResult0);
 
-log.Inf("4");
-var queryResult1 = await client0.QueryAsync<ConsoleApp.Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
+Console.WriteLine();
+log.Inf("4 - without specifiying client name");
+var queryResult1 = await client1.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 log.Dbg("Query result: {@Row}", queryResult1);
 
-log.Inf("5");
-var queryResult2 = await client0.QueryAsync("SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
+Console.WriteLine();
+log.Inf("5 - with client name");
+var queryResult2 = await client2.QueryAsync("SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
 log.Dbg("Query result: {@Row}", queryResult2);
 
-log.Inf("6");
+Console.WriteLine();
+log.Inf("6 - with client name");
 var query3 = "SELECT * FROM foo WHERE age > :age";
-var queryResult3 = await client1.QueryAsync<ConsoleApp.Person>(
+var queryResult3 = await client2.QueryAsync<Person>(
 	(query3, new { age = Rnd.Int }),
 	(query3, new { age = Rnd.Int })
 );
@@ -52,9 +61,17 @@ log.Dbg("Query 0 result: {@Row}", queryResult3.Results[0].Rows!);
 log.Dbg("Query 1 result: {@Row}", queryResult3.Results[1].Rows!);
 log.Dbg("Flattened query result: {@Row}", queryResult3.Flatten());
 
+Console.WriteLine();
+log.Inf("7 - with client name");
+var query4 = "SELECT * FROM foo WHERE name = :name";
+var queryResult4 = await client2.QueryAsync(query4, new { name });
+log.Dbg($"{name} is {{Age}}", queryResult4.Results[0].Values![0].First().GetInt32());
+
+Console.WriteLine();
+log.Inf("8 - with client name");
+var queryResult5 = await client2.QueryAsync<Person>(query4, new { name }).Flatten();
+log.Dbg($"{name} is {{Age}}", queryResult5[0].Age);
+
 Console.ReadLine();
 
-namespace ConsoleApp
-{
-	public readonly record struct Person(int Id, string Name, int Age);
-}
+internal sealed record Person(int Id, string Name, int Age);
