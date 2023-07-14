@@ -1,21 +1,20 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals.JsonContentTests;
+namespace Rqlite.Client.Internals.JsonContentTests.SerialiserOptionsTests;
 
-public class SerialiserOptionsTests
+/// <see cref="JsonContent.SerialiserOptions"/>
+
+public class default_value
 {
-	public class default_value
+	[Fact]
+	public void PropertyNameCaseInsensitive_is_true()
 	{
-		[Fact]
-		public void PropertyNameCaseInsensitive_is_true()
-		{
-			// Arrange
+		// Arrange
 
-			// Act
+		// Act
 
-			// Assert
-			Assert.True(JsonContent.SerialiserOptions.PropertyNameCaseInsensitive);
-		}
+		// Assert
+		Assert.True(JsonContent.SerialiserOptions.PropertyNameCaseInsensitive);
 	}
 }

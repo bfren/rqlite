@@ -1,22 +1,21 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.RqliteOptionsTests;
+namespace Rqlite.Client.RqliteOptionsTests.IncludeTimingsTests;
 
-public class IncludeTimingsTests
+/// <see cref="RqliteOptions.IncludeTimings"/>
+
+public class default_value
 {
-	public class default_value
+	public void is_true()
 	{
-		public void is_true()
-		{
-			// Arrange
-			var options = new RqliteOptions();
+		// Arrange
+		var options = new RqliteOptions();
 
-			// Act
-			var result = options.IncludeTimings;
+		// Act
+		var result = options.IncludeTimings;
 
-			// Assert
-			Assert.True(result);
-		}
+		// Assert
+		Assert.True(result);
 	}
 }
