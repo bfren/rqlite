@@ -65,7 +65,7 @@ Console.WriteLine();
 log.Inf("7 - with client name");
 var query4 = "SELECT * FROM foo WHERE name = :name";
 var queryResult4 = await client2.QueryAsync(query4, new { name });
-log.Dbg($"{name} is {{Age}}", queryResult4.Results[0].Values[0].First().GetInt32());
+log.Dbg($"{name} is {{Age}}", queryResult4.Results[0].Values![0].First().GetInt32());
 
 Console.ReadLine();
 
