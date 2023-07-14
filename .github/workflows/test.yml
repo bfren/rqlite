@@ -56,7 +56,7 @@ jobs:
       uses: bfren/action-slack-notify@master
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_USERNAME: Maybe (GitHub)
+        SLACK_USERNAME: Rqlite (GitHub)
         SLACK_MESSAGE: Tests Passed
         SLACK_COLOR: good
         SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
@@ -66,7 +66,7 @@ jobs:
       uses: bfren/action-slack-notify@master
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_USERNAME: Maybe (GitHub)
+        SLACK_USERNAME: Rqlite (GitHub)
         SLACK_MESSAGE: Test Failed
         SLACK_COLOR: danger
         SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
