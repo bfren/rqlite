@@ -9,6 +9,9 @@ dotnet_diagnostic.CA1707.severity = none
 # IDE0021: Use expression body for constructor
 dotnet_diagnostic.IDE0021.severity = none
 
+# IDE0022: Use expression body for method
+dotnet_diagnostic.IDE0022.severity = none
+
 # IDE0058: Expression value is never used
 dotnet_diagnostic.IDE0058.severity = none
 
