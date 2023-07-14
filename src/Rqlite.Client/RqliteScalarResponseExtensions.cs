@@ -8,9 +8,9 @@ using System.Text.Json;
 namespace Rqlite.Client;
 
 /// <summary>
-/// <see cref="RqliteGetScalarResponse{T}"/> extension methods.
+/// <see cref="RqliteScalarResponse{T}"/> extension methods.
 /// </summary>
-public static partial class RqliteGetScalarResponseExtensions
+public static partial class RqliteScalarResponseExtensions
 {
 	/// <summary>
 	/// Converts a <see cref="JsonElement"/> to <typeparamref name="T"/>.
@@ -22,7 +22,7 @@ public static partial class RqliteGetScalarResponseExtensions
 	internal delegate bool Convert<T>(JsonElement element, out T value);
 
 	/// <summary>
-	/// Flatten a <see cref="RqliteGetScalarResponse{T}"/> by returning first value or <paramref name="defaultValue"/>.
+	/// Flatten a <see cref="RqliteScalarResponse{T}"/> by returning first value or <paramref name="defaultValue"/>.
 	/// Warning: any errors will be ignored and an empty list returned instead!
 	/// </summary>
 	/// <typeparam name="T">Return value type.</typeparam>
@@ -30,7 +30,7 @@ public static partial class RqliteGetScalarResponseExtensions
 	/// <param name="convert">Conversion method.</param>
 	/// <param name="defaultValue">Default value to return on error.</param>
 	/// <returns>First value converted to <typeparamref name="T"/>, or <paramref name="defaultValue"/>.</returns>
-	internal static T Flatten<T>(RqliteGetScalarResponse<T> response, Convert<T> convert, [DisallowNull] T defaultValue)
+	internal static T Flatten<T>(RqliteScalarResponse<T> response, Convert<T> convert, [DisallowNull] T defaultValue)
 	{
 		if (response.Errors.Count > 0)
 		{
@@ -44,7 +44,7 @@ public static partial class RqliteGetScalarResponseExtensions
 
 		return elements.FirstOrDefault() switch
 		{
-			JsonElement e when convert(e, out T value) =>
+			JsonElement e when convert(e, out var value) =>
 				value,
 
 			_ =>

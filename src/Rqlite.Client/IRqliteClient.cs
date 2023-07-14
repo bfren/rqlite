@@ -66,23 +66,6 @@ public interface IRqliteClient : IDisposable
 	Task<RqliteExecuteResponse> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands);
 
 	/// <summary>
-	/// Execute a query and return a strongly-typed value.
-	/// </summary>
-	/// <typeparam name="T">Return model type.</typeparam>
-	/// <param name="query">Rqlite query.</param>
-	/// <returns>Query value.</returns>
-	Task<RqliteGetScalarResponse<T>> GetScalarAsync<T>(string query);
-
-	/// <summary>
-	/// Execute parameterised query and return a strongly-typed value.
-	/// </summary>
-	/// <typeparam name="T">Return model type.</typeparam>
-	/// <param name="query">Rqlite parameterised query.</param>
-	/// <param name="param">Query parameters - property names must match parameter names.</param>
-	/// <returns>Query value.</returns>
-	Task<RqliteGetScalarResponse<T>> GetScalarAsync<T>(string query, object param);
-
-	/// <summary>
 	/// Execute queries and return results.
 	/// </summary>
 	/// <param name="queries">Rqlite queries.</param>
@@ -130,4 +113,21 @@ public interface IRqliteClient : IDisposable
 	/// <param name="queries">Rqlite parameterised queries and parameters - property names must match parameter names.</param>
 	/// <returns>Query results.</returns>
 	Task<RqliteQueryResponse<T>> QueryAsync<T>(params (string query, object param)[] queries);
+
+	/// <summary>
+	/// Execute a query and return a strongly-typed value.
+	/// </summary>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="query">Rqlite query.</param>
+	/// <returns>Query value.</returns>
+	Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query);
+
+	/// <summary>
+	/// Execute parameterised query and return a strongly-typed value.
+	/// </summary>
+	/// <typeparam name="T">Return model type.</typeparam>
+	/// <param name="query">Rqlite parameterised query.</param>
+	/// <param name="param">Query parameters - property names must match parameter names.</param>
+	/// <returns>Query value.</returns>
+	Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query, object param);
 }

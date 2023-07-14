@@ -12,10 +12,9 @@
 		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Update="RqliteGetScalarResponseExtensions.cs">
+		<Compile Update="RqliteScalarResponseExtensions.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
-			<DependentUpon>RqliteGetScalarResponseExtensions.tt</DependentUpon>
 		</Compile>
 		<Compile Update="RqliteGetScalarResponseExtensionsGenerator.cs">
 			<DesignTime>True</DesignTime>
@@ -27,18 +26,16 @@
 		  <AutoGen>True</AutoGen>
 		  <DependentUpon>RqliteGetScalarResponseExtensionsTypes.tt</DependentUpon>
 		</Compile>
+		<Compile Update="RqliteScalarResponseExtensionsTypes.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>RqliteScalarResponseExtensionsTypes.tt</DependentUpon>
+		</Compile>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="RqliteGetScalarResponseExtensionsTypes.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>RqliteGetScalarResponseExtensionsTypes.tt</DependentUpon>
-		</None>
-	</ItemGroup>
-	<ItemGroup>
-		<None Update="RqliteGetScalarResponseExtensionsTypes.tt">
+		<None Update="RqliteScalarResponseExtensionsTypes.tt">
 			<Generator>TextTemplatingFileGenerator</Generator>
-			<LastGenOutput>RqliteGetScalarResponseExtensionsTypes.cs</LastGenOutput>
+			<LastGenOutput>RqliteScalarResponseExtensionsTypes.cs</LastGenOutput>
 		</None>
 	</ItemGroup>
 </Project>

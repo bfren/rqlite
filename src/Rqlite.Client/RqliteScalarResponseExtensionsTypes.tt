@@ -2,7 +2,7 @@
 <#@ import namespace="System.IO" #>
 <#@ output extension=".cs" #>
 <#
-	var filename = this.Host.ResolvePath("RqliteGetScalarResponseExtensionsTypes.csv");
+	var filename = this.Host.ResolvePath("RqliteScalarResponseExtensionsTypes.csv");
 	var lines = File.ReadLines(filename);
 #>
 // Maybe: Rqlite Client for .NET.
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Rqlite.Client;
 
-public static partial class RqliteGetScalarResponseExtensions
+public static partial class RqliteScalarResponseExtensions
 {
 <# foreach (string line in lines) { var type = line.Split(','); #>
 	/// <summary>
@@ -23,11 +23,11 @@ public static partial class RqliteGetScalarResponseExtensions
 	/// <remarks>Warning: any errors will be ignored and an empty list returned instead!</remarks>
 	/// <param name="response">RqliteGetScalarResponse object.</param>
 	/// <returns>First <see cref="<#= type[1] #>"/> or <see cref="<#= type[2] #>"/>.</returns>
-	public static <#= type[1] #> Flatten(this RqliteGetScalarResponse<<#= type[1] #>> response) =>
+	public static <#= type[1] #> Flatten(this RqliteScalarResponse<<#= type[1] #>> response) =>
 		Flatten(response, (JsonElement e, out <#= type[1] #> v) => e.TryGet<#= type[0] #>(out v), <#= type[2] #>);
 
 	/// <inheritdoc cref="Flatten(RqliteGetScalarResponse{<#= type[1] #>})"/>
-	public static async Task<<#= type[1] #>> Flatten(this Task<RqliteGetScalarResponse<<#= type[1] #>>> response) =>
+	public static async Task<<#= type[1] #>> Flatten(this Task<RqliteScalarResponse<<#= type[1] #>>> response) =>
 		Flatten(await response);
 
 <# } #>

@@ -20,10 +20,10 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
-	internal static async Task<RqliteGetScalarResponse<TModel>> ExecuteScalarAsync<TQuery, TModel>(
+	internal static async Task<RqliteScalarResponse<TModel>> ExecuteScalarAsync<TQuery, TModel>(
 		TQuery query,
 		UriBuilder uriBuilder,
-		Func<HttpRequestMessage, Task<RqliteGetScalarResponse<TModel>>> send
+		Func<HttpRequestMessage, Task<RqliteScalarResponse<TModel>>> send
 	)
 	{
 		var request = new HttpRequestMessage
@@ -39,24 +39,24 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return new RqliteGetScalarResponse<TModel>(ex);
+			return new RqliteScalarResponse<TModel>(ex);
 		}
 	}
 
 	/// <inheritdoc/>
-	public Task<RqliteGetScalarResponse<T>> GetScalarAsync<T>(string query) =>
+	public Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query) =>
 		ExecuteScalarAsync(
 			query: query,
 			uriBuilder: QueryUri(),
-			send: SendAsync<RqliteGetScalarResponse<T>>
+			send: SendAsync<RqliteScalarResponse<T>>
 		);
 
 	/// <inheritdoc/>
-	public Task<RqliteGetScalarResponse<T>> GetScalarAsync<T>(string query, object param) =>
+	public Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query, object param) =>
 		ExecuteScalarAsync(
 			query: new[] { new[] { query, param } },
 			uriBuilder: QueryUri(),
-			send: SendAsync<RqliteGetScalarResponse<T>>
+			send: SendAsync<RqliteScalarResponse<T>>
 		);
 
 }

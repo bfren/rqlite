@@ -10,16 +10,16 @@ namespace Rqlite.Client;
 /// <summary>
 /// Rqlite response from an execute scalar request.
 /// </summary>
-public sealed record class RqliteGetScalarResponse<T> : RqliteResponse<RqliteGetScalarResponse<T>.Result>
+public sealed record class RqliteScalarResponse<T> : RqliteResponse<RqliteScalarResponse<T>.Result>
 {
 	/// <inheritdoc/>
-	public RqliteGetScalarResponse() : base() { }
+	public RqliteScalarResponse() : base() { }
 
 	/// <inheritdoc/>
-	internal RqliteGetScalarResponse(string error) : base(error) { }
+	internal RqliteScalarResponse(string error) : base(error) { }
 
 	/// <inheritdoc/>
-	internal RqliteGetScalarResponse(Exception exception) : base(exception) { }
+	internal RqliteScalarResponse(Exception exception) : base(exception) { }
 
 	/// <summary>
 	/// Result properties.
