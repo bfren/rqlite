@@ -68,7 +68,7 @@ public interface IRqliteClient : IDisposable
 	/// <summary>
 	/// Execute queries and return results.
 	/// </summary>
-	/// <param name="query">Rqlite queries.</param>
+	/// <param name="queries">Rqlite queries.</param>
 	/// <returns>Query results.</returns>
 	Task<RqliteQueryResponse> QueryAsync(params string[] queries);
 
