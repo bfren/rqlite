@@ -27,7 +27,7 @@ internal sealed class UriBuilder
 	/// </summary>
 	/// <param name="path">URI path.</param>
 	internal UriBuilder(string path) =>
-		Path = path;
+		Path = path.TrimStart('/');
 
 	/// <summary>
 	/// Create builder and optionally include timings with all requests.
@@ -64,7 +64,7 @@ internal sealed class UriBuilder
 	internal Uri Build()
 	{
 		// Start URI with path
-		var uri = new StringBuilder(Path);
+		var uri = new StringBuilder("/").Append(Path);
 
 		// If there are query vars we need to add them
 		if (QueryVars.Count > 0)
