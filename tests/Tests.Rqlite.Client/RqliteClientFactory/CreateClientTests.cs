@@ -14,7 +14,7 @@ public class when_DefaultClientName_is_not_defined : RqliteClientFactoryTests
 		var (factory, _) = Setup();
 
 		// Act
-		var act = () => factory.CreateClient();
+		IRqliteClient act() => factory.CreateClient();
 
 		// Assert
 		Assert.Throws<UndefinedDefaultClientException>(act);
@@ -38,8 +38,8 @@ public class when_Clients_is_empty : RqliteClientFactoryTests
 		var (factory, _) = Setup(new() { DefaultClientName = clientName });
 
 		// Act
-		var act0 = () => factory.CreateClient();
-		var act1 = () => factory.CreateClient(clientName);
+		IRqliteClient act0() => factory.CreateClient();
+		IRqliteClient act1() => factory.CreateClient(clientName);
 
 		// Assert
 		Assert.Throws<UnknownClientException>(act0);
@@ -54,7 +54,7 @@ public class when_Clients_is_empty : RqliteClientFactoryTests
 		var (factory, _) = Setup();
 
 		// Act
-		var act = () => factory.CreateClient(clientName);
+		IRqliteClient act() => factory.CreateClient(clientName);
 
 		// Assert
 		var ex = Assert.Throws<UnknownClientException>(act);
@@ -85,8 +85,8 @@ public class when_Clients_does_not_contain_named_client : RqliteClientFactoryTes
 		var (factory, _) = Setup(new() { DefaultClientName = ClientName, Clients = Clients });
 
 		// Act
-		var act0 = () => factory.CreateClient();
-		var act1 = () => factory.CreateClient(ClientName);
+		IRqliteClient act0() => factory.CreateClient();
+		IRqliteClient act1() => factory.CreateClient(ClientName);
 
 		// Assert
 		Assert.Throws<UnknownClientException>(act0);
@@ -100,7 +100,7 @@ public class when_Clients_does_not_contain_named_client : RqliteClientFactoryTes
 		var (factory, _) = Setup(new() { Clients = Clients });
 
 		// Act
-		var act = () => factory.CreateClient(ClientName);
+		IRqliteClient act() => factory.CreateClient(ClientName);
 
 		// Assert
 		var ex = Assert.Throws<UnknownClientException>(act);
