@@ -22,7 +22,8 @@ log.Dbg("Create table result: {@Result}", createTableResult);
 
 Console.WriteLine();
 log.Inf("1 - using client defaults");
-var insertRowResult0 = await client0.ExecuteAsync($"INSERT INTO foo(name, age) VALUES('{Rnd.Str}', {Rnd.Int})");
+var name = Rnd.Str;
+var insertRowResult0 = await client0.ExecuteAsync($"INSERT INTO foo(name, age) VALUES('{name}', {Rnd.Int})");
 log.Dbg("Insert row result: {@Row}", insertRowResult0);
 
 Console.WriteLine();
@@ -59,6 +60,12 @@ var queryResult3 = await client2.QueryAsync<ConsoleApp.Person>(
 log.Dbg("Query 0 result: {@Row}", queryResult3.Results[0].Rows!);
 log.Dbg("Query 1 result: {@Row}", queryResult3.Results[1].Rows!);
 log.Dbg("Flattened query result: {@Row}", queryResult3.Flatten());
+
+Console.WriteLine();
+log.Inf("7 - with client name");
+var query4 = "SELECT * FROM foo WHERE name = :name";
+var queryResult4 = await client2.QueryAsync(query4, new { name });
+log.Dbg($"{name} is {{Age}}", queryResult4.Results[0].Values[0].First().GetInt32());
 
 Console.ReadLine();
 
