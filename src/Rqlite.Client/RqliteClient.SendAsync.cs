@@ -25,7 +25,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		var json = await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
 		Logger.ResponseJson(json);
 
-		return JsonSerializer.Deserialize<T>(json, JsonContent.SerialiserOptions)
-			?? throw new JsonException($"'{json}' deserialised to a null value.");
+		var result = JsonSerializer.Deserialize<T>(json, JsonContent.SerialiserOptions);
+		return result ?? throw new JsonException($"'{json}' deserialised to a null value.");
 	}
 }
