@@ -1,10 +1,11 @@
-// Maybe: Rqlite Client for .NET.
+// Rqlite client for .NET.
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Client.Internals;
+using Rqlite.Client.Response;
 using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
@@ -15,15 +16,15 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// Execute query and return a simple value.
 	/// </summary>
 	/// <typeparam name="TQuery">Query type.</typeparam>
-	/// <typeparam name="TModel">Return model type.</typeparam>
+	/// <typeparam name="TValue">Return value type.</typeparam>
 	/// <param name="queries">Query to execute.</param>
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
-	internal static async Task<RqliteScalarResponse<TModel>> ExecuteScalarAsync<TQuery, TModel>(
+	internal static async Task<RqliteScalarResponse<TValue>> ExecuteScalarAsync<TQuery, TValue>(
 		TQuery query,
 		UriBuilder uriBuilder,
-		Func<HttpRequestMessage, Task<RqliteScalarResponse<TModel>>> send
+		Func<HttpRequestMessage, Task<RqliteScalarResponse<TValue>>> send
 	)
 	{
 		var request = new HttpRequestMessage
@@ -39,7 +40,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return new RqliteScalarResponse<TModel>(ex);
+			return new RqliteScalarResponse<TValue>(ex);
 		}
 	}
 

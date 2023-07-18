@@ -3,7 +3,7 @@
 
 namespace Rqlite.Client.RqliteClientFactoryTests.CreateClientWithDefaultTests;
 
-/// <see cref="RqliteClientFactory.CreateClientWithDefaults()"/>
+/// <see cref="RqliteClientFactory.CreateClientWithDefaults"/>
 
 public class when_called : RqliteClientFactoryTests
 {
