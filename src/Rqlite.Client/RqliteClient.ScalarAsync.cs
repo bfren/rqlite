@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Client.Internals;
 using Rqlite.Client.Response;
-using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
 
@@ -23,7 +22,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <returns>Query results.</returns>
 	internal static async Task<RqliteScalarResponse<TValue>> ExecuteScalarAsync<TQuery, TValue>(
 		TQuery query,
-		UriBuilder uriBuilder,
+		IUriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteScalarResponse<TValue>>> send
 	)
 	{

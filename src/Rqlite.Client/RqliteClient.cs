@@ -4,6 +4,7 @@
 using System;
 using System.Net.Http;
 using Microsoft.Extensions.Logging;
+using IUriBuilder = Rqlite.Client.Internals.IUriBuilder;
 using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
@@ -14,7 +15,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <summary>
 	/// Returns the URI path for execute requests, optionally including timings.
 	/// </summary>
-	internal Func<UriBuilder> ExecuteUri { get; private init; }
+	internal Func<IUriBuilder> ExecuteUri { get; private init; }
 
 	/// <summary>
 	/// Used to execute requests on Rqlite server.
@@ -29,7 +30,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <summary>
 	/// Returns the URI path for query requests, optionally including timings.
 	/// </summary>
-	internal Func<UriBuilder> QueryUri { get; private init; }
+	internal Func<IUriBuilder> QueryUri { get; private init; }
 
 	/// <summary>
 	/// Create database client instance using specified HttpClient.

@@ -8,7 +8,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Client.Internals;
 using Rqlite.Client.Response;
-using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
 
@@ -26,7 +25,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	internal static async Task<RqliteExecuteResponse> ExecuteAsync<TCommand>(
 		IEnumerable<TCommand> commands,
 		bool asSingleTransaction,
-		UriBuilder uriBuilder,
+		IUriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteExecuteResponse>> send
 	)
 	{

@@ -7,20 +7,14 @@ using System.Text;
 
 namespace Rqlite.Client.Internals;
 
-/// <summary>
-/// Enables building relative URIs with expandable query vars.
-/// </summary>
-internal sealed class UriBuilder
+/// <inheritdoc cref="IUriBuilder"/>
+internal sealed class UriBuilder : IUriBuilder
 {
-	/// <summary>
-	/// URI path.
-	/// </summary>
-	internal string Path { get; }
+	/// <inheritdoc/>
+	public string Path { get; }
 
-	/// <summary>
-	/// Query vars collection.
-	/// </summary>
-	internal NameValueCollection QueryVars { get; } = new();
+	/// <inheritdoc/>
+	public NameValueCollection QueryVars { get; } = new();
 
 	/// <summary>
 	/// Create builder with a URI path.
@@ -42,26 +36,16 @@ internal sealed class UriBuilder
 		}
 	}
 
-	/// <summary>
-	/// Add a query var without a value.
-	/// </summary>
-	/// <param name="key">Query var key.</param>
-	internal void AddQueryVar(string key) =>
+	/// <inheritdoc/>
+	public void AddQueryVar(string key) =>
 		QueryVars.Add(key, null);
 
-	/// <summary>
-	/// Add a query var with a value.
-	/// </summary>
-	/// <param name="key">Query var key.</param>
-	/// <param name="value">Query var value.</param>
-	internal void AddQueryVar(string key, string value) =>
+	/// <inheritdoc/>
+	public void AddQueryVar(string key, string value) =>
 		QueryVars.Add(key, value);
 
-	/// <summary>
-	/// Build relative URI.
-	/// </summary>
-	/// <returns></returns>
-	internal Uri Build()
+	/// <inheritdoc/>
+	public Uri Build()
 	{
 		// Start URI with path
 		var uri = new StringBuilder("/").Append(Path);

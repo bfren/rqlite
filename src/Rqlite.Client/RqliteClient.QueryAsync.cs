@@ -8,7 +8,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Client.Internals;
 using Rqlite.Client.Response;
-using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
 namespace Rqlite.Client;
 
@@ -17,7 +16,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <inheritdoc cref="QueryAsync{TQuery, TModel}(IEnumerable{TQuery}, UriBuilder, Func{HttpRequestMessage, Task{RqliteQueryResponse{TModel}}})"/>
 	internal static async Task<RqliteQueryResponse> QueryAsync<TQuery>(
 		IEnumerable<TQuery> queries,
-		UriBuilder uriBuilder,
+		IUriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteQueryResponse>> send
 	)
 	{
@@ -54,7 +53,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <returns>Query results.</returns>
 	internal static async Task<RqliteQueryResponse<TModel>> QueryAsync<TQuery, TModel>(
 		IEnumerable<TQuery> queries,
-		UriBuilder uriBuilder,
+		IUriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteQueryResponse<TModel>>> send
 	)
 	{
