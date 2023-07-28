@@ -20,7 +20,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
-	internal static async Task<RqliteScalarResponse<TValue>> ExecuteScalarAsync<TQuery, TValue>(
+	internal static async Task<RqliteScalarResponse<TValue>> ScalarAsync<TQuery, TValue>(
 		TQuery query,
 		IUriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<RqliteScalarResponse<TValue>>> send
@@ -45,15 +45,15 @@ public sealed partial class RqliteClient : IRqliteClient
 
 	/// <inheritdoc/>
 	public Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query) =>
-		ExecuteScalarAsync(
-			query: query,
+		ScalarAsync(
+			query: new[] { query },
 			uriBuilder: QueryUri(),
 			send: SendAsync<RqliteScalarResponse<T>>
 		);
 
 	/// <inheritdoc/>
 	public Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query, object param) =>
-		ExecuteScalarAsync(
+		ScalarAsync(
 			query: new[] { new[] { query, param } },
 			uriBuilder: QueryUri(),
 			send: SendAsync<RqliteScalarResponse<T>>
