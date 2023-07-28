@@ -1,7 +1,6 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-using System.Text.Json;
 using NSubstitute.ExceptionExtensions;
 using Rqlite.Client.Internals;
 using Rqlite.Client.Response;
@@ -46,7 +45,7 @@ public class when_commands_is_not_empty
 		builder.Received().Build();
 	}
 
-	public class sends_request
+	public class sends_request : RqliteClientTests
 	{
 		[Fact]
 		public async Task with_content_serialised_as_json()
@@ -55,7 +54,7 @@ public class when_commands_is_not_empty
 			var commands = new[] { Rnd.Str, Rnd.Str };
 			var builder = Substitute.For<IUriBuilder>();
 			var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
-			var expected = JsonSerializer.Serialize(commands, JsonContent.SerialiserOptions);
+			var expected = Json(commands);
 
 			// Act
 			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
