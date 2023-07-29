@@ -27,7 +27,11 @@ public static class RqliteQueryResponseExtensions
 			return new();
 		}
 
-		return @this.Results.SelectMany(r => r.Rows ?? new()).ToList();
+		var rows = from result in @this.Results
+				   from row in result.Rows ?? new()
+				   select row;
+
+		return rows.ToList();
 	}
 
 	/// <inheritdoc cref="Flatten{T}(RqliteQueryResponse{T})"/>
