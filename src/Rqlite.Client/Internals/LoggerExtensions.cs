@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
+using Wrap;
 
 namespace Rqlite.Client.Internals;
 
@@ -15,11 +16,12 @@ namespace Rqlite.Client.Internals;
 /// </summary>
 internal static partial class LoggerExtensions
 {
-#if NET7_0_OR_GREATER
 	// HT https://stackoverflow.com/a/462586/8199362
 	[GeneratedRegex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase, "en-GB")]
 	private static partial Regex UnicodeEscapedCharacters();
-#endif
+
+	private static readonly Action<ILogger, ErrValue, Exception?> LogErr =
+		LoggerMessage.Define<ErrValue>(LogLevel.Error, new(), "Error: {ErrValue}");
 
 	private static readonly Action<ILogger, HttpMethod, Uri?, string?, Exception?> LogRequest =
 		LoggerMessage.Define<HttpMethod, Uri?, string?>(LogLevel.Debug, new(), "{Method} {Uri}: {Content}");
@@ -27,8 +29,8 @@ internal static partial class LoggerExtensions
 	private static readonly Action<ILogger, string, Exception?> LogResponseJson =
 		LoggerMessage.Define<string>(LogLevel.Debug, new(), "Response JSON: {Json}");
 
-	private static readonly Action<ILogger, string?, Exception?> LogVersion =
-		LoggerMessage.Define<string?>(LogLevel.Information, new(), "Rqlite version: {Version}");
+	private static readonly Action<ILogger, string, Exception?> LogVersion =
+		LoggerMessage.Define<string>(LogLevel.Information, new(), "Rqlite version: {Version}");
 
 	/// <summary>
 	/// Unescape UTF8 characters to show correctly in logs.
@@ -42,11 +44,7 @@ internal static partial class LoggerExtensions
 			return string.Empty;
 		}
 
-#if NET7_0_OR_GREATER
 		var regex = UnicodeEscapedCharacters();
-#else
-		var regex = new Regex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase);
-#endif
 		return regex.Replace(
 			input: Encoding.UTF8.GetString(bytes),
 			evaluator: match => parse(match).ToString()
@@ -55,6 +53,9 @@ internal static partial class LoggerExtensions
 		static char parse(Match m) =>
 			(char)int.Parse(m.Groups[1].Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
 	}
+
+	internal static void Err(this ILogger @this, ErrValue value) =>
+		LogErr(@this, value, null);
 
 	/// <summary>
 	/// Log a <see cref="HttpRequestMessage"/>.
@@ -80,6 +81,6 @@ internal static partial class LoggerExtensions
 	/// </summary>
 	/// <param name="this"></param>
 	/// <param name="version">Version string.</param>
-	internal static void Version(this ILogger @this, string? version) =>
+	internal static void Version(this ILogger @this, string version) =>
 		LogVersion(@this, version, null);
 }
