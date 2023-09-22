@@ -4,13 +4,15 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Rqlite.Client.Internals;
+using Wrap;
 
 namespace Rqlite.Client;
 
 public sealed partial class RqliteClient : IRqliteClient
 {
 	/// <inheritdoc/>
-	public async Task<RqliteStatus> GetStatusAsync()
+	public async Task<Maybe<RqliteStatus>> GetStatusAsync()
 	{
 		var request = new HttpRequestMessage
 		{
@@ -18,6 +20,13 @@ public sealed partial class RqliteClient : IRqliteClient
 			RequestUri = new Uri("/status", UriKind.Relative)
 		};
 
-		return await SendAsync<RqliteStatus>(request);
+		return await SendAsync<RqliteStatus>(request).SwitchAsync(
+			err: e =>
+			{
+				Logger.Err(e);
+				return M.None;
+			},
+			ok: M.Wrap
+		);
 	}
 }
