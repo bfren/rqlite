@@ -3,7 +3,11 @@
 
 using System;
 using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Rqlite.Client.Internals;
+using Wrap;
 using IUriBuilder = Rqlite.Client.Internals.IUriBuilder;
 using UriBuilder = Rqlite.Client.Internals.UriBuilder;
 
@@ -43,6 +47,33 @@ public sealed partial class RqliteClient : IRqliteClient
 		(HttpClient, Logger) = (httpClient, logger);
 		ExecuteUri = () => new UriBuilder("/db/execute", includeTimings);
 		QueryUri = () => new UriBuilder("/db/query", includeTimings);
+	}
+
+	/// <summary>
+	/// Send a request and deserialise the JSON response.
+	/// </summary>
+	/// <typeparam name="T">Response type.</typeparam>
+	/// <param name="request">Request message</param>
+	/// <returns>Deserialised JSON response.</returns>
+	internal async Task<Result<T>> SendAsync<T>(HttpRequestMessage request)
+	{
+		// Log the HTTP request
+		Logger.Request(request);
+
+		// Perform HTTP request and log HTTP response
+		var httpResponse = await HttpClient.SendAsync(request);
+		var json = await httpResponse.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
+		Logger.ResponseJson(json);
+
+		// Attempt to parse response
+		var rqliteResponse = JsonSerializer.Deserialize<T>(json, JsonContent.SerialiserOptions);
+		if (rqliteResponse is null)
+		{
+			return R.Err($"'{json}' deserialised to a null value.");
+		}
+
+		// Return response
+		return rqliteResponse;
 	}
 
 	/// <summary>
