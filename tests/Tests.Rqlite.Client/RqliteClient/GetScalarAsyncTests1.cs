@@ -18,7 +18,7 @@ public class with_query : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => expected == m.Content!.ReadAsStringAsync().GetAwaiter().GetResult()
+			m => expected == Helpers.ReadContent(m)
 		));
 	}
 }
@@ -39,7 +39,7 @@ public class with_parameterised_query : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => expected == m.Content!.ReadAsStringAsync().GetAwaiter().GetResult()
+			m => expected == Helpers.ReadContent(m)
 		));
 	}
 }

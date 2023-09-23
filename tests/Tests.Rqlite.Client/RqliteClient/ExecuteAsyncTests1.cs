@@ -18,7 +18,7 @@ public class with_commands_as_string_params : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => expected == m.Content!.ReadAsStringAsync().GetAwaiter().GetResult()
+			m => expected == Helpers.ReadContent(m)
 		));
 	}
 
@@ -75,7 +75,7 @@ public class with_parameterised_command : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => expected == m.Content!.ReadAsStringAsync().GetAwaiter().GetResult()
+			m => expected == Helpers.ReadContent(m)
 		));
 	}
 }
@@ -98,7 +98,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => expected == m.Content!.ReadAsStringAsync().GetAwaiter().GetResult()
+			m => expected == Helpers.ReadContent(m)
 		));
 	}
 

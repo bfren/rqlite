@@ -1,6 +1,7 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
+using System.Text;
 using Rqlite.Client.Internals;
 
 namespace Rqlite.Client;
@@ -72,6 +73,22 @@ internal static class Helpers
 		);
 
 		return new JsonContent(content);
+	}
+
+	#endregion
+
+	#region HttpContent
+
+	public static string ReadContent(HttpRequestMessage request)
+	{
+		if (request.Content is null)
+		{
+			return string.Empty;
+		}
+
+		var ms = new MemoryStream();
+		request.Content.ReadAsStream().CopyTo(ms);
+		return Encoding.UTF8.GetString(ms.ToArray());
 	}
 
 	#endregion

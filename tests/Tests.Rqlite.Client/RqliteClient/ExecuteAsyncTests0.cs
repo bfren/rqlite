@@ -58,7 +58,7 @@ public class when_commands_is_not_empty
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
-				expected == Assert.IsType<JsonContent>(m.Content).ReadAsStringAsync().GetAwaiter().GetResult()
+				expected == Helpers.ReadContent(m)
 			));
 		}
 

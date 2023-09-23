@@ -38,7 +38,7 @@ public class when_called
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
-				expected == Assert.IsType<JsonContent>(m.Content).ReadAsStringAsync().GetAwaiter().GetResult()
+				expected == Helpers.ReadContent(m)
 			));
 		}
 
