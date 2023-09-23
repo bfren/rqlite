@@ -4,14 +4,15 @@
 
 [![Test](https://github.com/bfren/rqlite/actions/workflows/test.yml/badge.svg)](https://github.com/bfren/rqlite/actions/workflows/test.yml) ![Publish](https://github.com/bfren/rqlite/workflows/Publish/badge.svg)
 
-Simple .NET client for [Rqlite](https://rqlite.io), with deserialisation support.
+Unofficial .NET client for [Rqlite](https://rqlite.io).
 
 ## Features
 
-- Configure multiple connections in settings
-- Execute (e.g. INSERT) and Query support
-- Return query results as rows or map to objects
-- Use parameters for Execute and Query
+- Fully asynchronous throughout
+- Configure multiple named connections in settings
+- Execute (e.g. INSERT), Query and Scalar support
+- Return query results as objects
+- Use parameters with queries
 - Support for transactions and multiple statements
 
 ## Getting Started
