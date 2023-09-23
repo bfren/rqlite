@@ -2,11 +2,12 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Client.Internals;
-using Rqlite.Client.Response;
-using UriBuilder = Rqlite.Client.Internals.UriBuilder;
+using Wrap;
 
 namespace Rqlite.Client;
 
@@ -21,10 +22,10 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
-	internal static async Task<RqliteScalarResponse<TValue>> ExecuteScalarAsync<TQuery, TValue>(
+	internal static async Task<Result<TValue>> GetScalarAsync<TQuery, TValue>(
 		TQuery query,
-		UriBuilder uriBuilder,
-		Func<HttpRequestMessage, Task<RqliteScalarResponse<TValue>>> send
+		IUriBuilder uriBuilder,
+		Func<HttpRequestMessage, Task<Result<List<ScalarResponseResult<TValue>>>>> send
 	)
 	{
 		var request = new HttpRequestMessage
@@ -36,28 +37,37 @@ public sealed partial class RqliteClient : IRqliteClient
 
 		try
 		{
-			return await send(request);
+			return await
+				send(
+					request
+				)
+				.BindAsync(
+					x => x.SelectMany(y => y.Values ?? new()).SelectMany(z => z).SingleOrNone().Switch(
+						none: R.Err("Did not receive exactly one value."),
+						some: R.Wrap
+					)
+				);
 		}
 		catch (Exception ex)
 		{
-			return new RqliteScalarResponse<TValue>(ex);
+			return R.Err(ex);
 		}
 	}
 
 	/// <inheritdoc/>
-	public Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query) =>
-		ExecuteScalarAsync(
-			query: query,
+	public Task<Result<T>> GetScalarAsync<T>(string query) =>
+		GetScalarAsync(
+			query: new[] { query },
 			uriBuilder: QueryUri(),
-			send: SendAsync<RqliteScalarResponse<T>>
+			send: GetResultsAsync<ScalarResponseResult<T>>
 		);
 
 	/// <inheritdoc/>
-	public Task<RqliteScalarResponse<T>> ScalarAsync<T>(string query, object param) =>
-		ExecuteScalarAsync(
+	public Task<Result<T>> GetScalarAsync<T>(string query, object param) =>
+		GetScalarAsync(
 			query: new[] { new[] { query, param } },
 			uriBuilder: QueryUri(),
-			send: SendAsync<RqliteScalarResponse<T>>
+			send: GetResultsAsync<ScalarResponseResult<T>>
 		);
 
 }

@@ -9,7 +9,7 @@ public class when_called : RqliteClientTests
 	public async Task requests_status()
 	{
 		// Arrange
-		var (client, v) = Setup();
+		var (client, v) = Setup(content: Helpers.GetStatusHttpContent());
 
 		// Act
 		_ = await client.GetVersionAsync();
@@ -22,34 +22,14 @@ public class when_called : RqliteClientTests
 	}
 }
 
-public class when_response_returns_no_version_header : RqliteClientTests
-{
-	[Fact]
-	public async Task returns_error_string()
-	{
-		// Arrange
-		var (client, _) = Setup();
-		var expected = "Unable to retrieve version - is the Rqlite instance running?";
-
-		// Act
-		var result = await client.GetVersionAsync();
-
-		// Assert
-		Assert.Equal(expected, result);
-	}
-}
-
-public class when_response_returns_single_version_header : RqliteClientTests
+public class when_status_returns_build_version : RqliteClientTests
 {
 	[Fact]
 	public async Task returns_version_string()
 	{
 		// Arrange
-		var (client, v) = Setup();
 		var version = Rnd.Str;
-		var response = new HttpResponseMessage();
-		response.Headers.Add("X-Rqlite-Version", version);
-		v.HttpMessageHandler.SendAsync(default!).ReturnsForAnyArgs(response);
+		var (client, _) = Setup(content: Helpers.GetStatusHttpContent(version));
 
 		// Act
 		var result = await client.GetVersionAsync();

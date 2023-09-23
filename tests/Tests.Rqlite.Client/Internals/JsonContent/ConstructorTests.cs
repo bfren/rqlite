@@ -8,7 +8,7 @@ namespace Rqlite.Client.Internals.JsonContentTests.ConstructorTests;
 public class when_called
 {
 	[Fact]
-	public void seralises_content_as_json()
+	public async Task seralises_content_as_json()
 	{
 		// Arrange
 		var v0 = Rnd.Str;
@@ -19,7 +19,7 @@ public class when_called
 		var result = new JsonContent(new { v0, v1 });
 
 		// Assert
-		Assert.Equal(expected, result.ReadAsStringAsync().Result);
+		Assert.Equal(expected, await result.ReadAsStringAsync());
 	}
 
 	[Fact]

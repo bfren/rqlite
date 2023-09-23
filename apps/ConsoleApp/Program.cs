@@ -4,6 +4,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using RndF;
 using Rqlite.Client;
+using Wrap;
 
 var (app, log) = Jeebs.Apps.Host.Create(args, (ctx, services) => services.AddRqlite());
 
@@ -18,13 +19,19 @@ log.Inf("Version: {Version}", version);
 Console.WriteLine();
 log.Inf("0 - using client defaults");
 var createTableResult = await client0.ExecuteAsync("CREATE TABLE foo (id INTEGER NOT NULL PRIMARY KEY, name TEXT, age INTEGER)");
-log.Dbg("Create table result: {@Result}", createTableResult);
+createTableResult.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg("Create table result: {@Result}", x)
+);
 
 Console.WriteLine();
 log.Inf("1 - using client defaults");
 var name = Rnd.Str;
 var insertRowResult0 = await client0.ExecuteAsync($"INSERT INTO foo(name, age) VALUES('{name}', {Rnd.Int})");
-log.Dbg("Insert row result: {@Row}", insertRowResult0);
+insertRowResult0.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg("Insert row result: {@Row}", x)
+);
 
 Console.WriteLine();
 log.Inf("2 - without specifiying client name");
@@ -33,22 +40,34 @@ var insertRowResult1 = await client1.ExecuteAsync(true,
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int }),
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int })
 );
-log.Dbg("Insert row result: {@Row}", insertRowResult1);
+insertRowResult1.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg("Insert row result: {@Row}", x)
+);
 
 Console.WriteLine();
 log.Inf("3 - without specifiying client name");
-var queryResult0 = await client1.QueryAsync($"SELECT * FROM foo WHERE age > {Rnd.Int}");
-log.Dbg("Query result: {@Row}", queryResult0);
+var queryResult0 = await client1.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
+queryResult0.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg("Query result: {@List}", x)
+);
 
 Console.WriteLine();
 log.Inf("4 - without specifiying client name");
 var queryResult1 = await client1.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
-log.Dbg("Query result: {@Row}", queryResult1);
+queryResult1.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg("Query result: {@List}", x)
+);
 
 Console.WriteLine();
 log.Inf("5 - with client name");
-var queryResult2 = await client2.QueryAsync("SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
-log.Dbg("Query result: {@Row}", queryResult2);
+var queryResult2 = await client2.QueryAsync<Person>("SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
+queryResult2.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg("Query result: {@List}", x)
+);
 
 Console.WriteLine();
 log.Inf("6 - with client name");
@@ -57,21 +76,48 @@ var queryResult3 = await client2.QueryAsync<Person>(
 	(query3, new { age = Rnd.Int }),
 	(query3, new { age = Rnd.Int })
 );
-log.Dbg("Query 0 result: {@Row}", queryResult3.Results[0].Rows!);
-log.Dbg("Query 1 result: {@Row}", queryResult3.Results[1].Rows!);
-log.Dbg("Flattened query result: {@Row}", queryResult3.Flatten());
+queryResult3.Audit(
+	err: e => log.Err(e.Message),
+	ok: x =>
+	{
+		log.Dbg("Query 0 result: {@Row}", x[0]);
+		log.Dbg("Query 1 result: {@Row}", x[1]);
+	}
+);
 
 Console.WriteLine();
 log.Inf("7 - with client name");
 var query4 = "SELECT * FROM foo WHERE name = :name";
-var queryResult4 = await client2.QueryAsync(query4, new { name });
-log.Dbg($"{name} is {{Age}}", queryResult4.Results[0].Values![0].First().GetInt32());
+var queryResult4 = await client2.QueryAsync<Person>(query4, new { name });
+queryResult4.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg($"{name} is {{Age}}", x[0].Age)
+);
 
 Console.WriteLine();
 log.Inf("8 - with client name");
-var queryResult5 = await client2.QueryAsync<Person>(query4, new { name }).Flatten();
-log.Dbg($"{name} is {{Age}}", queryResult5[0].Age);
+var queryResult5 = await client2.QueryAsync<Person>(query4, new { name });
+queryResult5.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg($"{name} is {{Age}}", x[0].Age)
+);
+
+Console.WriteLine();
+log.Inf("9 - as scalar");
+var scalarResult0 = await client2.GetScalarAsync<int>("SELECT age FROM foo WHERE name = :name", new { name });
+scalarResult0.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg($"{name} is {{Age}}", x)
+);
+
+Console.WriteLine();
+log.Inf("10 - as scalar with multiple values");
+var scalarResult1 = await client2.GetScalarAsync<int>("SELECT age FROM foo WHERE age > :age", new { age = Rnd.Int });
+scalarResult1.Audit(
+	err: e => log.Err(e.Message),
+	ok: x => log.Dbg($"{name} is {{Age}}", x)
+);
 
 Console.ReadLine();
 
-internal sealed record Person(int Id, string Name, int Age);
+internal sealed record class Person(int Id, string Name, int Age);
