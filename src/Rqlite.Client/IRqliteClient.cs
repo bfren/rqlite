@@ -4,7 +4,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Rqlite.Client.Results;
 using Wrap;
 
 namespace Rqlite.Client;
@@ -32,7 +31,7 @@ public interface IRqliteClient : IDisposable
 	/// </summary>
 	/// <param name="commands">Rqlite commands.</param>
 	/// <returns>Command results.</returns>
-	Task<Result<List<CommandResult>>> ExecuteAsync(params string[] commands);
+	Task<Result<List<RqliteCommandResult>>> ExecuteAsync(params string[] commands);
 
 	/// <summary>
 	/// Execute commands and return results, optionally using a single transaction
@@ -41,7 +40,7 @@ public interface IRqliteClient : IDisposable
 	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction.</param>
 	/// <param name="commands">Rqlite commands.</param>
 	/// <returns>Command results.</returns>
-	Task<Result<List<CommandResult>>> ExecuteAsync(bool asSingleTransaction, params string[] commands);
+	Task<Result<List<RqliteCommandResult>>> ExecuteAsync(bool asSingleTransaction, params string[] commands);
 
 	/// <summary>
 	/// Execute parameterised command and return results.
@@ -49,7 +48,7 @@ public interface IRqliteClient : IDisposable
 	/// <param name="command">Rqlite parameterised command.</param>
 	/// <param name="param">Command parameters - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
-	Task<Result<List<CommandResult>>> ExecuteAsync(string command, object param);
+	Task<Result<List<RqliteCommandResult>>> ExecuteAsync(string command, object param);
 
 	/// <summary>
 	/// Execute parameterised commands and return results. (Does not use a transaction -
@@ -57,7 +56,7 @@ public interface IRqliteClient : IDisposable
 	/// </summary>
 	/// <param name="commands">Rqlite parameterised commands - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
-	Task<Result<List<CommandResult>>> ExecuteAsync(params (string command, object param)[] commands);
+	Task<Result<List<RqliteCommandResult>>> ExecuteAsync(params (string command, object param)[] commands);
 
 	/// <summary>
 	/// Execute parameterised commands and return results, optionally using a single transaction
@@ -66,7 +65,7 @@ public interface IRqliteClient : IDisposable
 	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction.</param>
 	/// <param name="commands">Rqlite parameterised commands - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
-	Task<Result<List<CommandResult>>> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands);
+	Task<Result<List<RqliteCommandResult>>> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands);
 
 	/// <summary>
 	/// Execute queries and return strongly-typed results. Warning: each query MUST have the same return value or columns,

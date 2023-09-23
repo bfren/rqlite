@@ -3,7 +3,7 @@
 
 using System.Text.Json.Serialization;
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal.Response;
 
 /// <summary>
 /// Result properties.

@@ -9,4 +9,9 @@
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
 		<PackageReference Include="Wrap" />
 	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Rqlite.Internal\Rqlite.Internal.csproj">
+			<PrivateAssets>All</PrivateAssets>
+		</ProjectReference>
+	</ItemGroup>
 </Project>

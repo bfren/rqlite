@@ -1,14 +1,14 @@
 // Rqlite client for .NET.
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-using Rqlite.Client.Internals;
+using Rqlite.Internal.Response;
 
-namespace Rqlite.Client.Results;
+namespace Rqlite.Client;
 
 /// <summary>
 /// Command result properties.
 /// </summary>
-public readonly struct CommandResult
+public readonly struct RqliteCommandResult
 {
 	/// <summary>
 	/// For INSERT commands, the ID of the last item inserted.
@@ -20,6 +20,6 @@ public readonly struct CommandResult
 	/// </summary>
 	public readonly required int RowsAffected { get; init; }
 
-	internal static CommandResult Create(ExecuteResponseResult result) =>
+	internal static RqliteCommandResult Create(ExecuteResponseResult result) =>
 		new() { LastInsertId = result.LastInsertId, RowsAffected = result.RowsAffected };
 }

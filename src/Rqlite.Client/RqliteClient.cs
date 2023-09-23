@@ -6,10 +6,11 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Rqlite.Client.Internals;
+using Rqlite.Internal;
+using Rqlite.Internal.Request;
 using Wrap;
-using IUriBuilder = Rqlite.Client.Internals.IUriBuilder;
-using UriBuilder = Rqlite.Client.Internals.UriBuilder;
+using IUriBuilder = Rqlite.Internal.Request.IUriBuilder;
+using UriBuilder = Rqlite.Internal.Request.UriBuilder;
 
 namespace Rqlite.Client;
 

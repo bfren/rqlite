@@ -1,7 +1,7 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals.JsonContentTests.SerialiserOptionsTests;
+namespace Rqlite.Internal.Request.JsonContentTests.SerialiserOptionsTests;
 
 /// <see cref="JsonContent.SerialiserOptions"/>
 

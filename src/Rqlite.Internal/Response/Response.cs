@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal.Response;
 
 /// <summary>
 /// Common fields in Rqlite responses.
@@ -17,7 +17,7 @@ public sealed record class Response<T>
 	/// <summary>
 	/// Returns indexed list of errors while executing a request.
 	/// </summary>
-	internal Dictionary<int, string> Errors =>
+	public Dictionary<int, string> Errors =>
 		(
 			from x in Results
 			let index = Results.IndexOf(x)
@@ -46,7 +46,7 @@ public sealed record class Response<T>
 	/// Create a response with an error message.
 	/// </summary>
 	/// <param name="error">Error message.</param>
-	internal Response(string error) : this() =>
+	public Response(string error) : this() =>
 		Results = new()
 		{
 			new() { Error = error }
@@ -56,5 +56,5 @@ public sealed record class Response<T>
 	/// Create a response from an Exception.
 	/// </summary>
 	/// <param name="exception">Exception object.</param>
-	internal Response(Exception exception) : this(exception.ToString()) { }
+	public Response(Exception exception) : this(exception.ToString()) { }
 }

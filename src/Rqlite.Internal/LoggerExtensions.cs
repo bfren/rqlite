@@ -9,12 +9,12 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 using Wrap;
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal;
 
 /// <summary>
 /// Extension methods for <see cref="ILogger"/> to use <see cref="LoggerMessage"/> pattern.
 /// </summary>
-internal static partial class LoggerExtensions
+public static partial class LoggerExtensions
 {
 	// HT https://stackoverflow.com/a/462586/8199362
 	[GeneratedRegex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase, "en-GB")]
@@ -37,7 +37,7 @@ internal static partial class LoggerExtensions
 	/// </summary>
 	/// <param name="bytes">UTF8 string as byte array.</param>
 	/// <returns>Unescaped string (or empty string if <paramref name="bytes"/> is null or empty).</returns>
-	internal static string UnescapeUTF8(byte[]? bytes)
+	public static string UnescapeUTF8(byte[]? bytes)
 	{
 		if (bytes is null || bytes.Length == 0)
 		{
@@ -54,7 +54,7 @@ internal static partial class LoggerExtensions
 			(char)int.Parse(m.Groups[1].Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
 	}
 
-	internal static void Err(this ILogger @this, ErrValue value) =>
+	public static void Err(this ILogger @this, ErrValue value) =>
 		LogErr(@this, value, null);
 
 	/// <summary>
@@ -62,7 +62,7 @@ internal static partial class LoggerExtensions
 	/// </summary>
 	/// <param name="this"></param>
 	/// <param name="request">HttpRequestMessage instance.</param>
-	internal static void Request(this ILogger @this, HttpRequestMessage request)
+	public static void Request(this ILogger @this, HttpRequestMessage request)
 	{
 		var content = UnescapeUTF8(request.Content?.ReadAsByteArrayAsync().Result);
 		LogRequest(@this, request.Method, request.RequestUri, content, null);
@@ -73,7 +73,7 @@ internal static partial class LoggerExtensions
 	/// </summary>
 	/// <param name="this"></param>
 	/// <param name="json">Response JSON string.</param>
-	internal static void ResponseJson(this ILogger @this, string json) =>
+	public static void ResponseJson(this ILogger @this, string json) =>
 		LogResponseJson(@this, json, null);
 
 	/// <summary>
@@ -81,6 +81,6 @@ internal static partial class LoggerExtensions
 	/// </summary>
 	/// <param name="this"></param>
 	/// <param name="version">Version string.</param>
-	internal static void Version(this ILogger @this, string version) =>
+	public static void Version(this ILogger @this, string version) =>
 		LogVersion(@this, version, null);
 }

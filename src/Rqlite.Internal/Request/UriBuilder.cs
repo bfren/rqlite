@@ -5,10 +5,10 @@ using System;
 using System.Collections.Specialized;
 using System.Text;
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal.Request;
 
 /// <inheritdoc cref="IUriBuilder"/>
-internal sealed class UriBuilder : IUriBuilder
+public sealed class UriBuilder : IUriBuilder
 {
 	/// <inheritdoc/>
 	public string Path { get; }
@@ -20,7 +20,7 @@ internal sealed class UriBuilder : IUriBuilder
 	/// Create builder with a URI path.
 	/// </summary>
 	/// <param name="path">URI path.</param>
-	internal UriBuilder(string path) =>
+	public UriBuilder(string path) =>
 		Path = path.TrimStart('/');
 
 	/// <summary>
@@ -28,7 +28,7 @@ internal sealed class UriBuilder : IUriBuilder
 	/// </summary>
 	/// <param name="path">URI path.</param>
 	/// <param name="includeTimings">Whether or not to include timings with each request.</param>
-	internal UriBuilder(string path, bool includeTimings) : this(path)
+	public UriBuilder(string path, bool includeTimings) : this(path)
 	{
 		if (includeTimings)
 		{

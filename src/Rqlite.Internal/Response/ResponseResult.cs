@@ -1,7 +1,7 @@
 // Rqlite client for .NET.
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal.Response;
 
 /// <summary>
 /// Common fields in Rqlite response results.

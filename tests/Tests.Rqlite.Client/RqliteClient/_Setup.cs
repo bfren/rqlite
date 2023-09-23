@@ -4,7 +4,7 @@
 using System.Net;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using Rqlite.Client.Internals;
+using Rqlite.Internal.Request;
 
 namespace Rqlite.Client.RqliteClientTests;
 

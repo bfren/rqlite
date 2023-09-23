@@ -2,7 +2,8 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System.Text;
-using Rqlite.Client.Internals;
+using Rqlite.Internal.Request;
+using Rqlite.Internal.Response;
 
 namespace Rqlite.Client;
 

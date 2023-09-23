@@ -1,7 +1,7 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals.JsonContentTests.ConstructorTests;
+namespace Rqlite.Internal.Request.JsonContentTests.ConstructorTests;
 
 /// <see cref="JsonContent(object)"/>
 

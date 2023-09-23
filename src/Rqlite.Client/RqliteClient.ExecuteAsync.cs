@@ -6,8 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Rqlite.Client.Internals;
-using Rqlite.Client.Results;
+using Rqlite.Internal;
+using Rqlite.Internal.Request;
+using Rqlite.Internal.Response;
 using Wrap;
 
 namespace Rqlite.Client;
@@ -23,7 +24,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Command results.</returns>
-	internal static async Task<Result<List<CommandResult>>> ExecuteAsync<TCommand>(
+	internal static async Task<Result<List<RqliteCommandResult>>> ExecuteAsync<TCommand>(
 		IEnumerable<TCommand> commands,
 		bool asSingleTransaction,
 		IUriBuilder uriBuilder,
@@ -52,16 +53,16 @@ public sealed partial class RqliteClient : IRqliteClient
 				request
 			)
 			.MapAsync(
-				x => x.Select(CommandResult.Create).ToList()
+				x => x.Select(RqliteCommandResult.Create).ToList()
 			);
 	}
 
 	/// <inheritdoc/>
-	public Task<Result<List<CommandResult>>> ExecuteAsync(params string[] commands) =>
+	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(params string[] commands) =>
 		ExecuteAsync(false, commands);
 
 	/// <inheritdoc/>
-	public Task<Result<List<CommandResult>>> ExecuteAsync(bool asSingleTransaction, params string[] commands) =>
+	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(bool asSingleTransaction, params string[] commands) =>
 		ExecuteAsync(
 			commands: commands,
 			asSingleTransaction: asSingleTransaction,
@@ -70,15 +71,15 @@ public sealed partial class RqliteClient : IRqliteClient
 		);
 
 	/// <inheritdoc/>
-	public Task<Result<List<CommandResult>>> ExecuteAsync(string command, object param) =>
+	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(string command, object param) =>
 		ExecuteAsync(false, (command, param));
 
 	/// <inheritdoc/>
-	public Task<Result<List<CommandResult>>> ExecuteAsync(params (string command, object param)[] commands) =>
+	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(params (string command, object param)[] commands) =>
 		ExecuteAsync(false, commands);
 
 	/// <inheritdoc/>
-	public Task<Result<List<CommandResult>>> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands) =>
+	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands) =>
 		ExecuteAsync(
 			commands: from c in commands select new[] { c.command, c.param },
 			asSingleTransaction: asSingleTransaction,

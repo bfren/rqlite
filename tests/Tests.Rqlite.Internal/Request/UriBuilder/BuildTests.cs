@@ -1,7 +1,7 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-namespace Rqlite.Client.Internals.UriBuilderTests.BuildTests;
+namespace Rqlite.Internal.Request.UriBuilderTests.BuildTests;
 
 /// <see cref="UriBuilder.Build()"/>
 

@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal.Response;
 
 /// <summary>
 /// Result properties.

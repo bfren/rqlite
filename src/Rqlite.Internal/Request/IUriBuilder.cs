@@ -4,12 +4,12 @@
 using System;
 using System.Collections.Specialized;
 
-namespace Rqlite.Client.Internals;
+namespace Rqlite.Internal.Request;
 
 /// <summary>
 /// Enables building relative URIs with expandable query vars.
 /// </summary>
-internal interface IUriBuilder
+public interface IUriBuilder
 {
 	/// <summary>
 	/// URI path.

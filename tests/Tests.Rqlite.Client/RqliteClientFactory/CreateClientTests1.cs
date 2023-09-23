@@ -1,7 +1,8 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-using Rqlite.Client.Internals;
+using Rqlite.Client.Exceptions;
+using Rqlite.Internal;
 
 namespace Rqlite.Client.RqliteClientFactoryTests.CreateClientTests;
 

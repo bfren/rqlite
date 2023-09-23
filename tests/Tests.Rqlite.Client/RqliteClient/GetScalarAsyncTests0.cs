@@ -2,7 +2,7 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using NSubstitute.ExceptionExtensions;
-using Rqlite.Client.Internals;
+using Rqlite.Internal.Request;
 
 namespace Rqlite.Client.RqliteClientTests.GetScalarAsyncTests;
 
