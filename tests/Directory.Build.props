@@ -10,6 +10,8 @@
 	<ItemGroup>
 		<Using Include="NSubstitute"/>
 		<Using Include="RndF"/>
+		<Using Include="Wrap"/>
+		<Using Include="Wrap.Testing"/>
 		<Using Include="Xunit"/>
 	</ItemGroup>
 	<ItemGroup>
@@ -24,6 +26,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Rnd" />
+		<PackageReference Include="Wrap.Testing" />
 		<PackageReference Include="xunit" />
 		<PackageReference Include="xunit.runner.visualstudio">
 			<PrivateAssets>all</PrivateAssets>

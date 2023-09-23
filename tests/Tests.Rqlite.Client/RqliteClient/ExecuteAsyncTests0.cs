@@ -1,9 +1,7 @@
 // Rqlite: Unit Tests
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
-using NSubstitute.ExceptionExtensions;
 using Rqlite.Client.Internals;
-using Rqlite.Client.Response;
 
 namespace Rqlite.Client.RqliteClientTests.ExecuteAsyncTests;
 
@@ -15,16 +13,15 @@ public class when_commands_is_empty
 		// Arrange
 		var commands = Array.Empty<string>();
 		var builder = Substitute.For<IUriBuilder>();
-		var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+		var send = Helpers.GetExecuteSubstitute();
 		var expected = "You must pass at least one command.";
 
 		// Act
 		var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 		// Assert
-		Assert.Collection(result.Errors,
-			x => Assert.Equal(expected, x.Value)
-		);
+		var err = result.AssertErr();
+		Assert.Equal(expected, err.Message);
 	}
 }
 
@@ -36,7 +33,7 @@ public class when_commands_is_not_empty
 		// Arrange
 		var commands = new[] { Rnd.Str, Rnd.Str };
 		var builder = Substitute.For<IUriBuilder>();
-		var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
 		_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
@@ -53,7 +50,7 @@ public class when_commands_is_not_empty
 			// Arrange
 			var commands = new[] { Rnd.Str, Rnd.Str };
 			var builder = Substitute.For<IUriBuilder>();
-			var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+			var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 			var expected = Json(commands);
 
 			// Act
@@ -71,7 +68,8 @@ public class when_commands_is_not_empty
 			// Arrange
 			var commands = new[] { Rnd.Str, Rnd.Str };
 			var builder = Substitute.For<IUriBuilder>();
-			var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+			var send = Helpers.GetExecuteSubstitute();
+			send.Invoke(default!).ReturnsForAnyArgs(new List<ExecuteResponseResult>());
 
 			// Act
 			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
@@ -90,7 +88,7 @@ public class when_commands_is_not_empty
 			var uri = $"https://{Rnd.Str}.com/{Rnd.Str}".ToLowerInvariant();
 			var builder = Substitute.For<IUriBuilder>();
 			builder.Build().Returns(new Uri(uri));
-			var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+			var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 			// Act
 			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
@@ -107,15 +105,22 @@ public class when_commands_is_not_empty
 			// Arrange
 			var commands = new[] { Rnd.Str, Rnd.Str };
 			var builder = Substitute.For<IUriBuilder>();
-			var response = new RqliteExecuteResponse();
-			var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
-			send.Invoke(default!).ReturnsForAnyArgs(response);
+			var lastInsertId = Rnd.Int;
+			var rowsAffected = Rnd.Int;
+			var send = Helpers.GetExecuteSubstitute(lastInsertId, rowsAffected);
 
 			// Act
 			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 			// Assert
-			Assert.Same(response, result);
+			var actual = result.AssertOk();
+			Assert.Collection(actual,
+				x =>
+				{
+					Assert.Equal(lastInsertId, x.LastInsertId);
+					Assert.Equal(rowsAffected, x.RowsAffected);
+				}
+			);
 		}
 	}
 
@@ -128,16 +133,15 @@ public class when_commands_is_not_empty
 			var commands = new[] { Rnd.Str, Rnd.Str };
 			var builder = Substitute.For<IUriBuilder>();
 			var expected = new ArgumentNullException(Rnd.Str);
-			var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
-			send.Invoke(default!).ThrowsAsyncForAnyArgs(expected);
+			var send = Helpers.GetExecuteSubstitute();
+			send.Invoke(default!).ReturnsForAnyArgs(R.Err(expected));
 
 			// Act
 			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 			// Assert
-			Assert.Collection(result.Errors,
-				x => Assert.Equal(expected.ToString(), x.Value)
-			);
+			var err = result.AssertErr();
+			Assert.Same(expected, err.Exception);
 		}
 	}
 }
@@ -150,7 +154,7 @@ public class when_asSingleTransaction_is_true
 		// Arrange
 		var commands = new[] { Rnd.Str, Rnd.Str };
 		var builder = Substitute.For<IUriBuilder>();
-		var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
 		_ = await RqliteClient.ExecuteAsync(commands, true, builder, send);
@@ -168,7 +172,7 @@ public class when_asSingleTransaction_is_false
 		// Arrange
 		var commands = new[] { Rnd.Str, Rnd.Str };
 		var builder = Substitute.For<IUriBuilder>();
-		var send = Substitute.For<Func<HttpRequestMessage, Task<RqliteExecuteResponse>>>();
+		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
 		_ = await RqliteClient.ExecuteAsync(commands, false, builder, send);

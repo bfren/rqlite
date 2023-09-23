@@ -14,7 +14,7 @@ public class with_commands_as_string_params : RqliteClientTests
 		var expected = Json(queries);
 
 		// Act
-		_ = await client.QueryAsync(queries);
+		_ = await client.QueryAsync<int>(queries);
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
@@ -30,7 +30,7 @@ public class with_commands_as_string_params : RqliteClientTests
 		var queries = new[] { Rnd.Str, Rnd.Str };
 
 		// Act
-		_ = await client.QueryAsync(queries);
+		_ = await client.QueryAsync<int>(queries);
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
@@ -51,7 +51,7 @@ public class with_parameterised_command : RqliteClientTests
 		var expected = Json(new[] { new object[] { command, param } });
 
 		// Act
-		_ = await client.QueryAsync(command, param);
+		_ = await client.QueryAsync<int>(command, param);
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
@@ -74,7 +74,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 		var expected = Json(new[] { new object[] { c0, v0 }, new object[] { c1, v1 } });
 
 		// Act
-		_ = await client.QueryAsync((c0, v0), (c1, v1));
+		_ = await client.QueryAsync<int>((c0, v0), (c1, v1));
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
@@ -89,7 +89,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 		var (client, v) = Setup();
 
 		// Act
-		_ = await client.QueryAsync((Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Dbl));
+		_ = await client.QueryAsync<int>((Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Dbl));
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(

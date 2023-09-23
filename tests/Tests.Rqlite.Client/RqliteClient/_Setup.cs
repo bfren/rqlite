@@ -17,8 +17,7 @@ public abstract class RqliteClientTests
 		{
 			var status = handler.Status;
 			var value = handler.Value;
-			var response = new HttpResponseMessage(status) { Content = content ?? new JsonContent(value) };
-			return Task.FromResult(response);
+			return Task.FromResult(new HttpResponseMessage(status) { Content = content ?? new JsonContent(value) });
 		});
 
 		var httpClient = new HttpClient(handler) { BaseAddress = new("http://localhost:4001") };

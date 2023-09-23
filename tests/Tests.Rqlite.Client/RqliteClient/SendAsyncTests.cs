@@ -3,6 +3,7 @@
 
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using Wrap.Testing;
 
 namespace Rqlite.Client.RqliteClientTests.SendAsyncTests;
 
@@ -69,8 +70,9 @@ public class when_called : RqliteClientTests
 		var result = await client.SendAsync<Response>(new());
 
 		// Assert
-		Assert.Equal(v.HttpMessageHandler.Value.Foo, result.Foo);
-		Assert.Equal(v.HttpMessageHandler.Value.Bar, result.Bar);
+		var ok = result.AssertOk();
+		Assert.Equal(v.HttpMessageHandler.Value.Foo, ok.Foo);
+		Assert.Equal(v.HttpMessageHandler.Value.Bar, ok.Bar);
 	}
 }
 
