@@ -3,7 +3,6 @@
 
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using Wrap.Testing;
 
 namespace Rqlite.Client.RqliteClientTests.SendAsyncTests;
 
