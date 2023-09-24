@@ -78,7 +78,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	}
 
 	/// <summary>
-	/// Dispose <see cref="HttpClient"/>.
+	/// Dispose <see cref="HttpClient"/> property.
 	/// </summary>
 	public void Dispose() =>
 		HttpClient.Dispose();

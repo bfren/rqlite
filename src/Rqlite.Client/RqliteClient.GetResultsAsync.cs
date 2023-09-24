@@ -44,7 +44,6 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			// Capture any exceptions as an error result
 			return R.Err(ex);
 		}
 	}
