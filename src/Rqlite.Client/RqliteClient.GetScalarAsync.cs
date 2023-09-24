@@ -43,7 +43,7 @@ public sealed partial class RqliteClient : IRqliteClient
 					request
 				)
 				.BindAsync(
-					x => x.SelectMany(y => y.Values ?? new()).SelectMany(z => z).SingleOrNone().Switch(
+					x => x.SelectMany(y => y.Values ?? new()).SelectMany(z => z).SingleOrNone().Match(
 						none: R.Err("Did not receive exactly one value."),
 						some: R.Wrap
 					)

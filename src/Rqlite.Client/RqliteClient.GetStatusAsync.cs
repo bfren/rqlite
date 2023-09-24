@@ -20,7 +20,7 @@ public sealed partial class RqliteClient : IRqliteClient
 			RequestUri = new Uri("/status", UriKind.Relative)
 		};
 
-		return await SendAsync<RqliteStatus>(request).SwitchAsync(
+		return await SendAsync<RqliteStatus>(request).MatchAsync(
 			err: e =>
 			{
 				Logger.Err(e);
