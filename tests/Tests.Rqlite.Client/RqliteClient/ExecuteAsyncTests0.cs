@@ -115,13 +115,9 @@ public class when_commands_is_not_empty
 
 			// Assert
 			var actual = result.AssertOk();
-			Assert.Collection(actual,
-				x =>
-				{
-					Assert.Equal(lastInsertId, x.LastInsertId);
-					Assert.Equal(rowsAffected, x.RowsAffected);
-				}
-			);
+			var single = Assert.Single(actual);
+			Assert.Equal(lastInsertId, single.LastInsertId);
+			Assert.Equal(rowsAffected, single.RowsAffected);
 		}
 	}
 

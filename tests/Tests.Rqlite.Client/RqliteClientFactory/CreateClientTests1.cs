@@ -98,9 +98,8 @@ public class when_Clients_contains_named_client : RqliteClientFactoryTests
 
 		// Assert
 		var client = Assert.IsType<RqliteClient>(result);
-		Assert.Collection(client.ExecuteUri().QueryVars.AllKeys,
-			x => Assert.Equal("timings", x)
-		);
+		var single = Assert.Single(client.ExecuteUri().QueryVars.AllKeys);
+		Assert.Equal("timings", single);
 	}
 
 	[Fact]

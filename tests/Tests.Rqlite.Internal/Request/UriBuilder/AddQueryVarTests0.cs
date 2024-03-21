@@ -18,9 +18,8 @@ public class with_key
 		builder.AddQueryVar(key);
 
 		// Assert
-		Assert.Collection(builder.QueryVars.AllKeys,
-			x => Assert.Equal(key, x)
-		);
+		var single = Assert.Single(builder.QueryVars.AllKeys);
+		Assert.Equal(key, single);
 		Assert.Null(builder.QueryVars[key]);
 	}
 }

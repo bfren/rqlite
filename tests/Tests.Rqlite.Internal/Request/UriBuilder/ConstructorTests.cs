@@ -44,9 +44,8 @@ public class when_called
 			var result = new UriBuilder(Rnd.Str, true);
 
 			// Assert
-			Assert.Collection(result.QueryVars.AllKeys,
-				x => Assert.Equal("timings", x)
-			);
+			var single = Assert.Single(result.QueryVars.AllKeys);
+			Assert.Equal("timings", single);
 		}
 	}
 }
