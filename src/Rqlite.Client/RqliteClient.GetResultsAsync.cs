@@ -3,7 +3,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -32,12 +31,12 @@ public sealed partial class RqliteClient : IRqliteClient
 					request
 				)
 				.BindAsync(
-					x => x.Errors.Any() switch
+					x => x.Errors.Count switch
 					{
-						false =>
+						> 0 =>
 							R.Wrap(x.Results),
 
-						true =>
+						_ =>
 							R.Err(string.Join(Environment.NewLine, x.Errors))
 					}
 				);
