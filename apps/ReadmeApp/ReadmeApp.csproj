@@ -2,19 +2,19 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="jeebsconfig.json" />
+		<None Remove="jeebsconfig.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="jeebsconfig.json">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
+		<Content Include="jeebsconfig.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -22,7 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
+		<ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
 	</ItemGroup>
 
 </Project>
