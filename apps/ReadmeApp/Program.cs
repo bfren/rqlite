@@ -23,7 +23,7 @@ var sql0 = "INSERT INTO foo(name, age) VALUES(:name, :age)";
 var param0 = new { name = "Fred", age = 42 };
 var query0 = await client.ExecuteAsync(sql0, param0);
 query0.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => Console.WriteLine("Inserted record {0}.", x.Select(r => r.LastInsertId).First())
 );
 // Output: 'Inserted record 1.'
@@ -33,7 +33,7 @@ var sql1 = "SELECT * FROM foo WHERE name = :name";
 var param1 = new { name = "Fred" };
 var query1 = await client.QueryAsync<Person>(sql1, param1);
 query1.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => Console.WriteLine("{0} is {1}.", x.First().Name, x.First().Age)
 );
 // Output: 'Fred is 42.'
@@ -42,7 +42,7 @@ query1.Audit(
 var sql2 = "SELECT age FROM foo WHERE name = :name";
 var query2 = await client.GetScalarAsync<int>(sql2, param1);
 query2.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => Console.WriteLine("Fred is {0}.", x)
 );
 // Output: 'Fred is 42.'
@@ -50,7 +50,7 @@ query2.Audit(
 // 3: map results to a complex type
 var query3 = await client.QueryAsync<Person>(sql1, param1);
 query3.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => Console.WriteLine("Found {0}.", x.First())
 );
 // Output: 'Found Person { Id = 1, Name = Fred, Age = 42 }.'
@@ -63,7 +63,7 @@ var query4 = await client.ExecuteAsync(
 	(sql0, param3)
 );
 query4.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => Console.WriteLine("Inserted records {0}.", string.Join(", ", x.Select(r => r.LastInsertId)))
 );
 // Output: 'Inserted records 2, 3.'

@@ -44,14 +44,14 @@ public sealed partial class RqliteClient : IRqliteClient
 				)
 				.BindAsync(
 					x => x.SelectMany(y => y.Values ?? new()).SelectMany(z => z).SingleOrNone().Match(
-						none: R.Err("Did not receive exactly one value."),
+						none: R.Fail("Did not receive exactly one value."),
 						some: R.Wrap
 					)
 				);
 		}
 		catch (Exception ex)
 		{
-			return R.Err(ex);
+			return R.Fail(ex);
 		}
 	}
 

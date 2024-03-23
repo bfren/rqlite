@@ -20,7 +20,7 @@ Console.WriteLine();
 log.Inf("0 - using client defaults");
 var createTableResult = await client0.ExecuteAsync("CREATE TABLE foo (id INTEGER NOT NULL PRIMARY KEY, name TEXT, age INTEGER)");
 createTableResult.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg("Create table result: {@Result}", x)
 );
 
@@ -29,7 +29,7 @@ log.Inf("1 - using client defaults");
 var name = Rnd.Str;
 var insertRowResult0 = await client0.ExecuteAsync($"INSERT INTO foo(name, age) VALUES('{name}', {Rnd.Int})");
 insertRowResult0.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg("Insert row result: {@Row}", x)
 );
 
@@ -41,7 +41,7 @@ var insertRowResult1 = await client1.ExecuteAsync(true,
 	(insertRowCommand1, new { name = Rnd.Str, age = Rnd.Int })
 );
 insertRowResult1.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg("Insert row result: {@Row}", x)
 );
 
@@ -49,7 +49,7 @@ Console.WriteLine();
 log.Inf("3 - without specifiying client name");
 var queryResult0 = await client1.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 queryResult0.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg("Query result: {@List}", x)
 );
 
@@ -57,7 +57,7 @@ Console.WriteLine();
 log.Inf("4 - without specifiying client name");
 var queryResult1 = await client1.QueryAsync<Person>($"SELECT * FROM foo WHERE age > {Rnd.Int}");
 queryResult1.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg("Query result: {@List}", x)
 );
 
@@ -65,7 +65,7 @@ Console.WriteLine();
 log.Inf("5 - with client name");
 var queryResult2 = await client2.QueryAsync<Person>("SELECT * FROM foo WHERE age > :age", new { age = Rnd.Int });
 queryResult2.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg("Query result: {@List}", x)
 );
 
@@ -77,7 +77,7 @@ var queryResult3 = await client2.QueryAsync<Person>(
 	(query3, new { age = Rnd.Int })
 );
 queryResult3.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x =>
 	{
 		log.Dbg("Query 0 result: {@Row}", x[0]);
@@ -90,7 +90,7 @@ log.Inf("7 - with client name");
 var query4 = "SELECT * FROM foo WHERE name = :name";
 var queryResult4 = await client2.QueryAsync<Person>(query4, new { name });
 queryResult4.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg($"{name} is {{Age}}", x[0].Age)
 );
 
@@ -98,7 +98,7 @@ Console.WriteLine();
 log.Inf("8 - with client name");
 var queryResult5 = await client2.QueryAsync<Person>(query4, new { name });
 queryResult5.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg($"{name} is {{Age}}", x[0].Age)
 );
 
@@ -106,15 +106,7 @@ Console.WriteLine();
 log.Inf("9 - as scalar");
 var scalarResult0 = await client2.GetScalarAsync<int>("SELECT age FROM foo WHERE name = :name", new { name });
 scalarResult0.Audit(
-	err: e => log.Err(e.Message),
-	ok: x => log.Dbg($"{name} is {{Age}}", x)
-);
-
-Console.WriteLine();
-log.Inf("10 - as scalar with multiple values");
-var scalarResult1 = await client2.GetScalarAsync<int>("SELECT age FROM foo WHERE age > :age", new { age = Rnd.Int });
-scalarResult1.Audit(
-	err: e => log.Err(e.Message),
+	fail: e => log.Err(e.Message),
 	ok: x => log.Dbg($"{name} is {{Age}}", x)
 );
 

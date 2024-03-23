@@ -21,7 +21,7 @@ public class when_commands_is_empty
 		var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 		// Assert
-		var err = result.AssertErr();
+		var err = result.AssertFail();
 		Assert.Equal(expected, err.Message);
 	}
 }
@@ -131,13 +131,13 @@ public class when_commands_is_not_empty
 			var builder = Substitute.For<IUriBuilder>();
 			var expected = new ArgumentNullException(Rnd.Str);
 			var send = Helpers.GetExecuteSubstitute();
-			send.Invoke(default!).ReturnsForAnyArgs(R.Err(expected));
+			send.Invoke(default!).ReturnsForAnyArgs(R.Fail(expected));
 
 			// Act
 			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 			// Assert
-			var err = result.AssertErr();
+			var err = result.AssertFail();
 			Assert.Same(expected, err.Exception);
 		}
 	}

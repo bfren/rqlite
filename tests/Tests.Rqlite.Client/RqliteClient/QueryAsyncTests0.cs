@@ -22,7 +22,7 @@ public class when_queries_is_empty
 		var result = await RqliteClient.QueryAsync(queries, builder, send);
 
 		// Assert
-		var err = result.AssertErr();
+		var err = result.AssertFail();
 		Assert.Equal(expected, err.Message);
 	}
 }
@@ -134,7 +134,7 @@ public class when_queries_is_not_empty
 			var result = await RqliteClient.QueryAsync(queries, builder, send);
 
 			// Assert
-			var err = result.AssertErr();
+			var err = result.AssertFail();
 			Assert.Same(expected, err.Exception);
 		}
 	}

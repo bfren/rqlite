@@ -109,7 +109,7 @@ public class when_called
 			var result = await RqliteClient.GetScalarAsync(Rnd.Str, builder, send);
 
 			// Assert
-			var err = result.AssertErr();
+			var err = result.AssertFail();
 			Assert.Same(expected, err.Exception);
 		}
 	}

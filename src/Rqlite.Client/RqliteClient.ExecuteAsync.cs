@@ -32,7 +32,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	{
 		if (!commands.Any())
 		{
-			return R.Err("You must pass at least one command.");
+			return R.Fail("You must pass at least one command.");
 		}
 
 		if (asSingleTransaction)

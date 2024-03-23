@@ -34,16 +34,16 @@ public sealed partial class RqliteClient : IRqliteClient
 					x => x.Errors.Count switch
 					{
 						> 0 =>
-							R.Wrap(x.Results),
+							R.Fail(string.Join(Environment.NewLine, x.Errors)),
 
 						_ =>
-							R.Err(string.Join(Environment.NewLine, x.Errors))
+							R.Wrap(x.Results)
 					}
 				);
 		}
 		catch (Exception ex)
 		{
-			return R.Err(ex);
+			return R.Fail(ex);
 		}
 	}
 }

@@ -21,7 +21,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		};
 
 		return await SendAsync<RqliteStatus>(request).MatchAsync(
-			err: e =>
+			fail: e =>
 			{
 				Logger.Err(e);
 				return M.None;
