@@ -34,7 +34,7 @@ public sealed partial class RqliteClient : IRqliteClient
 					x => x.Errors.Count switch
 					{
 						> 0 =>
-							R.Fail(string.Join(Environment.NewLine, x.Errors)),
+							R.Fail(nameof(RqliteClient), nameof(GetResultsAsync), string.Join(Environment.NewLine, x.Errors)),
 
 						_ =>
 							R.Wrap(x.Results)
@@ -43,7 +43,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return R.Fail(ex);
+			return R.Fail(nameof(RqliteClient), nameof(GetResultsAsync), ex);
 		}
 	}
 }
