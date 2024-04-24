@@ -22,7 +22,7 @@ public class without_DefaultClientName
 
 			// Assert
 			var client = Assert.IsType<RqliteClient>(result);
-			Assert.Equal($"{v.ClientOptions.BaseAddress}/", client.HttpClient.BaseAddress!.AbsoluteUri);
+			Assert.Equal($"{v.Options.BaseAddress}/", client.HttpClient.BaseAddress!.AbsoluteUri);
 			Assert.Equal(TimeSpan.FromSeconds(v.Options.TimeoutInSeconds), client.HttpClient.Timeout);
 		}
 	}
@@ -70,7 +70,7 @@ public class with_DefaultClientName
 
 			// Assert
 			var client = Assert.IsType<RqliteClient>(result);
-			Assert.Equal($"{v.ClientOptions.BaseAddress}/", client.HttpClient.BaseAddress!.AbsoluteUri);
+			Assert.Equal($"{v.Options.BaseAddress}/", client.HttpClient.BaseAddress!.AbsoluteUri);
 			Assert.Equal(TimeSpan.FromSeconds(v.Options.TimeoutInSeconds), client.HttpClient.Timeout);
 		}
 	}

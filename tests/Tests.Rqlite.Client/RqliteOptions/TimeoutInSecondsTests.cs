@@ -11,8 +11,8 @@ public class default_value
 	public void is_thirty_seconds()
 	{
 		// Arrange
-		var thirtySeconds = 30;
 		var options = new RqliteOptions();
+		var thirtySeconds = 30;
 
 		// Act
 		var result = options.TimeoutInSeconds;

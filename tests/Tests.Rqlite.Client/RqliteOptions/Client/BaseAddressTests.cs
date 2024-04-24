@@ -8,16 +8,15 @@ namespace Rqlite.Client.RqliteOptionsTests.ClientTests.BaseAddressTests;
 public class default_value
 {
 	[Fact]
-	public void is_rqlite_default()
+	public void is_null()
 	{
 		// Arrange
 		var client = new RqliteOptions.Client();
-		var rqliteDefaultAddress = "http://localhost:4001";
 
 		// Act
 		var result = client.BaseAddress;
 
 		// Assert
-		Assert.Equal(rqliteDefaultAddress, result);
+		Assert.Null(result);
 	}
 }
