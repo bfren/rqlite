@@ -83,7 +83,6 @@
         <article data-uid="">
 <h1 id="configuration">Configuration</h1>
 
-<p>## Default Values</p>
 <p>Technically you don't need to add any configuration to use the library, if your Rqlite client instance is running on <code>localhost</code> on the default port <code>4001</code>.  This is like including the following in your <code>appsettings.json</code> file:</p>
 <pre><code class="lang-json">{
     &quot;Rqlite&quot;: {
@@ -101,6 +100,9 @@
 <p>With this config the following are functionally equivalent:</p>
 <pre><code class="lang-csharp">using var client = factory.CreateClient();
 using var client = factory.CreateClient(&quot;localhost&quot;);
+// BaseAddress: http://localhost:4001
+// IncludeTimings: false
+// TimeoutInSeconds: 30
 </code></pre>
 <h2 id="global-options">Global Options</h2>
 <p>You can set global values for the base address, whether or not to include timings with each request, and the network timeout, which will affect all clients, e.g.</p>
@@ -114,6 +116,9 @@ using var client = factory.CreateClient(&quot;localhost&quot;);
 </code></pre>
 <p>With this config (i.e. no named clients) you would need to use:</p>
 <pre><code class="lang-csharp">using var client = factory.CreateClient();
+// BaseAddress: http://db:4001
+// IncludeTimings: true
+// TimeoutInSeconds: 5
 </code></pre>
 <h2 id="defining-clients">Defining Clients</h2>
 <p>You can define named clients with different options:</p>
