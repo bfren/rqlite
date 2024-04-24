@@ -22,11 +22,13 @@ Documentation (including API explorer) is available [here](https://bfren.github.
 The simplest way to start testing is to use [Docker](https://docker.com):
 
 ```bash
-# start rqlite instance using Docker
+# in a temporary directory of your choice
+$ git checkout https://github.com/bfren/rqlite .
+$ chmod +x run.sh
 $ ./run.sh
 
 # in a new terminal
-$ dotnet run --project apps/ReadmeApp/ReadmeApp.csproj
+$ dotnet run --project apps/ReadmeApp
 ```
 
 This will execute the code below (taken from ReadmeApp's `Project.cs` file).  You can see additional options and code in the ConsoleApp project.
