@@ -10,22 +10,19 @@ namespace Rqlite.Internal.Request;
 /// <summary>
 /// Serialises and encodes JSON content correctly for use in HttpRequestMessage.
 /// </summary>
-public sealed class JsonContent : StringContent
+/// <remarks>
+/// Serialise content and set encoding.
+/// </remarks>
+/// <param name="content">Content to be serialised as JSON.</param>
+public sealed class JsonContent(object? content) : StringContent(
+	content: JsonSerializer.Serialize(content, SerialiserOptions),
+	encoding: Encoding.UTF8,
+	mediaType: "application/json"
+	)
 {
 	/// <summary>
 	/// Shared options for JSON serialisation.
 	/// </summary>
 	public static JsonSerializerOptions SerialiserOptions { get; } =
 		new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-
-	/// <summary>
-	/// Serialise content and set encoding.
-	/// </summary>
-	/// <param name="content">Content to be serialised as JSON.</param>
-	public JsonContent(object? content) : base(
-		content: JsonSerializer.Serialize(content, SerialiserOptions),
-		encoding: Encoding.UTF8,
-		mediaType: "application/json"
-	)
-	{ }
 }

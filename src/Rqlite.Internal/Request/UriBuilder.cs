@@ -8,20 +8,17 @@ using System.Text;
 namespace Rqlite.Internal.Request;
 
 /// <inheritdoc cref="IUriBuilder"/>
-public sealed class UriBuilder : IUriBuilder
+/// <summary>
+/// Create builder with a URI path.
+/// </summary>
+/// <param name="path">URI path.</param>
+public sealed class UriBuilder(string path) : IUriBuilder
 {
 	/// <inheritdoc/>
-	public string Path { get; }
+	public string Path { get; } = path.TrimStart('/');
 
 	/// <inheritdoc/>
-	public NameValueCollection QueryVars { get; } = new();
-
-	/// <summary>
-	/// Create builder with a URI path.
-	/// </summary>
-	/// <param name="path">URI path.</param>
-	public UriBuilder(string path) =>
-		Path = path.TrimStart('/');
+	public NameValueCollection QueryVars { get; } = [];
 
 	/// <summary>
 	/// Create builder and optionally include timings with all requests.

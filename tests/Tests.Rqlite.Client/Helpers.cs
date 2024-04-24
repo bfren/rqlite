@@ -39,7 +39,7 @@ internal static class Helpers
 	}
 
 	public static Result<List<QueryResponseResult<T>>> GetQueryResponseResult<T>(T[] value) =>
-		new List<QueryResponseResult<T>> { new() { Rows = value.ToList() } };
+		new List<QueryResponseResult<T>> { new() { Rows = [.. value] } };
 
 	#endregion
 
@@ -58,7 +58,7 @@ internal static class Helpers
 
 	public static Result<List<ScalarResponseResult<T>>> GetScalarResponseResult<T>(T value)
 		where T : struct =>
-		new List<ScalarResponseResult<T>> { { new() { Values = new() { new List<T>(new[] { value }) } } } };
+		new List<ScalarResponseResult<T>> { { new() { Values = [new List<T>([value])] } } };
 
 	#endregion
 

@@ -91,3 +91,11 @@ query4.Audit(
 
 internal sealed record Person(int Id, string Name, int Age);
 ```
+
+## Licence
+
+> [MIT](https://mit.bfren.dev/2023)
+
+## Copyright
+
+> Copyright (c) 2023-2024 [bfren](https://bfren.dev) (unless otherwise stated)

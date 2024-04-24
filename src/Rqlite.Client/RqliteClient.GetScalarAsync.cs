@@ -26,8 +26,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	internal static async Task<Result<TValue>> GetScalarAsync<TQuery, TValue>(
 		TQuery query,
 		IUriBuilder uriBuilder,
-		Func<HttpRequestMessage, Task<Result<List<ScalarResponseResult<TValue>>>>> send
-	)
+		Func<HttpRequestMessage, Task<Result<List<ScalarResponseResult<TValue>>>>> send)
 	{
 		var request = new HttpRequestMessage
 		{
@@ -43,7 +42,7 @@ public sealed partial class RqliteClient : IRqliteClient
 					request
 				)
 				.BindAsync(
-					x => x.SelectMany(y => y.Values ?? new()).SelectMany(z => z).SingleOrNone().Match(
+					x => x.SelectMany(y => y.Values ?? []).SelectMany(z => z).SingleOrNone().Match(
 						none: R.Fail(nameof(RqliteClient), nameof(GetScalarAsync), "Did not receive exactly one value."),
 						some: R.Wrap
 					)

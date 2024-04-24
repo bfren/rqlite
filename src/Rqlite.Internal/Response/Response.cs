@@ -30,7 +30,7 @@ public sealed record class Response<T>
 	/// <summary>
 	/// Request results.
 	/// </summary>
-	public List<T> Results { get; init; } = new();
+	public List<T> Results { get; init; } = [];
 
 	/// <summary>
 	/// If IncludeTimings is set, will include the time taken to execute the request.
@@ -47,10 +47,10 @@ public sealed record class Response<T>
 	/// </summary>
 	/// <param name="error">Error message.</param>
 	public Response(string error) : this() =>
-		Results = new()
-		{
+		Results =
+		[
 			new() { Error = error }
-		};
+		];
 
 	/// <summary>
 	/// Create a response from an Exception.

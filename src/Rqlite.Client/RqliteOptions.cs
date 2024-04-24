@@ -28,7 +28,7 @@ public sealed record class RqliteOptions
 	/// <summary>
 	/// Rqlite clients to be configured.
 	/// </summary>
-	public Dictionary<string, Client> Clients { get; init; } = new();
+	public Dictionary<string, Client> Clients { get; init; } = [];
 
 	/// <summary>
 	/// Rqlite client connection details.
