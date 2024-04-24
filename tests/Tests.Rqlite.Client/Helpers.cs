@@ -39,7 +39,7 @@ internal static class Helpers
 	}
 
 	public static Result<List<QueryResponseResult<T>>> GetQueryResponseResult<T>(T[] value) =>
-		new List<QueryResponseResult<T>> { new() { Rows = value.ToList() } };
+		new List<QueryResponseResult<T>> { new() { Rows = [.. value] } };
 
 	#endregion
 
