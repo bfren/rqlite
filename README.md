@@ -4,7 +4,9 @@
 
 [![Test](https://github.com/bfren/rqlite/actions/workflows/test.yml/badge.svg)](https://github.com/bfren/rqlite/actions/workflows/test.yml) ![Publish](https://github.com/bfren/rqlite/workflows/Publish/badge.svg)
 
-Unofficial .NET client for [Rqlite](https://rqlite.io).
+Unofficial .NET client for [Rqlite](https://rqlite.io), download [NuGet package](https://nuget.org/packages/rqlite).
+
+Documentation (including API explorer) is available [here](https://bfren.github.io/rqlite).
 
 ## Features
 
@@ -20,10 +22,14 @@ Unofficial .NET client for [Rqlite](https://rqlite.io).
 The simplest way to start testing is to use [Docker](https://docker.com):
 
 ```bash
-docker run -p4001:4001 rqlite/rqlite
+# start rqlite instance using Docker
+$ ./run.sh
+
+# in a new terminal
+$ dotnet run --project apps/ReadmeApp/ReadmeApp.csproj
 ```
 
-Install the [NuGet package](https://nuget.org/packages/rqlite).  You can see a functioning example of the code below in the ReadmeApp project of this repository.
+This will execute the code below (taken from ReadmeApp's `Project.cs` file).  You can see additional options and code in the ConsoleApp project.
 
 ```csharp
 // register Rqlite with dependency injection
