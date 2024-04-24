@@ -14,7 +14,7 @@ public sealed class UriBuilder : IUriBuilder
 	public string Path { get; }
 
 	/// <inheritdoc/>
-	public NameValueCollection QueryVars { get; } = new();
+	public NameValueCollection QueryVars { get; } = [];
 
 	/// <summary>
 	/// Create builder with a URI path.
