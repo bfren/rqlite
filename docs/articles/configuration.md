@@ -1,7 +1,5 @@
 # Configuration
 
-## Default Values
-
 Technically you don't need to add any configuration to use the library, if your Rqlite client instance is running on `localhost` on the default port `4001`.  This is like including the following in your `appsettings.json` file:
 
 ```json
@@ -24,6 +22,9 @@ With this config the following are functionally equivalent:
 ```csharp
 using var client = factory.CreateClient();
 using var client = factory.CreateClient("localhost");
+// BaseAddress: http://localhost:4001
+// IncludeTimings: false
+// TimeoutInSeconds: 30
 ```
 
 ## Global Options
@@ -44,6 +45,9 @@ With this config (i.e. no named clients) you would need to use:
 
 ```csharp
 using var client = factory.CreateClient();
+// BaseAddress: http://db:4001
+// IncludeTimings: true
+// TimeoutInSeconds: 5
 ```
 
 ## Defining Clients

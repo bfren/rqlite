@@ -1,3 +1,3 @@
 # Articles
 
-1. [Configuration]({% link articles/configuration.md %})
+1. [Configuration](~/articles/configuration.md)
