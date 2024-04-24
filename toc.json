@@ -1,2 +1,2 @@
 
-{"items":[{"name":"Get Started","href":"querying.html","topicHref":"querying.html"},{"name":"API","href":"api/index.html","tocHref":"api/toc.html","topicHref":"api/index.html","homepage":"api/index.html"}]}
+{"items":[{"name":"Get Started"},{"name":"Rqlite .NET Client","href":"index.html","topicHref":"index.html"},{"name":"Configuration","href":"configuration.html","topicHref":"configuration.html"},{"name":"Querying","href":"querying.html","topicHref":"querying.html"},{"name":"API","href":"api/index.html","tocHref":"api/toc.html","topicHref":"api/index.html","homepage":"api/index.html"}]}
