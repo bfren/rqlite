@@ -5,27 +5,13 @@ This is a community client for accessing [Rqlite](https://rqlite.io) from .NET a
 ## Contents
 
 * [Installation](#installation)
-* [Readme App](#readme-app)
 * [Usage](#usage)
+* [Readme App](#readme-app)
 * [Licence / Copyright](#licence)
 
 ## Installation
 
 You can either download and build the source yourself in your own project, or install the [NuGet Package](https://nuget.org/packages/rqlite).
-
-## Readme App
-
-To see the library in action, the source contains a Readme App.  Simply checkout the repository, spin up a Rqlite instance (Docker required), and run the project:
-
-```bash
-# in a temporary directory of your choice
-$ git checkout https://github.com/bfren/rqlite .
-$ chmod +x run.sh
-$ ./run.sh
-
-# in a new terminal
-$ dotnet run --project apps/ReadmeApp
-```
 
 ## Usage
 
@@ -63,6 +49,20 @@ var items = await client.QueryAsync<Item>("SELECT * FROM item WHERE id = :id", n
 ```
 
 NB: This client is **async only** so you **must** use it within `async` methods so you can make use of the `await` keyword.
+
+## Readme App
+
+To see the library in action, the source contains a Readme App.  Simply checkout the repository, spin up a Rqlite instance (Docker required), and run the project:
+
+```bash
+# in a temporary directory of your choice
+$ git checkout https://github.com/bfren/rqlite .
+$ chmod +x run.sh
+$ ./run.sh
+
+# in a new terminal
+$ dotnet run --project apps/ReadmeApp
+```
 
 ## Licence
 

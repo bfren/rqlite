@@ -1,0 +1,6 @@
+- name: Get Started
+- href: ../index.md
+
+- name: Essentials
+- href: configuration.md
+- href: querying.md

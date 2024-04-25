@@ -1,8 +1,6 @@
-- name: Get Started
-- href: index.md
-- href: configuration.md
-- href: querying.md
-
+- name: Docs
+  href: docs/
+  homepage: docs/configuration.md
 - name: API
   href: api/
   homepage: api/index.md
