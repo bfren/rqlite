@@ -30,7 +30,7 @@ public static class ServiceCollectionExtensions
 		{
 			_ = @this.AddHttpClient(name, opt =>
 			{
-				opt.BaseAddress = new(connection.BaseAddress);
+				opt.BaseAddress = new(connection.BaseAddress ?? rqliteOptions.BaseAddress);
 				opt.Timeout = TimeSpan.FromSeconds(connection.TimeoutInSeconds ?? rqliteOptions.TimeoutInSeconds);
 			});
 		}

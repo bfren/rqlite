@@ -2,11 +2,11 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Rqlite.Client.Exceptions;
+using Wrap;
 
 namespace Rqlite.Client;
 
@@ -58,29 +58,24 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 
 	/// <inheritdoc/>
 	public IRqliteClient CreateClient(string httpClientName) =>
-		Options.Clients.GetValueOrDefault(httpClientName) switch
-		{
-			RqliteOptions.Client client =>
-				new RqliteClient(
-					httpClient: HttpClientFactory.CreateClient(httpClientName),
-					includeTimings: client.IncludeTimings ?? Options.IncludeTimings,
-					logger: Logger
-				),
-
-			_ =>
-				throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings.")
-		};
+		Options.Clients.GetValueOrNone(httpClientName).Match(
+			none: () => throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings."),
+			some: x => new RqliteClient(
+				httpClient: HttpClientFactory.CreateClient(httpClientName),
+				includeTimings: x.IncludeTimings ?? Options.IncludeTimings,
+				logger: Logger
+			)
+		);
 
 	/// <inheritdoc/>
 	public IRqliteClient CreateClientWithDefaults()
 	{
 		// get default options
 		var options = new RqliteOptions();
-		var clientOptions = new RqliteOptions.Client();
 
 		// create and configure the HttpClient
 		var httpClient = HttpClientFactory.CreateClient();
-		httpClient.BaseAddress = new(clientOptions.BaseAddress);
+		httpClient.BaseAddress = new(options.BaseAddress);
 		httpClient.Timeout = TimeSpan.FromSeconds(options.TimeoutInSeconds);
 
 		// return default RqliteClient

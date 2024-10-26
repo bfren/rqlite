@@ -16,6 +16,11 @@ public sealed record class RqliteOptions
 	public string? DefaultClientName { get; init; }
 
 	/// <summary>
+	/// The default base address for all clients (without trailing slash).
+	/// </summary>
+	public string BaseAddress { get; init; } = "http://localhost:4001";
+
+	/// <summary>
 	/// If set to true, timings will be included with each request.
 	/// </summary>
 	public bool IncludeTimings { get; init; }
@@ -36,9 +41,9 @@ public sealed record class RqliteOptions
 	public sealed record class Client
 	{
 		/// <summary>
-		/// The base address of the Rqlite database instance (without trailing slash).
+		/// Set to override the base address of the Rqlite database instance (without trailing slash).
 		/// </summary>
-		public string BaseAddress { get; init; } = "http://localhost:4001";
+		public string? BaseAddress { get; init; }
 
 		/// <summary>
 		/// Set to override the global setting to include timings with each request.
