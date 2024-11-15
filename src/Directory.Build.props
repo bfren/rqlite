@@ -3,7 +3,7 @@
 
 	<!-- Standard Configuration -->
 	<PropertyGroup Label="Framework and Language">
-		<TargetFrameworks>net8.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
