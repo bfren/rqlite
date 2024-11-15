@@ -22,7 +22,7 @@ jobs:
       run: |
         dotnet build src/Rqlite.Client/Rqlite.Client.csproj \
           --configuration Debug \
-          --framework net8.0
+          --framework net9.0
     -
       name: A - Build Documentation
       uses: bfren/docfx-action@v1
