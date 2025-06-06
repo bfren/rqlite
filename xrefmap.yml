@@ -571,6 +571,18 @@ references:
   fullName.vb: Rqlite.Client.RqliteOptions.Client.New
   nameWithType: RqliteOptions.Client.Client
   nameWithType.vb: RqliteOptions.Client.New
+- uid: Rqlite.Client.RqliteOptions.Client.AuthString
+  name: AuthString
+  href: api/Rqlite.Client.RqliteOptions.Client.AuthString.html#Rqlite_Client_RqliteOptions_Client_AuthString
+  commentId: P:Rqlite.Client.RqliteOptions.Client.AuthString
+  fullName: Rqlite.Client.RqliteOptions.Client.AuthString
+  nameWithType: RqliteOptions.Client.AuthString
+- uid: Rqlite.Client.RqliteOptions.Client.AuthString*
+  name: AuthString
+  href: api/Rqlite.Client.RqliteOptions.Client.AuthString.html
+  commentId: Overload:Rqlite.Client.RqliteOptions.Client.AuthString
+  fullName: Rqlite.Client.RqliteOptions.Client.AuthString
+  nameWithType: RqliteOptions.Client.AuthString
 - uid: Rqlite.Client.RqliteOptions.Client.BaseAddress
   name: BaseAddress
   href: api/Rqlite.Client.RqliteOptions.Client.BaseAddress.html#Rqlite_Client_RqliteOptions_Client_BaseAddress
