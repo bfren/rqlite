@@ -54,5 +54,10 @@ public sealed record class RqliteOptions
 		/// Set to override the global timeout in seconds for this client.
 		/// </summary>
 		public int? TimeoutInSeconds { get; init; }
+
+		/// <summary>
+		/// Set the basic auth info for the client as <user>:<password> combination
+		/// </summary>
+		public string? AuthString { get; set; }
 	}
 }

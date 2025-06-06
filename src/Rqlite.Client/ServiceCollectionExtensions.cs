@@ -2,6 +2,7 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System;
+using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
@@ -32,6 +33,12 @@ public static class ServiceCollectionExtensions
 			{
 				opt.BaseAddress = new(connection.BaseAddress ?? rqliteOptions.BaseAddress);
 				opt.Timeout = TimeSpan.FromSeconds(connection.TimeoutInSeconds ?? rqliteOptions.TimeoutInSeconds);
+
+				if (!string.IsNullOrEmpty(connection.AuthString))
+				{
+					var encodedAuth = Convert.ToBase64String(Encoding.UTF8.GetBytes(connection.AuthString));
+					opt.DefaultRequestHeaders.Add("Authorization", encodedAuth);
+				}
 			});
 		}
 
