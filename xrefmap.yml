@@ -703,18 +703,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteOptions.Client.<>
   nameWithType: RqliteOptions.Client.operator !=
   nameWithType.vb: RqliteOptions.Client.<>
-- uid: Rqlite.Client.RqliteOptions.Client.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteOptions.Client.-Clone--.html#Rqlite_Client_RqliteOptions_Client__Clone__
-  commentId: M:Rqlite.Client.RqliteOptions.Client.{Clone}$
-  fullName: Rqlite.Client.RqliteOptions.Client.<Clone>$()
-  nameWithType: RqliteOptions.Client.<Clone>$()
-- uid: Rqlite.Client.RqliteOptions.Client.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteOptions.Client.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteOptions.Client.{Clone}$
-  fullName: Rqlite.Client.RqliteOptions.Client.<Clone>$
-  nameWithType: RqliteOptions.Client.<Clone>$
 - uid: Rqlite.Client.RqliteOptions.Clients
   name: Clients
   href: api/Rqlite.Client.RqliteOptions.Clients.html#Rqlite_Client_RqliteOptions_Clients
@@ -847,18 +835,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteOptions.<>
   nameWithType: RqliteOptions.operator !=
   nameWithType.vb: RqliteOptions.<>
-- uid: Rqlite.Client.RqliteOptions.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteOptions.-Clone--.html#Rqlite_Client_RqliteOptions__Clone__
-  commentId: M:Rqlite.Client.RqliteOptions.{Clone}$
-  fullName: Rqlite.Client.RqliteOptions.<Clone>$()
-  nameWithType: RqliteOptions.<Clone>$()
-- uid: Rqlite.Client.RqliteOptions.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteOptions.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteOptions.{Clone}$
-  fullName: Rqlite.Client.RqliteOptions.<Clone>$
-  nameWithType: RqliteOptions.<Clone>$
 - uid: Rqlite.Client.RqliteStatus
   name: RqliteStatus
   href: api/Rqlite.Client.RqliteStatus.html
@@ -1105,18 +1081,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteStatus.RqliteStatusBuild.<>
   nameWithType: RqliteStatus.RqliteStatusBuild.operator !=
   nameWithType.vb: RqliteStatus.RqliteStatusBuild.<>
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusBuild.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.-Clone--.html#Rqlite_Client_RqliteStatus_RqliteStatusBuild__Clone__
-  commentId: M:Rqlite.Client.RqliteStatus.RqliteStatusBuild.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusBuild.<Clone>$()
-  nameWithType: RqliteStatus.RqliteStatusBuild.<Clone>$()
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusBuild.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteStatus.RqliteStatusBuild.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusBuild.<Clone>$
-  nameWithType: RqliteStatus.RqliteStatusBuild.<Clone>$
 - uid: Rqlite.Client.RqliteStatus.RqliteStatusHttp
   name: RqliteStatus.RqliteStatusHttp
   href: api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.html
@@ -1351,18 +1315,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.<>
   nameWithType: RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.operator !=
   nameWithType.vb: RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.<>
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.-Clone--.html#Rqlite_Client_RqliteStatus_RqliteStatusHttp_RqliteStatusHttpTls__Clone__
-  commentId: M:Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.<Clone>$()
-  nameWithType: RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.<Clone>$()
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.<Clone>$
-  nameWithType: RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.<Clone>$
 - uid: Rqlite.Client.RqliteStatus.RqliteStatusHttp.Tls
   name: Tls
   href: api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Tls.html#Rqlite_Client_RqliteStatus_RqliteStatusHttp_Tls
@@ -1423,18 +1375,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteStatus.RqliteStatusHttp.<>
   nameWithType: RqliteStatus.RqliteStatusHttp.operator !=
   nameWithType.vb: RqliteStatus.RqliteStatusHttp.<>
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusHttp.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.-Clone--.html#Rqlite_Client_RqliteStatus_RqliteStatusHttp__Clone__
-  commentId: M:Rqlite.Client.RqliteStatus.RqliteStatusHttp.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusHttp.<Clone>$()
-  nameWithType: RqliteStatus.RqliteStatusHttp.<Clone>$()
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusHttp.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteStatus.RqliteStatusHttp.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusHttp.<Clone>$
-  nameWithType: RqliteStatus.RqliteStatusHttp.<Clone>$
 - uid: Rqlite.Client.RqliteStatus.RqliteStatusNode
   name: RqliteStatus.RqliteStatusNode
   href: api/Rqlite.Client.RqliteStatus.RqliteStatusNode.html
@@ -1570,18 +1510,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteStatus.RqliteStatusNode.<>
   nameWithType: RqliteStatus.RqliteStatusNode.operator !=
   nameWithType.vb: RqliteStatus.RqliteStatusNode.<>
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusNode.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusNode.-Clone--.html#Rqlite_Client_RqliteStatus_RqliteStatusNode__Clone__
-  commentId: M:Rqlite.Client.RqliteStatus.RqliteStatusNode.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusNode.<Clone>$()
-  nameWithType: RqliteStatus.RqliteStatusNode.<Clone>$()
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusNode.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusNode.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteStatus.RqliteStatusNode.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusNode.<Clone>$
-  nameWithType: RqliteStatus.RqliteStatusNode.<Clone>$
 - uid: Rqlite.Client.RqliteStatus.RqliteStatusStore
   name: RqliteStatus.RqliteStatusStore
   href: api/Rqlite.Client.RqliteStatus.RqliteStatusStore.html
@@ -1717,18 +1645,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteStatus.RqliteStatusStore.<>
   nameWithType: RqliteStatus.RqliteStatusStore.operator !=
   nameWithType.vb: RqliteStatus.RqliteStatusStore.<>
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusStore.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusStore.-Clone--.html#Rqlite_Client_RqliteStatus_RqliteStatusStore__Clone__
-  commentId: M:Rqlite.Client.RqliteStatus.RqliteStatusStore.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusStore.<Clone>$()
-  nameWithType: RqliteStatus.RqliteStatusStore.<Clone>$()
-- uid: Rqlite.Client.RqliteStatus.RqliteStatusStore.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteStatus.RqliteStatusStore.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteStatus.RqliteStatusStore.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.RqliteStatusStore.<Clone>$
-  nameWithType: RqliteStatus.RqliteStatusStore.<Clone>$
 - uid: Rqlite.Client.RqliteStatus.Store
   name: Store
   href: api/Rqlite.Client.RqliteStatus.Store.html#Rqlite_Client_RqliteStatus_Store
@@ -1789,18 +1705,6 @@ references:
   fullName.vb: Rqlite.Client.RqliteStatus.<>
   nameWithType: RqliteStatus.operator !=
   nameWithType.vb: RqliteStatus.<>
-- uid: Rqlite.Client.RqliteStatus.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Client.RqliteStatus.-Clone--.html#Rqlite_Client_RqliteStatus__Clone__
-  commentId: M:Rqlite.Client.RqliteStatus.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.<Clone>$()
-  nameWithType: RqliteStatus.<Clone>$()
-- uid: Rqlite.Client.RqliteStatus.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Client.RqliteStatus.-Clone--.html
-  commentId: Overload:Rqlite.Client.RqliteStatus.{Clone}$
-  fullName: Rqlite.Client.RqliteStatus.<Clone>$
-  nameWithType: RqliteStatus.<Clone>$
 - uid: Rqlite.Client.ServiceCollectionExtensions
   name: ServiceCollectionExtensions
   href: api/Rqlite.Client.ServiceCollectionExtensions.html
@@ -2272,18 +2176,6 @@ references:
   fullName.vb: Rqlite.Internal.Response.ExecuteResponseResult.<>
   nameWithType: ExecuteResponseResult.operator !=
   nameWithType.vb: ExecuteResponseResult.<>
-- uid: Rqlite.Internal.Response.ExecuteResponseResult.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Internal.Response.ExecuteResponseResult.-Clone--.html#Rqlite_Internal_Response_ExecuteResponseResult__Clone__
-  commentId: M:Rqlite.Internal.Response.ExecuteResponseResult.{Clone}$
-  fullName: Rqlite.Internal.Response.ExecuteResponseResult.<Clone>$()
-  nameWithType: ExecuteResponseResult.<Clone>$()
-- uid: Rqlite.Internal.Response.ExecuteResponseResult.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Internal.Response.ExecuteResponseResult.-Clone--.html
-  commentId: Overload:Rqlite.Internal.Response.ExecuteResponseResult.{Clone}$
-  fullName: Rqlite.Internal.Response.ExecuteResponseResult.<Clone>$
-  nameWithType: ExecuteResponseResult.<Clone>$
 - uid: Rqlite.Internal.Response.QueryResponseResult`1
   name: QueryResponseResult<T>
   href: api/Rqlite.Internal.Response.QueryResponseResult-1.html
@@ -2478,22 +2370,6 @@ references:
   fullName.vb: Rqlite.Internal.Response.QueryResponseResult(Of T).<>
   nameWithType: QueryResponseResult<T>.operator !=
   nameWithType.vb: QueryResponseResult(Of T).<>
-- uid: Rqlite.Internal.Response.QueryResponseResult`1.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Internal.Response.QueryResponseResult-1.-Clone--.html#Rqlite_Internal_Response_QueryResponseResult_1__Clone__
-  commentId: M:Rqlite.Internal.Response.QueryResponseResult`1.{Clone}$
-  fullName: Rqlite.Internal.Response.QueryResponseResult<T>.<Clone>$()
-  fullName.vb: Rqlite.Internal.Response.QueryResponseResult(Of T).<Clone>$()
-  nameWithType: QueryResponseResult<T>.<Clone>$()
-  nameWithType.vb: QueryResponseResult(Of T).<Clone>$()
-- uid: Rqlite.Internal.Response.QueryResponseResult`1.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Internal.Response.QueryResponseResult-1.-Clone--.html
-  commentId: Overload:Rqlite.Internal.Response.QueryResponseResult`1.{Clone}$
-  fullName: Rqlite.Internal.Response.QueryResponseResult<T>.<Clone>$
-  fullName.vb: Rqlite.Internal.Response.QueryResponseResult(Of T).<Clone>$
-  nameWithType: QueryResponseResult<T>.<Clone>$
-  nameWithType.vb: QueryResponseResult(Of T).<Clone>$
 - uid: Rqlite.Internal.Response.ResponseResult
   name: ResponseResult
   href: api/Rqlite.Internal.Response.ResponseResult.html
@@ -2647,18 +2523,6 @@ references:
   fullName.vb: Rqlite.Internal.Response.ResponseResult.<>
   nameWithType: ResponseResult.operator !=
   nameWithType.vb: ResponseResult.<>
-- uid: Rqlite.Internal.Response.ResponseResult.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Internal.Response.ResponseResult.-Clone--.html#Rqlite_Internal_Response_ResponseResult__Clone__
-  commentId: M:Rqlite.Internal.Response.ResponseResult.{Clone}$
-  fullName: Rqlite.Internal.Response.ResponseResult.<Clone>$()
-  nameWithType: ResponseResult.<Clone>$()
-- uid: Rqlite.Internal.Response.ResponseResult.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Internal.Response.ResponseResult.-Clone--.html
-  commentId: Overload:Rqlite.Internal.Response.ResponseResult.{Clone}$
-  fullName: Rqlite.Internal.Response.ResponseResult.<Clone>$
-  nameWithType: ResponseResult.<Clone>$
 - uid: Rqlite.Internal.Response.Response`1
   name: Response<T>
   href: api/Rqlite.Internal.Response.Response-1.html
@@ -2846,22 +2710,6 @@ references:
   fullName.vb: Rqlite.Internal.Response.Response(Of T).<>
   nameWithType: Response<T>.operator !=
   nameWithType.vb: Response(Of T).<>
-- uid: Rqlite.Internal.Response.Response`1.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Internal.Response.Response-1.-Clone--.html#Rqlite_Internal_Response_Response_1__Clone__
-  commentId: M:Rqlite.Internal.Response.Response`1.{Clone}$
-  fullName: Rqlite.Internal.Response.Response<T>.<Clone>$()
-  fullName.vb: Rqlite.Internal.Response.Response(Of T).<Clone>$()
-  nameWithType: Response<T>.<Clone>$()
-  nameWithType.vb: Response(Of T).<Clone>$()
-- uid: Rqlite.Internal.Response.Response`1.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Internal.Response.Response-1.-Clone--.html
-  commentId: Overload:Rqlite.Internal.Response.Response`1.{Clone}$
-  fullName: Rqlite.Internal.Response.Response<T>.<Clone>$
-  fullName.vb: Rqlite.Internal.Response.Response(Of T).<Clone>$
-  nameWithType: Response<T>.<Clone>$
-  nameWithType.vb: Response(Of T).<Clone>$
 - uid: Rqlite.Internal.Response.ScalarResponseResult`1
   name: ScalarResponseResult<T>
   href: api/Rqlite.Internal.Response.ScalarResponseResult-1.html
@@ -3040,19 +2888,3 @@ references:
   fullName.vb: Rqlite.Internal.Response.ScalarResponseResult(Of T).<>
   nameWithType: ScalarResponseResult<T>.operator !=
   nameWithType.vb: ScalarResponseResult(Of T).<>
-- uid: Rqlite.Internal.Response.ScalarResponseResult`1.{Clone}$
-  name: <Clone>$()
-  href: api/Rqlite.Internal.Response.ScalarResponseResult-1.-Clone--.html#Rqlite_Internal_Response_ScalarResponseResult_1__Clone__
-  commentId: M:Rqlite.Internal.Response.ScalarResponseResult`1.{Clone}$
-  fullName: Rqlite.Internal.Response.ScalarResponseResult<T>.<Clone>$()
-  fullName.vb: Rqlite.Internal.Response.ScalarResponseResult(Of T).<Clone>$()
-  nameWithType: ScalarResponseResult<T>.<Clone>$()
-  nameWithType.vb: ScalarResponseResult(Of T).<Clone>$()
-- uid: Rqlite.Internal.Response.ScalarResponseResult`1.{Clone}$*
-  name: <Clone>$
-  href: api/Rqlite.Internal.Response.ScalarResponseResult-1.-Clone--.html
-  commentId: Overload:Rqlite.Internal.Response.ScalarResponseResult`1.{Clone}$
-  fullName: Rqlite.Internal.Response.ScalarResponseResult<T>.<Clone>$
-  fullName.vb: Rqlite.Internal.Response.ScalarResponseResult(Of T).<Clone>$
-  nameWithType: ScalarResponseResult<T>.<Clone>$
-  nameWithType.vb: ScalarResponseResult(Of T).<Clone>$
