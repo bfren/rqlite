@@ -2,1135 +2,1135 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.Exceptions.UndefinedDefaultClientException.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.Exceptions.UndefinedDefaultClientException.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.Exceptions.UnknownClientException.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.Exceptions.UnknownClientException.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.Exceptions.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClient.ExecuteAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClient.GetScalarAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClient.GetStatusAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClient.GetVersionAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClient.QueryAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClient.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClientFactory.CreateClient.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClientFactory.CreateClientWithDefaults.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.IRqliteClientFactory.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.Dispose.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.ExecuteAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.GetScalarAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.GetStatusAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.GetVersionAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.QueryAsync.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClient.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClientFactory.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClientFactory.CreateClient.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClientFactory.CreateClientWithDefaults.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteClientFactory.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteCommandResult.LastInsertId.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteCommandResult.RowsAffected.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteCommandResult.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.BaseAddress.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.AuthString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.BaseAddress.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.IncludeTimings.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.TimeoutInSeconds.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Client.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Clients.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.DefaultClientName.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.IncludeTimings.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.TimeoutInSeconds.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteOptions.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.Build.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.Deconstruct.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.Http.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.Node.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Deconstruct.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Version.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Auth.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.BindAddr.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Deconstruct.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Deconstruct.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Enabled.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Tls.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.Deconstruct.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.Uptime.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusNode.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.Deconstruct.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.SizeInBytes.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.RqliteStatusStore.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.Store.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.RqliteStatus.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.ServiceCollectionExtensions.AddRqlite.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.ServiceCollectionExtensions.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Client.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.LoggerExtensions.Err.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.LoggerExtensions.Request.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.LoggerExtensions.ResponseJson.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.LoggerExtensions.UnescapeUTF8.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.LoggerExtensions.Version.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.LoggerExtensions.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.IUriBuilder.AddQueryVar.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.IUriBuilder.Build.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.IUriBuilder.Path.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.IUriBuilder.QueryVars.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.IUriBuilder.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.JsonContent.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.JsonContent.SerialiserOptions.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.JsonContent.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.UriBuilder.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.UriBuilder.AddQueryVar.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.UriBuilder.Build.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.UriBuilder.Path.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.UriBuilder.QueryVars.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.UriBuilder.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Request.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.EqualityContract.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.LastInsertId.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.PrintMembers.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.RowsAffected.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ExecuteResponseResult.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.EqualityContract.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.PrintMembers.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.Rows.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.Types.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.QueryResponseResult-1.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.Errors.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.Results.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.Time.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.Response-1.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.EqualityContract.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.Error.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.PrintMembers.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ResponseResult.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.-ctor.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.EqualityContract.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.Equals.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.GetHashCode.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.PrintMembers.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.ToString.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.Values.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.op_Equality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.ScalarResponseResult-1.op_Inequality.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.Response.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/Rqlite.Internal.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bfren.github.io/rqlite/api/index.html</loc>
-    <lastmod>2025-07-04T11:29:43+00:00</lastmod>
+    <lastmod>2025-08-20T10:57:14+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
