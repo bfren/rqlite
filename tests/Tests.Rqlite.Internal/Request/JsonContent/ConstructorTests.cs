@@ -19,7 +19,7 @@ public class when_called
 		var result = new JsonContent(new { v0, v1 });
 
 		// Assert
-		Assert.Equal(expected, await result.ReadAsStringAsync());
+		Assert.Equal(expected, await result.ReadAsStringAsync(TestContext.Current.CancellationToken));
 	}
 
 	[Fact]

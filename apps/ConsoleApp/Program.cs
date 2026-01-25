@@ -4,7 +4,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using RndF;
 using Rqlite.Client;
-using Wrap;
+using Wrap.Extensions;
 
 var (app, log) = Jeebs.Apps.Host.Create(args, (ctx, services) => services.AddRqlite());
 

@@ -8,6 +8,13 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<!-- Global Usings -->
+	<ItemGroup>
+		<Using Include="Wrap"/>
+		<Using Include="Wrap.Extensions"/>
+		<Using Include="Wrap.Linq"/>
+	</ItemGroup>
+
 	<!-- Enable Internal Testing -->
 	<ItemGroup Label="Test Internals">
 		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
