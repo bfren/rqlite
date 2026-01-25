@@ -70,7 +70,8 @@ public sealed partial class RqliteClient : IRqliteClient
 		var rqliteResponse = JsonSerializer.Deserialize<T>(json, JsonContent.SerialiserOptions);
 		if (rqliteResponse is null)
 		{
-			return R.Fail(nameof(RqliteClient), nameof(SendAsync), "'{JSON}' deserialised to a null value.", json);
+			return R.Fail("'{JSON}' deserialised to a null value.", json)
+				.Ctx(nameof(RqliteClient), nameof(SendAsync));
 		}
 
 		// Return response

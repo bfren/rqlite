@@ -31,7 +31,8 @@ public sealed partial class RqliteClient : IRqliteClient
 	{
 		if (!queries.Any())
 		{
-			return R.Fail(nameof(RqliteClient), nameof(QueryAsync), "You must pass at least one query.");
+			return R.Fail("You must pass at least one query.")
+				.Ctx(nameof(RqliteClient), nameof(QueryAsync));
 		}
 
 		uriBuilder.AddQueryVar("associative");
@@ -55,7 +56,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return R.Fail(nameof(RqliteClient), nameof(QueryAsync), ex);
+			return R.Fail(ex).Ctx(nameof(RqliteClient), nameof(QueryAsync));
 		}
 	}
 
