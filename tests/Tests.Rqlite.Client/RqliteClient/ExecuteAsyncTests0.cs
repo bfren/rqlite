@@ -21,7 +21,7 @@ public class when_commands_is_empty
 		var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 		// Assert
-		_ = result.AssertFail(expected);
+		_ = result.AssertFailure(expected);
 	}
 }
 
@@ -136,7 +136,7 @@ public class when_commands_is_not_empty
 			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
 
 			// Assert
-			var err = result.AssertFail();
+			var err = result.AssertFailure();
 			Assert.Same(expected, err.Exception);
 		}
 	}

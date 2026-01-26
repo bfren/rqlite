@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-    <PackageVersion Include="Jeebs.Apps" Version="8.6.3" />
+    <PackageVersion Include="Jeebs.Apps" Version="9.0.0-beta.26012501" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.2" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.2" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.2" />
@@ -14,8 +14,8 @@
     <PackageVersion Include="NSubstitute" Version="5.3.0" />
     <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
     <PackageVersion Include="Rnd" Version="10.1.1" />
-    <PackageVersion Include="Wrap" Version="1.0.0-beta.26012514" />
-    <PackageVersion Include="Wrap.Testing" Version="1.0.0-beta.26012514" />
+    <PackageVersion Include="Wrap" Version="1.0.0-beta.26012604" />
+    <PackageVersion Include="Wrap.Testing" Version="1.0.0-beta.26012604" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
   </ItemGroup>
