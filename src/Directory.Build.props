@@ -57,7 +57,7 @@
 
 	<!-- Read Version File -->
 	<PropertyGroup Label="Version">
-		<RqliteVersion>$([System.IO.File]::ReadAllText('$(VersionPath)'))</RqliteVersion>
+		<RqliteVersion>$([System.IO.File]::ReadAllText('$(VersionPath)').Trim())</RqliteVersion>
 	</PropertyGroup>
 
 	<!-- Package Configuration -->
