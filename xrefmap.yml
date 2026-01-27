@@ -1735,12 +1735,12 @@ references:
   commentId: T:Rqlite.Internal.LoggerExtensions
   fullName: Rqlite.Internal.LoggerExtensions
   nameWithType: LoggerExtensions
-- uid: Rqlite.Internal.LoggerExtensions.Err(Microsoft.Extensions.Logging.ILogger,Wrap.FailValue)
-  name: Err(ILogger, FailValue)
-  href: api/Rqlite.Internal.LoggerExtensions.Err.html#Rqlite_Internal_LoggerExtensions_Err_Microsoft_Extensions_Logging_ILogger_Wrap_FailValue_
-  commentId: M:Rqlite.Internal.LoggerExtensions.Err(Microsoft.Extensions.Logging.ILogger,Wrap.FailValue)
-  fullName: Rqlite.Internal.LoggerExtensions.Err(Microsoft.Extensions.Logging.ILogger, Wrap.FailValue)
-  nameWithType: LoggerExtensions.Err(ILogger, FailValue)
+- uid: Rqlite.Internal.LoggerExtensions.Err(Microsoft.Extensions.Logging.ILogger,Wrap.FailureValue)
+  name: Err(ILogger, FailureValue)
+  href: api/Rqlite.Internal.LoggerExtensions.Err.html#Rqlite_Internal_LoggerExtensions_Err_Microsoft_Extensions_Logging_ILogger_Wrap_FailureValue_
+  commentId: M:Rqlite.Internal.LoggerExtensions.Err(Microsoft.Extensions.Logging.ILogger,Wrap.FailureValue)
+  fullName: Rqlite.Internal.LoggerExtensions.Err(Microsoft.Extensions.Logging.ILogger, Wrap.FailureValue)
+  nameWithType: LoggerExtensions.Err(ILogger, FailureValue)
 - uid: Rqlite.Internal.LoggerExtensions.Err*
   name: Err
   href: api/Rqlite.Internal.LoggerExtensions.Err.html
