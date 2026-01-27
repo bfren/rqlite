@@ -8,7 +8,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Internal.Request;
 using Rqlite.Internal.Response;
-using Wrap;
 
 namespace Rqlite.Client;
 
