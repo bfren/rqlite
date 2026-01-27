@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Rqlite.Internal;
 using Rqlite.Internal.Request;
-using Wrap;
 using IUriBuilder = Rqlite.Internal.Request.IUriBuilder;
 using UriBuilder = Rqlite.Internal.Request.UriBuilder;
 

@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
-using Wrap;
 
 namespace Rqlite.Internal;
 
@@ -20,8 +19,8 @@ public static partial class LoggerExtensions
 	[GeneratedRegex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase, "en-GB")]
 	private static partial Regex UnicodeEscapedCharacters();
 
-	private static readonly Action<ILogger, FailValue, Exception?> LogErr =
-		LoggerMessage.Define<FailValue>(LogLevel.Error, new(), "Error: {FailValue}");
+	private static readonly Action<ILogger, FailureValue, Exception?> LogErr =
+		LoggerMessage.Define<FailureValue>(LogLevel.Error, new(), "Error: {FailureValue}");
 
 	private static readonly Action<ILogger, HttpMethod, Uri?, string?, Exception?> LogRequest =
 		LoggerMessage.Define<HttpMethod, Uri?, string?>(LogLevel.Debug, new(), "{Method} {Uri}: {Content}");
@@ -54,7 +53,7 @@ public static partial class LoggerExtensions
 			(char)int.Parse(m.Groups[1].Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
 	}
 
-	public static void Err(this ILogger @this, FailValue value) =>
+	public static void Err(this ILogger @this, FailureValue value) =>
 		LogErr(@this, value, null);
 
 	/// <summary>

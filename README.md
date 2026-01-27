@@ -106,4 +106,4 @@ internal sealed record Person(int Id, string Name, int Age);
 
 ## Copyright
 
-> Copyright (c) 2023-2024 [bfren](https://bfren.dev) (unless otherwise stated)
+> Copyright (c) 2023-2026 [bfren](https://bfren.dev) (unless otherwise stated)

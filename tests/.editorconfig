@@ -1,4 +1,4 @@
-﻿[*.{cs,csx,cake,vb,vbx}]
+[*.{cs,csx,cake,vb,vbx}]
 
 file_header_template = Rqlite: Unit Tests\nCopyright (c) bfren - licensed under https://mit.bfren.dev/2023
 insert_final_newline = true
@@ -26,3 +26,6 @@ dotnet_diagnostic.RCS1090.severity = none
 
 # RCS1118: Mark local variable as const.
 dotnet_diagnostic.RCS1118.severity = none
+
+# xUnit1051: Calls to methods which accept CancellationToken should use TestContext.Current.CancellationToken
+dotnet_diagnostic.xUnit1051.severity = none

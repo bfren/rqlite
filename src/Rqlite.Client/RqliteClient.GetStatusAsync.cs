@@ -5,7 +5,6 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Rqlite.Internal;
-using Wrap;
 
 namespace Rqlite.Client;
 

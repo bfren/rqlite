@@ -34,7 +34,7 @@ public class with_commands_as_string_params : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => false == m.RequestUri!.OriginalString.Contains("transaction")
+			m => !m.RequestUri!.OriginalString.Contains("transaction")
 		));
 	}
 }
@@ -71,7 +71,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 		var v0 = Rnd.Guid;
 		var c1 = Rnd.Str;
 		var v1 = Rnd.DateTime;
-		var expected = Json(new[] { new object[] { c0, v0 }, new object[] { c1, v1 } });
+		var expected = Json(new[] { new object[] { c0, v0 }, [c1, v1] });
 
 		// Act
 		_ = await client.QueryAsync<int>((c0, v0), (c1, v1));
@@ -93,7 +93,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => false == m.RequestUri!.OriginalString.Contains("transaction")
+			m => !m.RequestUri!.OriginalString.Contains("transaction")
 		));
 	}
 }

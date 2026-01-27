@@ -2,7 +2,7 @@
 # Updated: 2021-11-15
 # See https://github.com/RehanSaeed/EditorConfig/releases for release notes.
 # See https://github.com/RehanSaeed/EditorConfig for updates to this file.
-# See http://EditorConfig.org for more information about .editorconfig files.
+# See https://EditorConfig.org for more information about .editorconfig files.
 
 ##########################################
 # Common Settings
@@ -453,11 +453,14 @@ dotnet_naming_rule.parameters_rule.severity             = warning
 
 [*]
 
+end_of_line = crlf
+insert_final_newline = true
+
+[*.{cs,csx,cake,vb,vbx}]
+
 indent_style = tab
 indent_size = tab
 tab_size = 4
-
-[*.{cs,csx,cake,vb,vbx}]
 
 # SA1636: File header copyright text should match.
 dotnet_diagnostic.SA1636.severity = none
@@ -467,6 +470,9 @@ dotnet_style_qualification_for_field = false:warning
 dotnet_style_qualification_for_property = false:warning
 dotnet_style_qualification_for_method = false:warning
 dotnet_style_qualification_for_event = false:warning
+
+# accessibility modifiers should not be required for interfaces
+dotnet_style_require_accessibility_modifiers = for_non_interface_members
 
 # 'using' directive preferences
 csharp_using_directive_placement = outside_namespace:warning

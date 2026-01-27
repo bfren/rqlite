@@ -11,6 +11,7 @@
 		<Using Include="NSubstitute"/>
 		<Using Include="RndF"/>
 		<Using Include="Wrap"/>
+		<Using Include="Wrap.Extensions"/>
 		<Using Include="Wrap.Testing"/>
 		<Using Include="Xunit"/>
 	</ItemGroup>

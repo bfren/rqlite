@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Rqlite.Internal.Response;
-using Wrap;
 
 namespace Rqlite.Client;
 
