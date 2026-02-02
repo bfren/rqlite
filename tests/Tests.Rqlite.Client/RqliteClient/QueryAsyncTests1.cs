@@ -89,7 +89,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 		var (client, v) = Setup();
 
 		// Act
-		_ = await client.QueryAsync<int>((Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Dbl));
+		_ = await client.QueryAsync<int>((Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Double));
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
