@@ -20,12 +20,12 @@ public sealed partial class RqliteClient : IRqliteClient
 		};
 
 		return await SendAsync<RqliteStatus>(request).MatchAsync(
-			fail: e =>
+			fFail: e =>
 			{
 				Logger.Err(e);
 				return M.None;
 			},
-			ok: M.Wrap
+			fOk: M.Wrap
 		);
 	}
 }
