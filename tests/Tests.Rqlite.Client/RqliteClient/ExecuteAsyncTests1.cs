@@ -109,7 +109,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 		var (client, v) = Setup();
 
 		// Act
-		_ = await client.ExecuteAsync((Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Dbl));
+		_ = await client.ExecuteAsync((Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Double));
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
@@ -127,7 +127,7 @@ public class with_parameterised_commands_as_tuple_params : RqliteClientTests
 			var asTransaction = Rnd.Flip;
 
 			// Act
-			_ = await client.ExecuteAsync(asTransaction, (Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Dbl));
+			_ = await client.ExecuteAsync(asTransaction, (Rnd.Str, Rnd.Guid), (Rnd.Str, Rnd.Double));
 
 			// Assert
 			await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(

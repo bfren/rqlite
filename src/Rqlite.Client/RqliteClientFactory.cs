@@ -58,8 +58,8 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 	/// <inheritdoc/>
 	public IRqliteClient CreateClient(string httpClientName) =>
 		Options.Clients.GetValueOrNone(httpClientName).Match(
-			none: () => throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings."),
-			some: x => new RqliteClient(
+			fNone: () => throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings."),
+			fSome: x => new RqliteClient(
 				httpClient: HttpClientFactory.CreateClient(httpClientName),
 				includeTimings: x.IncludeTimings ?? Options.IncludeTimings,
 				logger: Logger

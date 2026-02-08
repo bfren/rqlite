@@ -12,7 +12,6 @@ namespace Rqlite.Client;
 
 public sealed partial class RqliteClient : IRqliteClient
 {
-
 	/// <summary>
 	/// Send a request and deserialise the JSON response.
 	/// </summary>
