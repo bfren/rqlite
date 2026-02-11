@@ -51,7 +51,7 @@ public class when_commands_is_not_empty
 		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
-		_ = await RqliteClient.ExecuteAsync(commands, true, builder, send);
+		_ = await RqliteClient.ExecuteAsync(commands, true, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.Received().AddQueryVar("wait");
