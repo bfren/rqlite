@@ -20,6 +20,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="commands">Commands to execute.</param>
 	/// <param name="asSingleTransaction">If true, commands will be executed together as a single transaction.</param>
 	/// <param name="uriBuilder">URI builder.</param>
+	/// <param name="jsonOptions">JsonSerializerOptions.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Command results.</returns>
 	internal static async Task<Result<List<RqliteCommandResult>>> ExecuteAsync<TCommand>(
@@ -61,8 +62,12 @@ public sealed partial class RqliteClient : IRqliteClient
 	}
 
 	/// <inheritdoc/>
+	public Task<Result<RqliteCommandResult>> ExecuteAsync(string command, object param) =>
+		ExecuteAsync(true, (command, param)).GetSingleAsync(x => x.Value<RqliteCommandResult>());
+
+	/// <inheritdoc/>
 	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(params string[] commands) =>
-		ExecuteAsync(false, commands);
+		ExecuteAsync(true, commands);
 
 	/// <inheritdoc/>
 	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(bool asSingleTransaction, params string[] commands) =>
@@ -72,10 +77,6 @@ public sealed partial class RqliteClient : IRqliteClient
 			uriBuilder: ExecuteUri(),
 			send: GetResultsAsync<ExecuteResponseResult>
 		);
-
-	/// <inheritdoc/>
-	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(string command, object param) =>
-		ExecuteAsync(false, (command, param));
 
 	/// <inheritdoc/>
 	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(params (string command, object param)[] commands) =>
