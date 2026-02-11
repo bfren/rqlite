@@ -36,6 +36,13 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// </summary>
 	internal Func<IUriBuilder> QueryUri { get; private init; }
 
+	/// <inheritdoc/>
+	public JsonSerializerOptions JsonSerializerOptions
+	{
+		get => JsonContent.SerialiserOptions;
+		set => JsonContent.SerialiserOptions = value;
+	}
+
 	/// <summary>
 	/// Create database client instance using specified HttpClient.
 	/// </summary>
