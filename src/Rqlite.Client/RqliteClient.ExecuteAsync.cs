@@ -25,14 +25,14 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Command results.</returns>
 	internal static async Task<Result<List<RqliteCommandResult>>> ExecuteAsync<TCommand>(
-		IEnumerable<TCommand> commands,
+		TCommand[] commands,
 		bool asSingleTransaction,
 		IUriBuilder uriBuilder,
 		JsonSerializerOptions jsonOptions,
 		Func<HttpRequestMessage, Task<Result<List<ExecuteResponseResult>>>> send
 	)
 	{
-		if (!commands.Any())
+		if (commands.Length == 0)
 		{
 			return R.Fail("You must pass at least one command.")
 				.Ctx(nameof(RqliteClient), nameof(ExecuteAsync));
@@ -88,7 +88,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <inheritdoc/>
 	public Task<Result<List<RqliteCommandResult>>> ExecuteAsync(bool asSingleTransaction, params (string command, object param)[] commands) =>
 		ExecuteAsync(
-			commands: from c in commands select new[] { c.command, c.param },
+			commands: (from c in commands select new[] { c.command, c.param }).ToArray(),
 			asSingleTransaction: asSingleTransaction,
 			uriBuilder: ExecuteUri(),
 			jsonOptions: JsonOptions,
