@@ -202,6 +202,18 @@ references:
   commentId: Overload:Rqlite.Client.IRqliteClient.GetVersionAsync
   fullName: Rqlite.Client.IRqliteClient.GetVersionAsync
   nameWithType: IRqliteClient.GetVersionAsync
+- uid: Rqlite.Client.IRqliteClient.JsonOptions
+  name: JsonOptions
+  href: api/Rqlite.Client.IRqliteClient.JsonOptions.html#Rqlite_Client_IRqliteClient_JsonOptions
+  commentId: P:Rqlite.Client.IRqliteClient.JsonOptions
+  fullName: Rqlite.Client.IRqliteClient.JsonOptions
+  nameWithType: IRqliteClient.JsonOptions
+- uid: Rqlite.Client.IRqliteClient.JsonOptions*
+  name: JsonOptions
+  href: api/Rqlite.Client.IRqliteClient.JsonOptions.html
+  commentId: Overload:Rqlite.Client.IRqliteClient.JsonOptions
+  fullName: Rqlite.Client.IRqliteClient.JsonOptions
+  nameWithType: IRqliteClient.JsonOptions
 - uid: Rqlite.Client.IRqliteClient.QueryAsync*
   name: QueryAsync
   href: api/Rqlite.Client.IRqliteClient.QueryAsync.html
@@ -274,6 +286,18 @@ references:
   commentId: Overload:Rqlite.Client.IRqliteClientFactory.CreateClientWithDefaults
   fullName: Rqlite.Client.IRqliteClientFactory.CreateClientWithDefaults
   nameWithType: IRqliteClientFactory.CreateClientWithDefaults
+- uid: Rqlite.Client.IRqliteClientFactory.JsonOptions
+  name: JsonOptions
+  href: api/Rqlite.Client.IRqliteClientFactory.JsonOptions.html#Rqlite_Client_IRqliteClientFactory_JsonOptions
+  commentId: P:Rqlite.Client.IRqliteClientFactory.JsonOptions
+  fullName: Rqlite.Client.IRqliteClientFactory.JsonOptions
+  nameWithType: IRqliteClientFactory.JsonOptions
+- uid: Rqlite.Client.IRqliteClientFactory.JsonOptions*
+  name: JsonOptions
+  href: api/Rqlite.Client.IRqliteClientFactory.JsonOptions.html
+  commentId: Overload:Rqlite.Client.IRqliteClientFactory.JsonOptions
+  fullName: Rqlite.Client.IRqliteClientFactory.JsonOptions
+  nameWithType: IRqliteClientFactory.JsonOptions
 - uid: Rqlite.Client.RqliteClient
   name: RqliteClient
   href: api/Rqlite.Client.RqliteClient.html
@@ -391,6 +415,18 @@ references:
   commentId: Overload:Rqlite.Client.RqliteClient.GetVersionAsync
   fullName: Rqlite.Client.RqliteClient.GetVersionAsync
   nameWithType: RqliteClient.GetVersionAsync
+- uid: Rqlite.Client.RqliteClient.JsonOptions
+  name: JsonOptions
+  href: api/Rqlite.Client.RqliteClient.JsonOptions.html#Rqlite_Client_RqliteClient_JsonOptions
+  commentId: P:Rqlite.Client.RqliteClient.JsonOptions
+  fullName: Rqlite.Client.RqliteClient.JsonOptions
+  nameWithType: RqliteClient.JsonOptions
+- uid: Rqlite.Client.RqliteClient.JsonOptions*
+  name: JsonOptions
+  href: api/Rqlite.Client.RqliteClient.JsonOptions.html
+  commentId: Overload:Rqlite.Client.RqliteClient.JsonOptions
+  fullName: Rqlite.Client.RqliteClient.JsonOptions
+  nameWithType: RqliteClient.JsonOptions
 - uid: Rqlite.Client.RqliteClient.QueryAsync*
   name: QueryAsync
   href: api/Rqlite.Client.RqliteClient.QueryAsync.html
@@ -481,6 +517,18 @@ references:
   commentId: Overload:Rqlite.Client.RqliteClientFactory.CreateClientWithDefaults
   fullName: Rqlite.Client.RqliteClientFactory.CreateClientWithDefaults
   nameWithType: RqliteClientFactory.CreateClientWithDefaults
+- uid: Rqlite.Client.RqliteClientFactory.JsonOptions
+  name: JsonOptions
+  href: api/Rqlite.Client.RqliteClientFactory.JsonOptions.html#Rqlite_Client_RqliteClientFactory_JsonOptions
+  commentId: P:Rqlite.Client.RqliteClientFactory.JsonOptions
+  fullName: Rqlite.Client.RqliteClientFactory.JsonOptions
+  nameWithType: RqliteClientFactory.JsonOptions
+- uid: Rqlite.Client.RqliteClientFactory.JsonOptions*
+  name: JsonOptions
+  href: api/Rqlite.Client.RqliteClientFactory.JsonOptions.html
+  commentId: Overload:Rqlite.Client.RqliteClientFactory.JsonOptions
+  fullName: Rqlite.Client.RqliteClientFactory.JsonOptions
+  nameWithType: RqliteClientFactory.JsonOptions
 - uid: Rqlite.Client.RqliteCommandResult
   name: RqliteCommandResult
   href: api/Rqlite.Client.RqliteCommandResult.html
@@ -1882,15 +1930,15 @@ references:
   commentId: T:Rqlite.Internal.Request.JsonContent
   fullName: Rqlite.Internal.Request.JsonContent
   nameWithType: JsonContent
-- uid: Rqlite.Internal.Request.JsonContent.#ctor(System.Object)
-  name: JsonContent(object?)
-  href: api/Rqlite.Internal.Request.JsonContent.-ctor.html#Rqlite_Internal_Request_JsonContent__ctor_System_Object_
-  commentId: M:Rqlite.Internal.Request.JsonContent.#ctor(System.Object)
-  name.vb: New(Object)
-  fullName: Rqlite.Internal.Request.JsonContent.JsonContent(object?)
-  fullName.vb: Rqlite.Internal.Request.JsonContent.New(Object)
-  nameWithType: JsonContent.JsonContent(object?)
-  nameWithType.vb: JsonContent.New(Object)
+- uid: Rqlite.Internal.Request.JsonContent.#ctor(System.Object,System.Text.Json.JsonSerializerOptions)
+  name: JsonContent(object?, JsonSerializerOptions)
+  href: api/Rqlite.Internal.Request.JsonContent.-ctor.html#Rqlite_Internal_Request_JsonContent__ctor_System_Object_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Rqlite.Internal.Request.JsonContent.#ctor(System.Object,System.Text.Json.JsonSerializerOptions)
+  name.vb: New(Object, JsonSerializerOptions)
+  fullName: Rqlite.Internal.Request.JsonContent.JsonContent(object?, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Rqlite.Internal.Request.JsonContent.New(Object, System.Text.Json.JsonSerializerOptions)
+  nameWithType: JsonContent.JsonContent(object?, JsonSerializerOptions)
+  nameWithType.vb: JsonContent.New(Object, JsonSerializerOptions)
 - uid: Rqlite.Internal.Request.JsonContent.#ctor*
   name: JsonContent
   href: api/Rqlite.Internal.Request.JsonContent.-ctor.html
@@ -1900,18 +1948,6 @@ references:
   fullName.vb: Rqlite.Internal.Request.JsonContent.New
   nameWithType: JsonContent.JsonContent
   nameWithType.vb: JsonContent.New
-- uid: Rqlite.Internal.Request.JsonContent.SerialiserOptions
-  name: SerialiserOptions
-  href: api/Rqlite.Internal.Request.JsonContent.SerialiserOptions.html#Rqlite_Internal_Request_JsonContent_SerialiserOptions
-  commentId: P:Rqlite.Internal.Request.JsonContent.SerialiserOptions
-  fullName: Rqlite.Internal.Request.JsonContent.SerialiserOptions
-  nameWithType: JsonContent.SerialiserOptions
-- uid: Rqlite.Internal.Request.JsonContent.SerialiserOptions*
-  name: SerialiserOptions
-  href: api/Rqlite.Internal.Request.JsonContent.SerialiserOptions.html
-  commentId: Overload:Rqlite.Internal.Request.JsonContent.SerialiserOptions
-  fullName: Rqlite.Internal.Request.JsonContent.SerialiserOptions
-  nameWithType: JsonContent.SerialiserOptions
 - uid: Rqlite.Internal.Request.UriBuilder
   name: UriBuilder
   href: api/Rqlite.Internal.Request.UriBuilder.html
