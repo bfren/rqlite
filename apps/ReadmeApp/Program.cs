@@ -24,7 +24,7 @@ var param0 = new { name = "Fred", age = 42 };
 var query0 = await client.ExecuteAsync(sql0, param0);
 query0.Audit(
 	fFail: e => log.Err(e.Message),
-	fOk: x => Console.WriteLine("Inserted record {0}.", x.Select(r => r.LastInsertId).First())
+	fOk: x => Console.WriteLine("Inserted record {0}.", x.LastInsertId)
 );
 // Output: 'Inserted record 1.'
 
