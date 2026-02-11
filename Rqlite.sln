@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.6.33815.320
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11505.172 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rqlite.Client", "src\Rqlite.Client\Rqlite.Client.csproj", "{58C30D92-A396-40A0-A79B-BC95E20A7FD0}"
 EndProject
@@ -64,15 +64,12 @@ Global
 		{21D34529-32FE-4347-999C-7C1702AFE506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{21D34529-32FE-4347-999C-7C1702AFE506}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D34529-32FE-4347-999C-7C1702AFE506}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21D34529-32FE-4347-999C-7C1702AFE506}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B720C6DF-F92D-4816-BAEC-FB8C330008C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8A8824C-0F1C-4F22-989E-4109D19A3A42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{61D55D24-FD1A-4F5A-9E65-2ABA2823BFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{61D55D24-FD1A-4F5A-9E65-2ABA2823BFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D55D24-FD1A-4F5A-9E65-2ABA2823BFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -80,7 +77,6 @@ Global
 		{5489A283-F04E-46D2-AB93-B7899C9A4DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5489A283-F04E-46D2-AB93-B7899C9A4DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5489A283-F04E-46D2-AB93-B7899C9A4DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5489A283-F04E-46D2-AB93-B7899C9A4DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
