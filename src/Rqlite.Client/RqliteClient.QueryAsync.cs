@@ -25,13 +25,13 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
 	internal static async Task<Result<List<TModel>>> QueryAsync<TQuery, TModel>(
-		IEnumerable<TQuery> queries,
+		TQuery[] queries,
 		IUriBuilder uriBuilder,
 		JsonSerializerOptions jsonOptions,
 		Func<HttpRequestMessage, Task<Result<List<QueryResponseResult<TModel>>>>> send
 	)
 	{
-		if (!queries.Any())
+		if (queries.Length == 0)
 		{
 			return R.Fail("You must pass at least one query.")
 				.Ctx(nameof(RqliteClient), nameof(QueryAsync));
@@ -78,7 +78,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <inheritdoc/>
 	public Task<Result<List<T>>> QueryAsync<T>(params (string query, object param)[] queries) =>
 		QueryAsync(
-			queries: from q in queries select new[] { q.query, q.param },
+			queries: (from q in queries select new[] { q.query, q.param }).ToArray(),
 			uriBuilder: QueryUri(),
 			jsonOptions: JsonOptions,
 			send: GetResultsAsync<QueryResponseResult<T>>
