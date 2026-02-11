@@ -22,7 +22,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Command results.</returns>
-	internal static async Task<Result<List<RqliteCommandResult>>> ExecuteAsync<TCommand>(
+	internal async Task<Result<List<RqliteCommandResult>>> ExecuteAsync<TCommand>(
 		IEnumerable<TCommand> commands,
 		bool asSingleTransaction,
 		IUriBuilder uriBuilder,
@@ -42,7 +42,7 @@ public sealed partial class RqliteClient : IRqliteClient
 
 		var request = new HttpRequestMessage
 		{
-			Content = new JsonContent(commands),
+			Content = new JsonContent(commands, JsonOptions),
 			Method = HttpMethod.Post,
 			RequestUri = uriBuilder.Build(),
 		};

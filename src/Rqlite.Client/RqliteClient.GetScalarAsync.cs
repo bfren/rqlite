@@ -22,14 +22,14 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
-	internal static async Task<Result<TValue>> GetScalarAsync<TQuery, TValue>(
+	internal async Task<Result<TValue>> GetScalarAsync<TQuery, TValue>(
 		TQuery query,
 		IUriBuilder uriBuilder,
 		Func<HttpRequestMessage, Task<Result<List<ScalarResponseResult<TValue>>>>> send)
 	{
 		var request = new HttpRequestMessage
 		{
-			Content = new JsonContent(query),
+			Content = new JsonContent(query, JsonOptions),
 			Method = HttpMethod.Post,
 			RequestUri = uriBuilder.Build(),
 		};

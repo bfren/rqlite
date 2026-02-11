@@ -1,6 +1,8 @@
 // Rqlite client for .NET.
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
+using System.Text.Json;
+
 namespace Rqlite.Client;
 
 /// <summary>
@@ -8,6 +10,11 @@ namespace Rqlite.Client;
 /// </summary>
 public interface IRqliteClientFactory
 {
+	/// <summary>
+	/// Allows custom JSON serialisation (e.g. type mapping, property naming).
+	/// </summary>
+	JsonSerializerOptions JsonOptions { get; set; }
+
 	/// <summary>
 	/// Create a new <see cref="IRqliteClient"/> using the default named HttpClient
 	/// (see <see cref="RqliteOptions.DefaultClientName"/>.

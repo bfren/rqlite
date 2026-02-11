@@ -7,7 +7,6 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Rqlite.Internal;
-using Rqlite.Internal.Request;
 using IUriBuilder = Rqlite.Internal.Request.IUriBuilder;
 using UriBuilder = Rqlite.Internal.Request.UriBuilder;
 
@@ -37,21 +36,18 @@ public sealed partial class RqliteClient : IRqliteClient
 	internal Func<IUriBuilder> QueryUri { get; private init; }
 
 	/// <inheritdoc/>
-	public JsonSerializerOptions JsonSerializerOptions
-	{
-		get => JsonContent.SerialiserOptions;
-		set => JsonContent.SerialiserOptions = value;
-	}
+	public JsonSerializerOptions JsonOptions { get; private init; }
 
 	/// <summary>
 	/// Create database client instance using specified HttpClient.
 	/// </summary>
 	/// <param name="httpClient">HttpClient instance.</param>
+	/// <param name="jsonOptions">JsonSerializerOptions.</param>
 	/// <param name="includeTimings">Whether or not to include timings with each request.</param>
 	/// <param name="logger">ILogger instance.</param>
-	internal RqliteClient(HttpClient httpClient, bool includeTimings, ILogger<RqliteClient> logger)
+	internal RqliteClient(HttpClient httpClient, JsonSerializerOptions jsonOptions, bool includeTimings, ILogger<RqliteClient> logger)
 	{
-		(HttpClient, Logger) = (httpClient, logger);
+		(HttpClient, JsonOptions, Logger) = (httpClient, jsonOptions, logger);
 		ExecuteUri = () => new UriBuilder("/db/execute", includeTimings);
 		QueryUri = () => new UriBuilder("/db/query", includeTimings);
 	}
@@ -73,7 +69,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		Logger.ResponseJson(json);
 
 		// Attempt to parse response
-		var rqliteResponse = JsonSerializer.Deserialize<T>(json, JsonContent.SerialiserOptions);
+		var rqliteResponse = JsonSerializer.Deserialize<T>(json, JsonOptions);
 		if (rqliteResponse is null)
 		{
 			return R.Fail("'{JSON}' deserialised to a null value.", json)

@@ -3,6 +3,7 @@
 
 using System;
 using System.Net.Http;
+using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Rqlite.Client.Exceptions;
@@ -12,6 +13,9 @@ namespace Rqlite.Client;
 /// <inheritdoc cref="IRqliteClientFactory"/>
 public sealed class RqliteClientFactory : IRqliteClientFactory
 {
+	/// <inheritdoc/>
+	public JsonSerializerOptions JsonOptions { get; set; }
+
 	/// <summary>
 	/// IHttpClientFactory instance.
 	/// </summary>
@@ -33,8 +37,11 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 	/// <param name="httpClientFactory">IHttpClientFactory instance.</param>
 	/// <param name="logger">ILogger for RqliteClient instances.</param>
 	/// <param name="options">RqliteOptions instance.</param>
-	public RqliteClientFactory(IHttpClientFactory httpClientFactory, ILogger<RqliteClient> logger, IOptions<RqliteOptions> options) =>
+	public RqliteClientFactory(IHttpClientFactory httpClientFactory, ILogger<RqliteClient> logger, IOptions<RqliteOptions> options)
+	{
 		(HttpClientFactory, Logger, Options) = (httpClientFactory, logger, options.Value);
+		JsonOptions = new() { PropertyNameCaseInsensitive = true };
+	}
 
 	/// <inheritdoc/>
 	public IRqliteClient CreateClient() =>
@@ -61,6 +68,7 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 			fNone: () => throw new UnknownClientException($"Client '{httpClientName}' cannot be found in Rqlite settings."),
 			fSome: x => new RqliteClient(
 				httpClient: HttpClientFactory.CreateClient(httpClientName),
+				jsonOptions: JsonOptions,
 				includeTimings: x.IncludeTimings ?? Options.IncludeTimings,
 				logger: Logger
 			)
@@ -78,6 +86,6 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 		httpClient.Timeout = TimeSpan.FromSeconds(options.TimeoutInSeconds);
 
 		// return default RqliteClient
-		return new RqliteClient(httpClient, options.IncludeTimings, Logger);
+		return new RqliteClient(httpClient, JsonOptions, options.IncludeTimings, Logger);
 	}
 }

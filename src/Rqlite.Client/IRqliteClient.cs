@@ -14,9 +14,9 @@ namespace Rqlite.Client;
 public interface IRqliteClient : IDisposable
 {
 	/// <summary>
-	/// Provides ability to customise JSON serialisation (e.g. to support custom types).
+	/// Set by RqliteClientFactory to customise JSON serialisation (e.g. type mapping, property naming).
 	/// </summary>
-	JsonSerializerOptions JsonSerializerOptions { get; set; }
+	JsonSerializerOptions JsonOptions { get; }
 
 	/// <summary>
 	/// Use /status endpoint to check Rqlite is running and return the version of the connected instance.
