@@ -1,43 +1,43 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net10.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<None Remove="appsettings.json" />
-		<None Remove="jeebsconfig-secrets.json" />
-		<None Remove="jeebsconfig.json" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="jeebsconfig-secrets.json" />
+    <None Remove="jeebsconfig.json" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<Content Include="appsettings.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="jeebsconfig-secrets.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="jeebsconfig.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="jeebsconfig-secrets.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="jeebsconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Jeebs.Apps" />
-		<PackageReference Include="Rnd" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Jeebs.Apps" />
+    <PackageReference Include="Rnd" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
+  </ItemGroup>
 
-	<ProjectExtensions>
-		<VisualStudio>
-			<UserProperties jeebsconfig_1json__JsonSchema="https://schemas.bfren.dev/jeebs/application/config/2022-06.json" />
-		</VisualStudio>
-	</ProjectExtensions>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties jeebsconfig_1json__JsonSchema="https://schemas.bfren.dev/jeebs/application/config/2022-06.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 
 </Project>

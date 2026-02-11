@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<RootNamespace>Rqlite.Client</RootNamespace>
-	</PropertyGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
-		<ProjectReference Include="..\..\src\Rqlite.Internal\Rqlite.Internal.csproj" />
-	</ItemGroup>
+  <PropertyGroup>
+    <RootNamespace>Rqlite.Client</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Rqlite.Client\Rqlite.Client.csproj" />
+  </ItemGroup>
 </Project>

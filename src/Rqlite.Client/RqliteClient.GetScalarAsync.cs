@@ -18,7 +18,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// </summary>
 	/// <typeparam name="TQuery">Query type.</typeparam>
 	/// <typeparam name="TValue">Return value type.</typeparam>
-	/// <param name="queries">Query to execute.</param>
+	/// <param name="query">Query to execute.</param>
 	/// <param name="uriBuilder">URI builder.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>

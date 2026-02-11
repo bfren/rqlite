@@ -53,6 +53,11 @@ public static partial class LoggerExtensions
 			(char)int.Parse(m.Groups[1].Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
 	}
 
+	/// <summary>
+	/// Log a FailureValue.
+	/// </summary>
+	/// <param name="this">ILogger.</param>
+	/// <param name="value">Failure.</param>
 	public static void Err(this ILogger @this, FailureValue value) =>
 		LogErr(@this, value, null);
 
