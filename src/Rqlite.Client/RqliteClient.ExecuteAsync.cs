@@ -35,6 +35,10 @@ public sealed partial class RqliteClient : IRqliteClient
 				.Ctx(nameof(RqliteClient), nameof(ExecuteAsync));
 		}
 
+		// See https://rqlite.io/docs/api/queued-writes/#waiting-for-a-queue-to-flush
+		uriBuilder.AddQueryVar("wait");
+
+		// See https://rqlite.io/docs/api/bulk-api/#transaction-support
 		if (asSingleTransaction)
 		{
 			uriBuilder.AddQueryVar("transaction");
