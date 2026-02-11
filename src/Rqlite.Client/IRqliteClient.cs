@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Rqlite.Client;
@@ -12,6 +13,11 @@ namespace Rqlite.Client;
 /// </summary>
 public interface IRqliteClient : IDisposable
 {
+	/// <summary>
+	/// Set by RqliteClientFactory to customise JSON serialisation (e.g. type mapping, property naming).
+	/// </summary>
+	JsonSerializerOptions JsonOptions { get; }
+
 	/// <summary>
 	/// Use /status endpoint to check Rqlite is running and return the version of the connected instance.
 	/// </summary>

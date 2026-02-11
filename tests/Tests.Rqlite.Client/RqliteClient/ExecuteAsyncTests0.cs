@@ -18,7 +18,7 @@ public class when_commands_is_empty
 		var expected = "You must pass at least one command.";
 
 		// Act
-		var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+		var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		_ = result.AssertFailure(expected);
@@ -36,7 +36,7 @@ public class when_commands_is_not_empty
 		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
-		_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+		_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.Received().Build();
@@ -51,7 +51,7 @@ public class when_commands_is_not_empty
 		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
-		_ = await RqliteClient.ExecuteAsync(commands, true, builder, send);
+		_ = await RqliteClient.ExecuteAsync(commands, true, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.Received().AddQueryVar("wait");
@@ -69,7 +69,7 @@ public class when_commands_is_not_empty
 			var expected = Json(commands);
 
 			// Act
-			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -87,7 +87,7 @@ public class when_commands_is_not_empty
 			send.Invoke(default!).ReturnsForAnyArgs(new List<ExecuteResponseResult>());
 
 			// Act
-			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -106,7 +106,7 @@ public class when_commands_is_not_empty
 			var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 			// Act
-			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+			_ = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -125,7 +125,7 @@ public class when_commands_is_not_empty
 			var send = Helpers.GetExecuteSubstitute(lastInsertId, rowsAffected);
 
 			// Act
-			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			var actual = result.AssertOk();
@@ -148,7 +148,7 @@ public class when_commands_is_not_empty
 			send.Invoke(default!).ReturnsForAnyArgs(R.Fail(expected));
 
 			// Act
-			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, send);
+			var result = await RqliteClient.ExecuteAsync(commands, Rnd.Flip, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			var err = result.AssertFailure();
@@ -168,7 +168,7 @@ public class when_asSingleTransaction_is_true
 		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
-		_ = await RqliteClient.ExecuteAsync(commands, true, builder, send);
+		_ = await RqliteClient.ExecuteAsync(commands, true, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.Received().AddQueryVar("transaction");
@@ -186,7 +186,7 @@ public class when_asSingleTransaction_is_false
 		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
 
 		// Act
-		_ = await RqliteClient.ExecuteAsync(commands, false, builder, send);
+		_ = await RqliteClient.ExecuteAsync(commands, false, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.DidNotReceive().AddQueryVar("transaction");

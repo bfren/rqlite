@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Rqlite.Internal.Request;
 using Rqlite.Internal.Response;
@@ -20,16 +21,18 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <typeparam name="TValue">Return value type.</typeparam>
 	/// <param name="query">Query to execute.</param>
 	/// <param name="uriBuilder">URI builder.</param>
+	/// <param name="jsonOptions">JsonSerializerOptions.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
 	internal static async Task<Result<TValue>> GetScalarAsync<TQuery, TValue>(
 		TQuery query,
 		IUriBuilder uriBuilder,
+		JsonSerializerOptions jsonOptions,
 		Func<HttpRequestMessage, Task<Result<List<ScalarResponseResult<TValue>>>>> send)
 	{
 		var request = new HttpRequestMessage
 		{
-			Content = new JsonContent(query),
+			Content = new JsonContent(query, jsonOptions),
 			Method = HttpMethod.Post,
 			RequestUri = uriBuilder.Build(),
 		};
@@ -59,6 +62,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		GetScalarAsync(
 			query: new[] { query },
 			uriBuilder: QueryUri(),
+			jsonOptions: JsonOptions,
 			send: GetResultsAsync<ScalarResponseResult<T>>
 		);
 
@@ -67,6 +71,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		GetScalarAsync(
 			query: new[] { new[] { query, param } },
 			uriBuilder: QueryUri(),
+			jsonOptions: JsonOptions,
 			send: GetResultsAsync<ScalarResponseResult<T>>
 		);
 

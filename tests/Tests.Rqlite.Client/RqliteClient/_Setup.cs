@@ -17,7 +17,7 @@ public abstract class RqliteClientTests
 		{
 			var status = handler.Status;
 			var value = handler.Value;
-			return Task.FromResult(new HttpResponseMessage(status) { Content = content ?? new JsonContent(value) });
+			return Task.FromResult(new HttpResponseMessage(status) { Content = content ?? new JsonContent(value, RqliteClientFactory.DefaultJsonOptions) });
 		});
 
 		var httpClient = new HttpClient(handler) { BaseAddress = new("http://localhost:4001") };
@@ -26,11 +26,11 @@ public abstract class RqliteClientTests
 
 		var logger = Substitute.ForPartsOf<LoggerMock>();
 
-		return (new(httpClient, includeTimings, logger), new(httpClient, handler, includeTimings, logger));
+		return (new(httpClient, RqliteClientFactory.DefaultJsonOptions, includeTimings, logger), new(httpClient, handler, includeTimings, logger));
 	}
 
 	protected static string Json<T>(T obj) =>
-		JsonSerializer.Serialize(obj, JsonContent.SerialiserOptions);
+		JsonSerializer.Serialize(obj, RqliteClientFactory.DefaultJsonOptions);
 
 	public sealed record class Vars(
 		HttpClient HttpClient,

@@ -23,7 +23,7 @@ public class with_commands_as_string_params : RqliteClientTests
 	}
 
 	[Fact]
-	public async Task does_not_add_transaction_to_QueryVars()
+	public async Task adds_transaction_to_QueryVars()
 	{
 		// Arrange
 		var (client, v) = Setup();
@@ -34,7 +34,7 @@ public class with_commands_as_string_params : RqliteClientTests
 
 		// Assert
 		await v.HttpMessageHandler.Received().SendAsync(Arg.Is<HttpRequestMessage>(
-			m => !m.RequestUri!.OriginalString.Contains("transaction")
+			m => m.RequestUri!.OriginalString.Contains("transaction")
 		));
 	}
 

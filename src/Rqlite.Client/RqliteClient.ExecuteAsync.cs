@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Rqlite.Internal.Request;
 using Rqlite.Internal.Response;
@@ -27,6 +28,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		IEnumerable<TCommand> commands,
 		bool asSingleTransaction,
 		IUriBuilder uriBuilder,
+		JsonSerializerOptions jsonOptions,
 		Func<HttpRequestMessage, Task<Result<List<ExecuteResponseResult>>>> send
 	)
 	{
@@ -47,7 +49,7 @@ public sealed partial class RqliteClient : IRqliteClient
 
 		var request = new HttpRequestMessage
 		{
-			Content = new JsonContent(commands),
+			Content = new JsonContent(commands, jsonOptions),
 			Method = HttpMethod.Post,
 			RequestUri = uriBuilder.Build(),
 		};
@@ -75,6 +77,7 @@ public sealed partial class RqliteClient : IRqliteClient
 			commands: commands,
 			asSingleTransaction: asSingleTransaction,
 			uriBuilder: ExecuteUri(),
+			jsonOptions: JsonOptions,
 			send: GetResultsAsync<ExecuteResponseResult>
 		);
 
@@ -88,6 +91,7 @@ public sealed partial class RqliteClient : IRqliteClient
 			commands: from c in commands select new[] { c.command, c.param },
 			asSingleTransaction: asSingleTransaction,
 			uriBuilder: ExecuteUri(),
+			jsonOptions: JsonOptions,
 			send: GetResultsAsync<ExecuteResponseResult>
 		);
 }
