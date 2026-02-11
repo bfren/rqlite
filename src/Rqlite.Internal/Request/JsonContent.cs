@@ -23,6 +23,6 @@ public sealed class JsonContent(object? content) : StringContent(
 	/// <summary>
 	/// Shared options for JSON serialisation.
 	/// </summary>
-	public static JsonSerializerOptions SerialiserOptions { get; } =
+	internal static JsonSerializerOptions SerialiserOptions { get; set; } =
 		new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 }
