@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Rqlite.Internal.Request;
 using Rqlite.Internal.Response;
@@ -20,11 +21,13 @@ public sealed partial class RqliteClient : IRqliteClient
 	/// <typeparam name="TModel">Return model type.</typeparam>
 	/// <param name="queries">Queries to execute.</param>
 	/// <param name="uriBuilder">URI builder.</param>
+	/// <param name="jsonOptions">JsonSerializerOptions.</param>
 	/// <param name="send">Asynchronous send method.</param>
 	/// <returns>Query results.</returns>
-	internal async Task<Result<List<TModel>>> QueryAsync<TQuery, TModel>(
+	internal static async Task<Result<List<TModel>>> QueryAsync<TQuery, TModel>(
 		IEnumerable<TQuery> queries,
 		IUriBuilder uriBuilder,
+		JsonSerializerOptions jsonOptions,
 		Func<HttpRequestMessage, Task<Result<List<QueryResponseResult<TModel>>>>> send
 	)
 	{
@@ -38,7 +41,7 @@ public sealed partial class RqliteClient : IRqliteClient
 
 		var request = new HttpRequestMessage
 		{
-			Content = new JsonContent(queries, JsonOptions),
+			Content = new JsonContent(queries, jsonOptions),
 			Method = HttpMethod.Post,
 			RequestUri = uriBuilder.Build(),
 		};
@@ -64,6 +67,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		QueryAsync(
 			queries: queries,
 			uriBuilder: QueryUri(),
+			jsonOptions: JsonOptions,
 			send: GetResultsAsync<QueryResponseResult<T>>
 		);
 
@@ -76,6 +80,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		QueryAsync(
 			queries: from q in queries select new[] { q.query, q.param },
 			uriBuilder: QueryUri(),
+			jsonOptions: JsonOptions,
 			send: GetResultsAsync<QueryResponseResult<T>>
 		);
 }
