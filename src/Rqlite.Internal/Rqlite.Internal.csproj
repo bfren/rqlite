@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>Internal classes for Rqlite client for .NET.</Description>
   </PropertyGroup>
@@ -9,6 +9,9 @@
   <ItemGroup Label="Internal Visibility">
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
       <_Parameter1>Rqlite.Client</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Tests.Rqlite.Client</_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
 </Project>
