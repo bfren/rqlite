@@ -19,7 +19,7 @@ public class when_queries_is_empty
 		var expected = "You must pass at least one query.";
 
 		// Act
-		var result = await RqliteClient.QueryAsync(queries, builder, send);
+		var result = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		_ = result.AssertFailure(expected);
@@ -37,7 +37,7 @@ public class when_queries_is_not_empty
 		var send = Substitute.For<Func<HttpRequestMessage, Task<Result<List<QueryResponseResult<int>>>>>>();
 
 		// Act
-		_ = await RqliteClient.QueryAsync(queries, builder, send);
+		_ = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.Received().Build();
@@ -55,7 +55,7 @@ public class when_queries_is_not_empty
 			var expected = Json(queries);
 
 			// Act
-			_ = await RqliteClient.QueryAsync(queries, builder, send);
+			_ = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -72,7 +72,7 @@ public class when_queries_is_not_empty
 			var send = Helpers.GetQuerySubstitute<int>();
 
 			// Act
-			_ = await RqliteClient.QueryAsync(queries, builder, send);
+			_ = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -91,7 +91,7 @@ public class when_queries_is_not_empty
 			var send = Helpers.GetQuerySubstitute<int>();
 
 			// Act
-			_ = await RqliteClient.QueryAsync(queries, builder, send);
+			_ = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -109,7 +109,7 @@ public class when_queries_is_not_empty
 			var send = Helpers.GetQuerySubstitute(expected);
 
 			// Act
-			var result = await RqliteClient.QueryAsync(queries, builder, send);
+			var result = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			var actual = result.AssertOk();
@@ -130,8 +130,7 @@ public class when_queries_is_not_empty
 			send.Invoke(default!).ThrowsAsyncForAnyArgs(expected);
 
 			// Act
-			var result = await RqliteClient.QueryAsync(queries, builder, send);
-
+			var result = await RqliteClient.QueryAsync(queries, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			_ = result.AssertFailure(expected);

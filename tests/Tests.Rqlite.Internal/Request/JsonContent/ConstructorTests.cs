@@ -16,7 +16,7 @@ public class when_called
 		var expected = $"{{\"v0\":\"{v0}\",\"v1\":{v1}}}";
 
 		// Act
-		var result = new JsonContent(new { v0, v1 });
+		var result = new JsonContent(new { v0, v1 }, new());
 
 		// Assert
 		Assert.Equal(expected, await result.ReadAsStringAsync(TestContext.Current.CancellationToken));
@@ -28,7 +28,7 @@ public class when_called
 		// Arrange
 
 		// Act
-		var result = new JsonContent(Rnd.Str);
+		var result = new JsonContent(Rnd.Str, new());
 
 		// Assert
 		Assert.Equal("utf-8", result.Headers.ContentType?.CharSet);
@@ -40,7 +40,7 @@ public class when_called
 		// Arrange
 
 		// Act
-		var result = new JsonContent(Rnd.Str);
+		var result = new JsonContent(Rnd.Str, new());
 
 		// Assert
 		Assert.Equal("application/json", result.Headers.ContentType?.MediaType);

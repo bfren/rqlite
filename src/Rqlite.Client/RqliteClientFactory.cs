@@ -13,6 +13,10 @@ namespace Rqlite.Client;
 /// <inheritdoc cref="IRqliteClientFactory"/>
 public sealed class RqliteClientFactory : IRqliteClientFactory
 {
+	/// <inheritdoc cref="JsonOptions"/>
+	internal static JsonSerializerOptions DefaultJsonOptions { get; } =
+		new() { PropertyNameCaseInsensitive = true };
+
 	/// <inheritdoc/>
 	public JsonSerializerOptions JsonOptions { get; set; }
 
@@ -40,7 +44,7 @@ public sealed class RqliteClientFactory : IRqliteClientFactory
 	public RqliteClientFactory(IHttpClientFactory httpClientFactory, ILogger<RqliteClient> logger, IOptions<RqliteOptions> options)
 	{
 		(HttpClientFactory, Logger, Options) = (httpClientFactory, logger, options.Value);
-		JsonOptions = new() { PropertyNameCaseInsensitive = true };
+		JsonOptions = DefaultJsonOptions;
 	}
 
 	/// <inheritdoc/>

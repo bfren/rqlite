@@ -73,7 +73,7 @@ internal static class Helpers
 			Store: new(Rnd.Int)
 		);
 
-		return new JsonContent(content);
+		return new JsonContent(content, RqliteClientFactory.DefaultJsonOptions);
 	}
 
 	#endregion

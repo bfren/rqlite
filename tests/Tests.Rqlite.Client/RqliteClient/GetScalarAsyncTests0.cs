@@ -16,7 +16,7 @@ public class when_called
 		var send = Helpers.GetScalarSubstitute<int>();
 
 		// Act
-		_ = await RqliteClient.GetScalarAsync(Rnd.Str, builder, send);
+		_ = await RqliteClient.GetScalarAsync(Rnd.Str, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 		// Assert
 		builder.Received().Build();
@@ -34,7 +34,7 @@ public class when_called
 			var expected = Json(command);
 
 			// Act
-			_ = await RqliteClient.GetScalarAsync(command, builder, send);
+			_ = await RqliteClient.GetScalarAsync(command, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -50,7 +50,7 @@ public class when_called
 			var send = Helpers.GetScalarSubstitute<int>();
 
 			// Act
-			_ = await RqliteClient.GetScalarAsync(Rnd.Str, builder, send);
+			_ = await RqliteClient.GetScalarAsync(Rnd.Str, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -68,7 +68,7 @@ public class when_called
 			var send = Helpers.GetScalarSubstitute<int>();
 
 			// Act
-			_ = await RqliteClient.GetScalarAsync(Rnd.Str, builder, send);
+			_ = await RqliteClient.GetScalarAsync(Rnd.Str, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			await send.Received().Invoke(Arg.Is<HttpRequestMessage>(m =>
@@ -86,7 +86,7 @@ public class when_called
 			var send = Helpers.GetScalarSubstitute(expected);
 
 			// Act
-			var result = await RqliteClient.GetScalarAsync(commands, builder, send);
+			var result = await RqliteClient.GetScalarAsync(commands, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			var actual = result.AssertOk();
@@ -106,7 +106,7 @@ public class when_called
 			send.Invoke(default!).ThrowsAsyncForAnyArgs(expected);
 
 			// Act
-			var result = await RqliteClient.GetScalarAsync(Rnd.Str, builder, send);
+			var result = await RqliteClient.GetScalarAsync(Rnd.Str, builder, RqliteClientFactory.DefaultJsonOptions, send);
 
 			// Assert
 			_ = result.AssertFailure(expected);
