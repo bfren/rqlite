@@ -14,11 +14,11 @@ public sealed record class ExecuteResponseResult : ResponseResult
 	/// For INSERT commands, the ID of the last item inserted.
 	/// </summary>
 	[JsonPropertyName("last_insert_id")]
-	public int LastInsertId { get; init; }
+	public long LastInsertId { get; init; }
 
 	/// <summary>
 	/// The number of rows affected by the command.
 	/// </summary>
 	[JsonPropertyName("rows_affected")]
-	public int RowsAffected { get; init; }
+	public long RowsAffected { get; init; }
 }

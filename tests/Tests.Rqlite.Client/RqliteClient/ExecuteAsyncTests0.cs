@@ -42,6 +42,21 @@ public class when_commands_is_not_empty
 		builder.Received().Build();
 	}
 
+	[Fact]
+	public async Task adds_wait_to_QueryVars()
+	{
+		// Arrange
+		var commands = new[] { Rnd.Str, Rnd.Str };
+		var builder = Substitute.For<IUriBuilder>();
+		var send = Helpers.GetExecuteSubstitute(Rnd.Int, Rnd.Int);
+
+		// Act
+		_ = await RqliteClient.ExecuteAsync(commands, true, builder, send);
+
+		// Assert
+		builder.Received().AddQueryVar("wait");
+	}
+
 	public class sends_request : RqliteClientTests
 	{
 		[Fact]
