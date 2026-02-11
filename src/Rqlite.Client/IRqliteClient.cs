@@ -47,7 +47,7 @@ public interface IRqliteClient : IDisposable
 	/// <param name="command">Rqlite parameterised command.</param>
 	/// <param name="param">Command parameters - property names must match parameter names.</param>
 	/// <returns>Command results.</returns>
-	Task<Result<List<RqliteCommandResult>>> ExecuteAsync(string command, object param);
+	Task<Result<RqliteCommandResult>> ExecuteAsync(string command, object param);
 
 	/// <summary>
 	/// Execute parameterised commands and return results. (Does not use a transaction -
