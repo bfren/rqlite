@@ -32,7 +32,7 @@
 
   <!-- Get Paths to Files -->
   <PropertyGroup>
-    <SolutionFilePath>$([MSBuild]::GetPathOfFileAbove('Rqlite.sln'))</SolutionFilePath>
+    <SolutionFilePath>$([MSBuild]::GetPathOfFileAbove('Rqlite.slnx'))</SolutionFilePath>
     <SolutionRootPath>$([System.IO.Path]::GetDirectoryName('$(SolutionFilePath)'))</SolutionRootPath>
   </PropertyGroup>
   <PropertyGroup>
