@@ -40,20 +40,6 @@
       "source_relative_path": "api/Rqlite.Client.Exceptions.UnknownClientException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.Exceptions.UnknownClientException.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.Exceptions.UnknownClientException",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.Exceptions.UnknownClientException.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Client.Exceptions.UnknownClientException.-ctor.html"
         }
       },
@@ -61,6 +47,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.Exceptions.UnknownClientException.UnknownClientException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.Exceptions.UnknownClientException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.Exceptions.UnknownClientException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.Exceptions.UnknownClientException",
       "Summary": null
     },
     {
@@ -75,6 +75,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.IRqliteClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.IRqliteClient.ExecuteAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.IRqliteClient.ExecuteAsync",
       "Summary": null
     },
     {
@@ -103,20 +117,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.IRqliteClient.GetStatusAsync",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.IRqliteClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.IRqliteClient.ExecuteAsync.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.IRqliteClient.ExecuteAsync",
       "Summary": null
     },
     {
@@ -208,6 +208,20 @@
       "source_relative_path": "api/Rqlite.Client.IRqliteClientFactory.yml",
       "output": {
         ".html": {
+          "relative_path": "api/Rqlite.Client.IRqliteClientFactory.CreateClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.IRqliteClientFactory.CreateClient",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.IRqliteClientFactory.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/Rqlite.Client.IRqliteClientFactory.JsonOptions.html"
         }
       },
@@ -219,16 +233,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.IRqliteClientFactory.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.IRqliteClientFactory.CreateClient.html"
+          "relative_path": "api/Rqlite.Client.RqliteClient.JsonOptions.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.IRqliteClientFactory.CreateClient",
+      "Title": "Rqlite.Client.RqliteClient.JsonOptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteClient.QueryAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteClient.QueryAsync",
       "Summary": null
     },
     {
@@ -243,6 +271,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.RqliteClient",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteClient.GetVersionAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteClient.GetVersionAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteClient.GetStatusAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteClient.GetStatusAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteClient.GetScalarAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteClient.GetScalarAsync",
       "Summary": null
     },
     {
@@ -275,76 +345,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteClient.GetScalarAsync.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteClient.GetScalarAsync",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteClient.GetStatusAsync.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteClient.GetStatusAsync",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteClient.GetVersionAsync.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteClient.GetVersionAsync",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteClient.QueryAsync.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteClient.QueryAsync",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteClient.JsonOptions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteClient.JsonOptions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Rqlite.Client.RqliteClientFactory.yml",
       "output": {
         ".html": {
@@ -355,6 +355,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.RqliteClientFactory.RqliteClientFactory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteClientFactory.CreateClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteClientFactory.CreateClient",
       "Summary": null
     },
     {
@@ -401,16 +415,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteClientFactory.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteCommandResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteClientFactory.CreateClient.html"
+          "relative_path": "api/Rqlite.Client.RqliteCommandResult.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteClientFactory.CreateClient",
+      "Title": "Rqlite.Client.RqliteCommandResult",
       "Summary": null
     },
     {
@@ -443,16 +457,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteCommandResult.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteCommandResult.html"
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.ToString.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteCommandResult",
+      "Title": "Rqlite.Client.RqliteOptions.Client.ToString",
       "Summary": null
     },
     {
@@ -460,13 +474,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.html"
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.op_Inequality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client",
+      "Title": "Rqlite.Client.RqliteOptions.Client.operator !=",
       "Summary": null
     },
     {
@@ -474,27 +488,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.AuthString.html"
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.op_Equality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client.AuthString",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.TimeoutInSeconds.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client.TimeoutInSeconds",
+      "Title": "Rqlite.Client.RqliteOptions.Client.operator ==",
       "Summary": null
     },
     {
@@ -530,13 +530,27 @@
       "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.-ctor.html"
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.TimeoutInSeconds.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client.Client",
+      "Title": "Rqlite.Client.RqliteOptions.Client.TimeoutInSeconds",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.AuthString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions.Client.AuthString",
       "Summary": null
     },
     {
@@ -558,48 +572,6 @@
       "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.op_Equality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client.operator ==",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client.operator !=",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.ToString.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.Client.ToString",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Client.RqliteOptions.Client.Equals.html"
         }
       },
@@ -611,16 +583,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.ToString.html"
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.-ctor.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.ToString",
+      "Title": "Rqlite.Client.RqliteOptions.Client.Client",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.Client.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions.Client",
       "Summary": null
     },
     {
@@ -670,20 +656,6 @@
       "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.-ctor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.RqliteOptions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Client.RqliteOptions.Equals.html"
         }
       },
@@ -691,6 +663,76 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.RqliteOptions.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.TimeoutInSeconds.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions.TimeoutInSeconds",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.IncludeTimings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions.IncludeTimings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteOptions.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteOptions.RqliteOptions",
       "Summary": null
     },
     {
@@ -726,34 +768,6 @@
       "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.IncludeTimings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.IncludeTimings",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.TimeoutInSeconds.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions.TimeoutInSeconds",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Client.RqliteOptions.Clients.html"
         }
       },
@@ -761,118 +775,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.RqliteOptions.Clients",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteOptions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteOptions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Deconstruct.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.Deconstruct",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Version.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.Version",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Equals.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.Equals",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.GetHashCode.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.GetHashCode",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.operator !=",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.ToString.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.ToString",
       "Summary": null
     },
     {
@@ -894,6 +796,34 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
       "output": {
         ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.op_Inequality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.operator !=",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.op_Equality.html"
         }
       },
@@ -905,16 +835,72 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Equals.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.GetHashCode.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Equals",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Deconstruct.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.Deconstruct",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.Version.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild.Version",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusBuild.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusBuild",
       "Summary": null
     },
     {
@@ -936,13 +922,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Enabled.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.op_Equality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Enabled",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.operator ==",
       "Summary": null
     },
     {
@@ -964,13 +950,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.GetHashCode.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Equals.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.GetHashCode",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Equals",
       "Summary": null
     },
     {
@@ -978,13 +964,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.-ctor.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.GetHashCode.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.RqliteStatusHttpTls",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.GetHashCode",
       "Summary": null
     },
     {
@@ -1020,13 +1006,27 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.op_Equality.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.-ctor.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.operator ==",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.RqliteStatusHttpTls",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Enabled.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttpTls.Enabled",
       "Summary": null
     },
     {
@@ -1034,97 +1034,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.BindAddr.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.BindAddr",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Deconstruct.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.Deconstruct",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Auth.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.Auth",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Equals.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.Equals",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.-ctor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttp",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.op_Equality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.operator ==",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.operator !=",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp",
       "Summary": null
     },
     {
@@ -1160,13 +1076,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Auth.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.Auth",
       "Summary": null
     },
     {
@@ -1185,86 +1101,86 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.op_Inequality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.operator !=",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.-ctor.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.op_Equality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.RqliteStatusNode",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.operator ==",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.ToString.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Equals.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.ToString",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.Equals",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.op_Inequality.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.BindAddr.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.operator !=",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.BindAddr",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.op_Equality.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.-ctor.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.operator ==",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.RqliteStatusHttp",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.GetHashCode.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusHttp.Deconstruct.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.GetHashCode",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusHttp.Deconstruct",
       "Summary": null
     },
     {
@@ -1286,13 +1202,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.Deconstruct.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.op_Equality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.Deconstruct",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.operator ==",
       "Summary": null
     },
     {
@@ -1311,16 +1227,86 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.GetHashCode.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.GetHashCode",
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.op_Inequality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.operator !=",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.RqliteStatusNode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusNode.Deconstruct.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusNode.Deconstruct",
       "Summary": null
     },
     {
@@ -1370,34 +1356,6 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.Equals.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.Equals",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.SizeInBytes.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.SizeInBytes",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.op_Equality.html"
         }
       },
@@ -1405,6 +1363,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.operator ==",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.Equals",
       "Summary": null
     },
     {
@@ -1426,6 +1412,20 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
       "output": {
         ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.SizeInBytes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.RqliteStatusStore.SizeInBytes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/Rqlite.Client.RqliteStatus.RqliteStatusStore.html"
         }
       },
@@ -1440,27 +1440,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.op_Inequality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.Store.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.Store",
+      "Title": "Rqlite.Client.RqliteStatus.operator !=",
       "Summary": null
     },
     {
@@ -1510,55 +1496,13 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.ToString.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.Deconstruct.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.ToString",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.operator !=",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.op_Equality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.operator ==",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.GetHashCode.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.GetHashCode",
+      "Title": "Rqlite.Client.RqliteStatus.Deconstruct",
       "Summary": null
     },
     {
@@ -1580,13 +1524,55 @@
       "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.RqliteStatus.Deconstruct.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.RqliteStatus.Deconstruct",
+      "Title": "Rqlite.Client.RqliteStatus",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.op_Equality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.operator ==",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.Store.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.Store",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.RqliteStatus.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.RqliteStatus.ToString",
       "Summary": null
     },
     {
@@ -1605,16 +1591,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Client.ServiceCollectionExtensions.yml",
+      "source_relative_path": "api/Rqlite.Client.RqliteStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Client.ServiceCollectionExtensions.AddRqlite.html"
+          "relative_path": "api/Rqlite.Client.RqliteStatus.GetHashCode.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Client.ServiceCollectionExtensions.AddRqlite",
+      "Title": "Rqlite.Client.RqliteStatus.GetHashCode",
       "Summary": null
     },
     {
@@ -1629,6 +1615,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Client.ServiceCollectionExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Client.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Client.ServiceCollectionExtensions.AddRqlite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Client.ServiceCollectionExtensions.AddRqlite",
       "Summary": null
     },
     {
@@ -1678,20 +1678,6 @@
       "source_relative_path": "api/Rqlite.Internal.LoggerExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.LoggerExtensions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.LoggerExtensions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.LoggerExtensions.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Internal.LoggerExtensions.Request.html"
         }
       },
@@ -1727,6 +1713,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Internal.LoggerExtensions.Version",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.LoggerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.LoggerExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.LoggerExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Request.IUriBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Request.IUriBuilder.QueryVars.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Request.IUriBuilder.QueryVars",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Request.IUriBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Request.IUriBuilder.Path.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Request.IUriBuilder.Path",
       "Summary": null
     },
     {
@@ -1773,48 +1801,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Request.IUriBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Request.IUriBuilder.Path.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Request.IUriBuilder.Path",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Request.IUriBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Request.IUriBuilder.QueryVars.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Request.IUriBuilder.QueryVars",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Request.JsonContent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Request.JsonContent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Request.JsonContent",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Rqlite.Internal.Request.JsonContent.yml",
       "output": {
         ".html": {
@@ -1829,30 +1815,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Request.UriBuilder.yml",
+      "source_relative_path": "api/Rqlite.Internal.Request.JsonContent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Request.UriBuilder.AddQueryVar.html"
+          "relative_path": "api/Rqlite.Internal.Request.JsonContent.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Request.UriBuilder.AddQueryVar",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Request.UriBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Request.UriBuilder.QueryVars.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Request.UriBuilder.QueryVars",
+      "Title": "Rqlite.Internal.Request.JsonContent",
       "Summary": null
     },
     {
@@ -1874,13 +1846,13 @@
       "source_relative_path": "api/Rqlite.Internal.Request.UriBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Request.UriBuilder.html"
+          "relative_path": "api/Rqlite.Internal.Request.UriBuilder.AddQueryVar.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Request.UriBuilder",
+      "Title": "Rqlite.Internal.Request.UriBuilder.AddQueryVar",
       "Summary": null
     },
     {
@@ -1909,6 +1881,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Internal.Request.UriBuilder.Path",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Request.UriBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Request.UriBuilder.QueryVars.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Request.UriBuilder.QueryVars",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Request.UriBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Request.UriBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Request.UriBuilder",
       "Summary": null
     },
     {
@@ -1944,48 +1944,6 @@
       "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.PrintMembers.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.PrintMembers",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.LastInsertId.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.LastInsertId",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.RowsAffected.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.RowsAffected",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.-ctor.html"
         }
       },
@@ -1993,34 +1951,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Internal.Response.ExecuteResponseResult.ExecuteResponseResult",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.ToString.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.ToString",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.operator !=",
       "Summary": null
     },
     {
@@ -2056,20 +1986,6 @@
       "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ExecuteResponseResult",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.op_Equality.html"
         }
       },
@@ -2081,16 +1997,86 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.GetHashCode.html"
+          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.op_Inequality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.GetHashCode",
+      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.operator !=",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.PrintMembers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.PrintMembers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.LastInsertId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.LastInsertId",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.RowsAffected.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ExecuteResponseResult.RowsAffected",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ExecuteResponseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ExecuteResponseResult",
       "Summary": null
     },
     {
@@ -2098,111 +2084,13 @@
       "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.PrintMembers.html"
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.PrintMembers",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.operator !=",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.op_Equality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.operator ==",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.ToString.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.ToString",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.Equals.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.Equals",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.-ctor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.QueryResponseResult",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.EqualityContract.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.EqualityContract",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.Types.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.Types",
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>",
       "Summary": null
     },
     {
@@ -2224,13 +2112,237 @@
       "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.html"
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.Types.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>",
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.Types",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.EqualityContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.EqualityContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.QueryResponseResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.op_Equality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.operator ==",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.op_Inequality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.operator !=",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.PrintMembers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.PrintMembers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.QueryResponseResult-1.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.QueryResponseResult<T>.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.Response",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.op_Inequality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.operator !=",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.op_Equality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.operator ==",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.Errors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.Errors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.Response-1.Results.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.Response<T>.Results",
       "Summary": null
     },
     {
@@ -2263,184 +2375,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.Results.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.Results",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.Errors.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.Errors",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.Equals.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.Equals",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.ToString.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.ToString",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.op_Equality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.operator ==",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.operator !=",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.-ctor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.Response",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.Response-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.Response-1.GetHashCode.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.Response<T>.GetHashCode",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.Equals.html"
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.PrintMembers.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.Equals",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.EqualityContract.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.EqualityContract",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.-ctor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.ResponseResult",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.GetHashCode.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.GetHashCode",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.ToString.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.ToString",
+      "Title": "Rqlite.Internal.Response.ResponseResult.PrintMembers",
       "Summary": null
     },
     {
@@ -2462,13 +2406,69 @@
       "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.PrintMembers.html"
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.op_Equality.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.PrintMembers",
+      "Title": "Rqlite.Internal.Response.ResponseResult.operator ==",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ResponseResult.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ResponseResult.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ResponseResult.ResponseResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.EqualityContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ResponseResult.EqualityContract",
       "Summary": null
     },
     {
@@ -2490,20 +2490,6 @@
       "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.op_Equality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ResponseResult.operator ==",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Internal.Response.ResponseResult.html"
         }
       },
@@ -2511,6 +2497,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Internal.Response.ResponseResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ResponseResult.ToString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ResponseResult.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.op_Inequality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.operator !=",
       "Summary": null
     },
     {
@@ -2574,13 +2588,13 @@
       "source_relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.Equals.html"
+          "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.PrintMembers.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.Equals",
+      "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.PrintMembers",
       "Summary": null
     },
     {
@@ -2616,34 +2630,6 @@
       "source_relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.op_Inequality.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.operator !=",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.PrintMembers.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.PrintMembers",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.ToString.html"
         }
       },
@@ -2651,6 +2637,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.ToString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Rqlite.Internal.Response.ScalarResponseResult-1.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Rqlite.Internal.Response.ScalarResponseResult<T>.Equals",
       "Summary": null
     },
     {
@@ -2695,11 +2695,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
