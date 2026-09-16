@@ -1,11 +1,18 @@
 <Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <BuildType Name="Test" />
+  </Configurations>
   <Folder Name="/apps/">
     <File Path="apps/.editorconfig" />
     <Project Path="apps/ConsoleApp/ConsoleApp.csproj">
       <Build Solution="Release|*" Project="false" />
+      <Build Solution="Test|*" Project="false" />
     </Project>
     <Project Path="apps/ReadmeApp/ReadmeApp.csproj">
       <Build Solution="Release|*" Project="false" />
+      <Build Solution="Test|*" Project="false" />
     </Project>
   </Folder>
   <Folder Name="/Solution Items/">
@@ -17,11 +24,11 @@
     <File Path=".github/workflows/workflow-cleanup.yml" />
     <File Path=".gitignore" />
     <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
     <File Path="LICENSE" />
     <File Path="Pack.csproj" />
     <File Path="README.md" />
     <File Path="run.sh" />
-    <File Path="Test.csproj" />
     <File Path="Version" />
   </Folder>
   <Folder Name="/src/">
