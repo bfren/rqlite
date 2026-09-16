@@ -37,20 +37,21 @@ jobs:
     -
       name: A - Restore
       run: |
-        dotnet restore Test.csproj
+        dotnet restore Rqlite.slnx
     -
       name: B - Build
       run: |
-        dotnet build Test.csproj \
+        dotnet build Rqlite.slnx \
           --no-restore \
-          --configuration Release
+          --configuration Debug
     -
       name: C - Test
       run: |
-        dotnet test Test.csproj \
+        dotnet test \
+          --solution Rqlite.slnx \
           --no-restore \
           --no-build \
-          --configuration Release
+          --configuration Debug
     -
       if: success()
       name: Finish - Success

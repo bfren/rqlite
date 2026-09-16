@@ -21,7 +21,6 @@
     <File Path="Pack.csproj" />
     <File Path="README.md" />
     <File Path="run.sh" />
-    <File Path="Test.csproj" />
     <File Path="Version" />
   </Folder>
   <Folder Name="/src/">
