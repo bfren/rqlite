@@ -19,7 +19,7 @@ jobs:
     steps:
     -
       name: Prepare - Checkout Code
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     -
       name: Prepare - Read Version
       uses: bfren/read-file@v2
@@ -28,7 +28,7 @@ jobs:
       id: version
     -
       name: Prepare - Setup .NET
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: |
           8.0.x
@@ -43,7 +43,7 @@ jobs:
       run: |
         dotnet build Rqlite.slnx \
           --no-restore \
-          --configuration Debug
+          --configuration Test
     -
       name: C - Test
       run: |
@@ -51,7 +51,7 @@ jobs:
           --solution Rqlite.slnx \
           --no-restore \
           --no-build \
-          --configuration Debug
+          --configuration Test
     -
       if: success()
       name: Finish - Success
