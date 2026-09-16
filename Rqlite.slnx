@@ -1,11 +1,18 @@
 <Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <BuildType Name="Test" />
+  </Configurations>
   <Folder Name="/apps/">
     <File Path="apps/.editorconfig" />
     <Project Path="apps/ConsoleApp/ConsoleApp.csproj">
       <Build Solution="Release|*" Project="false" />
+      <Build Solution="Test|*" Project="false" />
     </Project>
     <Project Path="apps/ReadmeApp/ReadmeApp.csproj">
       <Build Solution="Release|*" Project="false" />
+      <Build Solution="Test|*" Project="false" />
     </Project>
   </Folder>
   <Folder Name="/Solution Items/">
