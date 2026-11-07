@@ -67,21 +67,6 @@ jobs:
       with:
         name: nupkgs
         path: ${{ env.PACKAGES_DIR }}
-  add-assets:
-    if: success() && github.event_name == 'release'   # nothing to attach to without a release
-    runs-on: ubuntu-latest
-    needs: restore-build-test-pack
-    steps:
-    - name: Retrieve
-      uses: actions/download-artifact@v8
-      with:
-        name: nupkgs
-        path: ${{ env.PACKAGES_DIR }}
-    - name: Add Assets
-      if: github.ref_type == 'tag'
-      uses: softprops/action-gh-release@v3
-      with:
-        files: "${{ env.PACKAGES_DIR }}/*.nupkg"
   publish:
     runs-on: ubuntu-latest
     needs: restore-build-test-pack
@@ -115,11 +100,11 @@ jobs:
           --source https://nuget.pkg.github.com/bfren/index.json
   notify:
     runs-on: ubuntu-latest
-    needs: [restore-build-test-pack, add-assets, publish]
+    needs: [restore-build-test-pack, publish]
     if: always() && !inputs.dry_run # always(): otherwise this job is skipped when an earlier job fails, and the failure message is never sent
     steps:
     -
-      if: success()
+      if: ${{ !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled') }} # step success() only sees steps in this job, so check the jobs it needs
       name: Success
       uses: bfren/action-slack-notify@master
       env:
@@ -129,7 +114,7 @@ jobs:
         SLACK_COLOR: good
         SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
     -
-      if: failure()
+      if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
       name: Failure
       uses: bfren/action-slack-notify@master
       env:
