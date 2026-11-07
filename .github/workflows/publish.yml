@@ -17,77 +17,31 @@ env:
   PACKAGES_DIR: /home/runner/packages
 
 jobs:
-  restore-build-test-pack:
+  prepare:
+    uses: bfren/dotnet/.github/workflows/prepare.yml@main
+    with:
+      solution: "Rqlite.slnx"
+  nuget:
+    needs: prepare
     runs-on: ubuntu-latest
-    steps:
-    -
-      name: Prepare - Checkout Code
-      uses: actions/checkout@v7
-    -
-      name: Prepare - Read Version
-      uses: bfren/read-file@v2
-      with:
-        file: ./Version
-      id: version
-    -
-      name: Prepare - Setup .NET
-      uses: actions/setup-dotnet@v6
-      with:
-        dotnet-version: |
-          8.0.x
-          9.0.x
-          10.0.x
-    -
-      name: Restore
-      run: |
-        dotnet restore Rqlite.slnx
-    -
-      name: Style
-      run: |
-        dotnet format style -v d Rqlite.slnx \
-          --no-restore
-    -
-      name: Build
-      run: |
-        dotnet build Rqlite.slnx \
-          --no-restore \
-          --configuration Release
-    -
-      if: success()
-      name: Pack
-      run: |
-        dotnet pack Pack.csproj \
-          --no-build \
-          --configuration Release \
-          /p:PackageOutputPath=${{ env.PACKAGES_DIR }} \
-          -p:PackageVersion=${{ steps.version.outputs.contents }}
-    -
-      name: Store
-      uses: actions/upload-artifact@v7
-      with:
-        name: nupkgs
-        path: ${{ env.PACKAGES_DIR }}
-  publish:
-    runs-on: ubuntu-latest
-    needs: restore-build-test-pack
-    if: success()
     permissions:
       id-token: write   # lets NuGet/login exchange a GitHub token for a 1-hour NuGet key
-      packages: write   # still needed for the GitHub Packages push
+      packages: write   # GitHub Packages push
     steps:
-    - name: Retrieve
+    -
+      name: Retrieve
       uses: actions/download-artifact@v8
       with:
-        name: nupkgs
+        name: nupkgs # uploaded by bfren/dotnet prepare.yml
         path: ${{ env.PACKAGES_DIR }}
     -
-      name: NuGet login
+      name: NuGet login # must run from this repo's own workflow file - NuGet rejects logins from shared workflows
       uses: NuGet/login@v1
       id: login
       with:
         user: ${{ secrets.NUGET_USER }}
     -
-      if: success() && !inputs.dry_run
+      if: ${{ !inputs.dry_run }} # inputs.dry_run is empty on release, so this pushes
       name: Push
       run: |
         dotnet nuget push "${{ env.PACKAGES_DIR }}/*.nupkg" \
@@ -99,27 +53,10 @@ jobs:
           --api-key ${{ secrets.GITHUB_TOKEN }} \
           --source https://nuget.pkg.github.com/bfren/index.json
   notify:
-    runs-on: ubuntu-latest
-    needs: [restore-build-test-pack, publish]
+    needs: [prepare, nuget]
     if: always() && !inputs.dry_run # always(): otherwise this job is skipped when an earlier job fails, and the failure message is never sent
-    steps:
-    -
-      if: ${{ !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled') }} # step success() only sees steps in this job, so check the jobs it needs
-      name: Success
-      uses: bfren/action-slack-notify@master
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_USERNAME: Rqlite (GitHub)
-        SLACK_MESSAGE: Publish Succeeded
-        SLACK_COLOR: good
-        SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
-    -
-      if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
-      name: Failure
-      uses: bfren/action-slack-notify@master
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_USERNAME: Rqlite (GitHub)
-        SLACK_MESSAGE: Publish Failed
-        SLACK_COLOR: danger
-        SLACK_ICON: https://bfren.dev/img/logo-square-500x500.jpg
+    uses: bfren/dotnet/.github/workflows/notify.yml@main
+    with:
+      name: Rqlite
+      results: ${{ toJSON(needs.*.result) }}
+    secrets: inherit

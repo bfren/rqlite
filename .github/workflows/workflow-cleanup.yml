@@ -9,12 +9,7 @@ on:
         default: "60"
 
 jobs:
-  delete-workflow-runs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete old workflow runs
-        uses: bfren/delete-workflow-runs@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          retain_days: ${{ github.event.inputs.days }}
+  cleanup:
+    uses: bfren/dotnet/.github/workflows/workflow-cleanup.yml@main
+    with:
+      days: ${{ inputs.days }}
