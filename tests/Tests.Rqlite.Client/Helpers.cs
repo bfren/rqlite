@@ -2,7 +2,6 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System.Text;
-using Rqlite.Internal.Request;
 using Rqlite.Internal.Response;
 
 namespace Rqlite.Client;
@@ -73,7 +72,7 @@ internal static class Helpers
 			Store: new(Rnd.Int)
 		);
 
-		return new JsonContent(content, RqliteClientFactory.DefaultJsonOptions);
+		return new Internal.Request.JsonContent(content, RqliteClientFactory.DefaultJsonOptions);
 	}
 
 	#endregion
