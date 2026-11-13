@@ -19,8 +19,8 @@ public static partial class LoggerExtensions
 	[GeneratedRegex(@"\\U([0-9A-F]{4})", RegexOptions.IgnoreCase, "en-GB")]
 	private static partial Regex UnicodeEscapedCharacters();
 
-	private static readonly Action<ILogger, FailureValue, Exception?> LogErr =
-		LoggerMessage.Define<FailureValue>(LogLevel.Error, new(), "Error: {FailureValue}");
+	private static readonly Action<ILogger, Failure, Exception?> LogErr =
+		LoggerMessage.Define<Failure>(LogLevel.Error, new(), "Error: {Failure}");
 
 	private static readonly Action<ILogger, HttpMethod, Uri?, string?, Exception?> LogRequest =
 		LoggerMessage.Define<HttpMethod, Uri?, string?>(LogLevel.Debug, new(), "{Method} {Uri}: {Content}");
@@ -54,11 +54,11 @@ public static partial class LoggerExtensions
 	}
 
 	/// <summary>
-	/// Log a FailureValue.
+	/// Log a Failure.
 	/// </summary>
 	/// <param name="this">ILogger.</param>
 	/// <param name="value">Failure.</param>
-	public static void Err(this ILogger @this, FailureValue value) =>
+	public static void Err(this ILogger @this, Failure value) =>
 		LogErr(@this, value, null);
 
 	/// <summary>

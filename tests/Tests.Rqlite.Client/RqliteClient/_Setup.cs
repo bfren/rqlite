@@ -4,7 +4,6 @@
 using System.Net;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using Rqlite.Internal.Request;
 
 namespace Rqlite.Client.RqliteClientTests;
 
@@ -17,7 +16,7 @@ public abstract class RqliteClientTests
 		{
 			var status = handler.Status;
 			var value = handler.Value;
-			return Task.FromResult(new HttpResponseMessage(status) { Content = content ?? new JsonContent(value, RqliteClientFactory.DefaultJsonOptions) });
+			return Task.FromResult(new HttpResponseMessage(status) { Content = content ?? new Internal.Request.JsonContent(value, RqliteClientFactory.DefaultJsonOptions) });
 		});
 
 		var httpClient = new HttpClient(handler) { BaseAddress = new("http://localhost:4001") };

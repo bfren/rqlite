@@ -2,7 +2,6 @@
 // Copyright (c) bfren - licensed under https://mit.bfren.dev/2023
 
 using System.Text;
-using Rqlite.Internal.Request;
 using Rqlite.Internal.Response;
 
 namespace Rqlite.Client;
@@ -58,7 +57,7 @@ internal static class Helpers
 
 	public static Result<List<ScalarResponseResult<T>>> GetScalarResponseResult<T>(T value)
 		where T : struct =>
-		new List<ScalarResponseResult<T>> { { new() { Values = [new List<T>([value])] } } };
+		new List<ScalarResponseResult<T>> { { new() { Values = [[value]] } } };
 
 	#endregion
 
@@ -73,7 +72,7 @@ internal static class Helpers
 			Store: new(Rnd.Int)
 		);
 
-		return new JsonContent(content, RqliteClientFactory.DefaultJsonOptions);
+		return new Internal.Request.JsonContent(content, RqliteClientFactory.DefaultJsonOptions);
 	}
 
 	#endregion
