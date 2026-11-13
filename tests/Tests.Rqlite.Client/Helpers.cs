@@ -57,7 +57,7 @@ internal static class Helpers
 
 	public static Result<List<ScalarResponseResult<T>>> GetScalarResponseResult<T>(T value)
 		where T : struct =>
-		new List<ScalarResponseResult<T>> { { new() { Values = [new List<T>([value])] } } };
+		new List<ScalarResponseResult<T>> { { new() { Values = [[value]] } } };
 
 	#endregion
 
