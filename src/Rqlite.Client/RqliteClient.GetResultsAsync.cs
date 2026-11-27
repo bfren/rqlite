@@ -32,8 +32,8 @@ public sealed partial class RqliteClient : IRqliteClient
 					x => x.Errors.Count switch
 					{
 						> 0 =>
-							R.Fail(string.Join(Environment.NewLine, x.Errors))
-								.Ctx(nameof(RqliteClient), nameof(GetResultsAsync)),
+							ErrorsWhileExecutingRequest(string.Join(Environment.NewLine, x.Errors))
+								.WithContext(nameof(RqliteClient), nameof(GetResultsAsync)),
 
 						_ =>
 							R.Wrap(x.Results)
@@ -42,7 +42,13 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return R.Fail(ex).Ctx(nameof(RqliteClient), nameof(GetResultsAsync));
+			return ExceptionWhileExecutingRequest() with { Exception = ex };
 		}
 	}
+
+	[Failure("Errors: {errors}")]
+	private static partial Failure ErrorsWhileExecutingRequest(string errors);
+
+	[Failure("Exception while executing request.")]
+	private static partial Failure ExceptionWhileExecutingRequest();
 }

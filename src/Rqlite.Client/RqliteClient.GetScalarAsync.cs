@@ -45,17 +45,22 @@ public sealed partial class RqliteClient : IRqliteClient
 				)
 				.BindAsync(
 					x => x.SelectMany(y => y.Values ?? []).SelectMany(z => z).SingleOrNone().Match(
-						fNone: () => R.Fail("Did not receive exactly one value.")
-							.Ctx(nameof(RqliteClient), nameof(GetScalarAsync)),
+						fNone: () => MultipleValuesReceived(),
 						fSome: R.Wrap
 					)
 				);
 		}
 		catch (Exception ex)
 		{
-			return R.Fail(ex).Ctx(nameof(RqliteClient), nameof(GetScalarAsync));
+			return ExceptionWhileGettingScalar() with { Exception = ex };
 		}
 	}
+
+	[Failure("Zero or multiple values received - required exactly one.")]
+	private static partial Failure MultipleValuesReceived();
+
+	[Failure("Exception while getting scalar.")]
+	private static partial Failure ExceptionWhileGettingScalar();
 
 	/// <inheritdoc/>
 	public Task<Result<T>> GetScalarAsync<T>(string query) =>

@@ -34,8 +34,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	{
 		if (commands.Length == 0)
 		{
-			return R.Fail("You must pass at least one command.")
-				.Ctx(nameof(RqliteClient), nameof(ExecuteAsync));
+			return NoCommandsPassed();
 		}
 
 		// See https://rqlite.io/docs/api/queued-writes/#waiting-for-a-queue-to-flush
@@ -62,6 +61,9 @@ public sealed partial class RqliteClient : IRqliteClient
 				x => x.Select(RqliteCommandResult.Create).ToList()
 			);
 	}
+
+	[Failure("You must pass at least one command.")]
+	private static partial Failure NoCommandsPassed();
 
 	/// <inheritdoc/>
 	public Task<Result<RqliteCommandResult>> ExecuteAsync(string command, object param) =>
