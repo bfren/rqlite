@@ -33,8 +33,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	{
 		if (queries.Length == 0)
 		{
-			return R.Fail("You must pass at least one query.")
-				.Ctx(nameof(RqliteClient), nameof(QueryAsync));
+			return NoQueriesPassed();
 		}
 
 		uriBuilder.AddQueryVar("associative");
@@ -58,9 +57,15 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return R.Fail(ex).Ctx(nameof(RqliteClient), nameof(QueryAsync));
+			return ExceptionWhileExecutingQueries(ex);
 		}
 	}
+
+	[Failure("You must pass at least one query.")]
+	private static partial Failure NoQueriesPassed();
+
+	[Failure("Exception while executing queries.")]
+	private static partial Failure ExceptionWhileExecutingQueries(Exception ex);
 
 	/// <inheritdoc/>
 	public Task<Result<List<T>>> QueryAsync<T>(params string[] queries) =>

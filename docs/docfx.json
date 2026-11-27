@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
       "src": [
@@ -16,7 +17,7 @@
       "noRestore": false,
       "namespaceLayout": "flattened",
       "memberLayout": "separatePages",
-      "EnumSortOrder": "alphabetic",
+      "enumSortOrder": "alphabetic",
       "allowCompilationErrors": false
     }
   ],
@@ -25,21 +26,18 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "images/**"
+          "api/index.md",
+          "index.md",
+          "toc.yml",
+          "docs/**.md",
+          "docs/toc.yml"
         ]
       }
     ],
     "globalMetadata": {
       "_appTitle": "Rqlite",
       "_appName": "Rqlite",
-      "_appFooter": "<span>Copyright &copy; 2023-2024 <a href=\"https://bfren.dev\">bfren</a>. Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></span>"
+      "_appFooter": "<span>Copyright &copy; 2023-2026 <a href=\"https://bfren.dev\">bfren</a>. Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></span>"
     },
     "sitemap": {
       "baseUrl": "https://bfren.github.io/rqlite",
@@ -54,7 +52,6 @@
       "modern"
     ],
     "postProcessors": [],
-    "keepFileLink": false,
     "disableGitFeatures": false
   }
 }

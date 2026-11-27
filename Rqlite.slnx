@@ -15,6 +15,15 @@
       <Build Solution="Test|*" Project="false" />
     </Project>
   </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/api/index.md" />
+    <File Path="docs/docfx.json" />
+    <File Path="docs/docs/configuration.md" />
+    <File Path="docs/docs/querying.md" />
+    <File Path="docs/docs/toc.yml" />
+    <File Path="docs/index.md" />
+    <File Path="docs/toc.yml" />
+  </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path=".github/FUNDING.yml" />
