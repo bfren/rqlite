@@ -57,7 +57,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return ExceptionWhileExecutingQueries() with { Exception = ex };
+			return ExceptionWhileExecutingQueries(ex);
 		}
 	}
 
@@ -65,7 +65,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	private static partial Failure NoQueriesPassed();
 
 	[Failure("Exception while executing queries.")]
-	private static partial Failure ExceptionWhileExecutingQueries();
+	private static partial Failure ExceptionWhileExecutingQueries(Exception ex);
 
 	/// <inheritdoc/>
 	public Task<Result<List<T>>> QueryAsync<T>(params string[] queries) =>

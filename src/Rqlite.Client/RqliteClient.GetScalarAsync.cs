@@ -52,7 +52,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return ExceptionWhileGettingScalar() with { Exception = ex };
+			return ExceptionWhileGettingScalar(ex);
 		}
 	}
 
@@ -60,7 +60,7 @@ public sealed partial class RqliteClient : IRqliteClient
 	private static partial Failure MultipleValuesReceived();
 
 	[Failure("Exception while getting scalar.")]
-	private static partial Failure ExceptionWhileGettingScalar();
+	private static partial Failure ExceptionWhileGettingScalar(Exception ex);
 
 	/// <inheritdoc/>
 	public Task<Result<T>> GetScalarAsync<T>(string query) =>

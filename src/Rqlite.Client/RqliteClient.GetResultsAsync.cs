@@ -42,7 +42,7 @@ public sealed partial class RqliteClient : IRqliteClient
 		}
 		catch (Exception ex)
 		{
-			return ExceptionWhileExecutingRequest() with { Exception = ex };
+			return ExceptionWhileExecutingRequest(ex);
 		}
 	}
 
@@ -50,5 +50,5 @@ public sealed partial class RqliteClient : IRqliteClient
 	private static partial Failure ErrorsWhileExecutingRequest(string errors);
 
 	[Failure("Exception while executing request.")]
-	private static partial Failure ExceptionWhileExecutingRequest();
+	private static partial Failure ExceptionWhileExecutingRequest(Exception ex);
 }
